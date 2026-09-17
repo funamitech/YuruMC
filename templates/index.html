@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <!-- @include partials/head.html title="YuruMC — semi-vanilla SMP Minecraft server in Gyeonggi, South Korea" description="Semi-vanilla SMP Minecraft server running since 2021. Two rules, Java and Bedrock Edition, hosted in Gyeonggi, South Korea. Server address: mc.funami.tech" image="/assets/img/hero-2023-06-24.webp" -->
+    <!-- @include partials/head.html title="YuruMC — semi-vanilla SMP Minecraft server in Gyeonggi, South Korea" description="Semi-vanilla SMP Minecraft server running since 2021. Two rules, Java and Bedrock Edition, hosted in Gyeonggi, South Korea. Server address: mc.funami.tech" image="/assets/img/og-hero.jpg" -->
 </head>
 
 <body>
@@ -28,7 +28,7 @@
                         <svg class="size-3.5" aria-hidden="true"><use href="#i-calendar"/></svg>
                         Since 2021
                     </p>
-                    <h1 class="mt-5 text-4xl font-bold tracking-tight text-ink sm:text-5xl lg:text-6xl">
+                    <h1 class="mt-5 text-4xl font-bold tracking-tight text-ink sm:text-5xl md:max-w-lg lg:max-w-none lg:text-6xl">
                         The laid-back
                         <span class="whitespace-nowrap text-accent-strong">semi-vanilla</span> SMP.
                     </h1>
@@ -175,7 +175,7 @@
                         <span class="flex size-12 flex-none items-center justify-center rounded-2xl bg-accent-soft font-mono text-xl font-bold text-accent-strong">2</span>
                         <div>
                             <h3 class="text-lg font-semibold text-ink">Don't grief.</h3>
-                            <p class="mt-1 text-sm/relaxed">You can do anything you want, except griefing or lagging the server.</p>
+                            <p class="mt-1 text-sm/relaxed">You can do anything you want, except griefing or lagging the server!</p>
                         </div>
                     </li>
                 </ol>
@@ -185,7 +185,7 @@
         <!-- Modded server -->
         <section id="modded" class="scroll-mt-20 border-t border-line bg-surface/50">
             <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
-                <div class="card flex flex-col gap-8 p-8 md:flex-row md:items-center md:justify-between">
+                <div class="card flex flex-col gap-8 p-6 sm:p-8 md:flex-row md:items-center md:justify-between">
                     <div class="max-w-lg">
                         <p class="chip-accent">
                             <svg class="size-3" aria-hidden="true"><use href="#i-package"/></svg>
@@ -211,10 +211,10 @@
                             </a>
                         </div>
                     </div>
-                    <dl class="grid gap-3 text-sm sm:min-w-64">
+                    <dl class="grid min-w-0 gap-3 text-sm sm:min-w-64">
                         <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
                             <dt class="text-faint">Address</dt>
-                            <dd class="flex items-center gap-1 font-mono font-semibold text-ink">
+                            <dd class="flex min-w-0 items-center gap-1 font-mono text-[13px] font-semibold break-all text-ink sm:text-sm">
                                 modded.mc.funami.tech
                                 <button type="button" class="copy-btn" data-copy="modded.mc.funami.tech" aria-label="Copy modded server address" hidden>
                                     <svg class="size-3.5" data-copy-icon aria-hidden="true"><use href="#i-copy"/></svg>
@@ -228,7 +228,7 @@
                         </div>
                         <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
                             <dt class="text-faint whitespace-nowrap">All packs &amp; worlds</dt>
-                            <dd><a class="footer-link inline-flex items-center gap-1 font-medium" href="https://mirror.funami.tech/yurumc/">mirror.funami.tech/yurumc/<svg class="size-3" aria-hidden="true"><use href="#i-external-link"/></svg></a></dd>
+                            <dd class="min-w-0"><a class="inline-flex items-center gap-1 font-medium break-all text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong" href="https://mirror.funami.tech/yurumc/">mirror.funami.tech/yurumc/<svg class="size-3" aria-hidden="true"><use href="#i-external-link"/></svg></a></dd>
                         </div>
                     </dl>
                 </div>
@@ -268,6 +268,7 @@
                         <h3 class="mt-4 font-semibold text-ink">Optimized for performance</h3>
                         <p class="mt-2 text-sm/relaxed">
                             The servers run on GraalVM, which provides extra performance!
+                            A student's home server needs all the help it can get.
                         </p>
                     </div>
                     <div class="card p-6">
@@ -277,8 +278,8 @@
                         <h3 class="mt-4 font-semibold text-ink">Live map</h3>
                         <p class="mt-2 text-sm/relaxed">
                             Explore the world in your browser with
-                            <a class="footer-link underline decoration-line underline-offset-2" href="https://map.mc.funami.tech/">BlueMap</a> — for the modded
-                            server too.
+                            <a class="text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong" href="https://map.mc.funami.tech/">BlueMap</a> — for the modded
+                            server too. Explore!
                         </p>
                     </div>
                 </div>
