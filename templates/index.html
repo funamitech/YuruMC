@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <!-- @include partials/head.html title="YuruMC — semi-vanilla SMP Minecraft server in Seoul" description="Semi-vanilla SMP Minecraft server running since 2021. Two rules, Java and Bedrock Edition, hosted in Seoul, South Korea. Server address: mc.funami.tech" -->
+    <!-- @include partials/head.html title="YuruMC — semi-vanilla SMP Minecraft server in Gyeonggi, South Korea" description="Semi-vanilla SMP Minecraft server running since 2021. Two rules, Java and Bedrock Edition, hosted in Gyeonggi, South Korea. Server address: mc.funami.tech" image="/assets/img/hero-2023-06-24.webp" -->
 </head>
 
 <body>
@@ -11,10 +11,10 @@
     <main>
         <!-- Hero: the server's own build screenshot fades into the canvas -->
         <section class="relative overflow-hidden">
-            <div class="absolute inset-y-0 right-0 w-[88%] [mask-image:linear-gradient(to_right,transparent,black_55%)] sm:w-[72%] lg:w-[62%] lg:[mask-image:linear-gradient(to_right,transparent,black_40%)]" aria-hidden="true">
+            <div class="absolute inset-y-0 right-0 w-[88%] [mask-image:linear-gradient(to_right,transparent,black_55%)] sm:w-[72%] md:w-[64%] md:[mask-image:linear-gradient(to_right,transparent_20%,black_65%)] lg:w-[62%] lg:[mask-image:linear-gradient(to_right,transparent,black_40%)]" aria-hidden="true">
                 <img src="/assets/img/hero-2023-06-24.webp" alt="" fetchpriority="high" width="2560" height="1600"
                      class="size-full object-cover object-[62%_55%]">
-                <div class="absolute inset-0 bg-canvas/55 sm:bg-canvas/25 lg:bg-canvas/10"></div>
+                <div class="absolute inset-0 bg-canvas/55 md:bg-canvas/40 lg:bg-canvas/20 xl:bg-canvas/10"></div>
             </div>
             <div class="glow -top-32 -left-24 size-[28rem] bg-plum-400/20" aria-hidden="true"></div>
             <div class="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-canvas to-transparent" aria-hidden="true"></div>
@@ -23,7 +23,7 @@
                 <div class="max-w-2xl">
                     <p class="chip">
                         <svg class="size-3.5" aria-hidden="true"><use href="#i-map-pin"/></svg>
-                        Seoul, South Korea
+                        Gyeonggi, South Korea
                         <span class="text-line-strong">·</span>
                         <svg class="size-3.5" aria-hidden="true"><use href="#i-calendar"/></svg>
                         Since 2021
@@ -32,9 +32,9 @@
                         The laid-back
                         <span class="whitespace-nowrap text-accent-strong">semi-vanilla</span> SMP.
                     </h1>
-                    <p class="mt-5 max-w-xl text-lg/relaxed">
+                    <p class="mt-5 max-w-md text-lg/relaxed xl:max-w-xl">
                         Welcome to YuruMC! A semi-vanilla SMP Minecraft server running since
-                        2021 — minimal rules, Java and Bedrock Edition, hosted in Seoul,
+                        2021 — minimal rules, Java and Bedrock Edition, hosted in Gyeonggi,
                         South Korea. Enjoy!
                     </p>
                     <div class="mt-8 flex flex-wrap gap-3">
@@ -76,7 +76,7 @@
                 </p>
 
                 <div class="mt-8 grid gap-4 lg:grid-cols-5">
-                    <div class="card p-6 lg:col-span-3">
+                    <div class="card p-6 lg:col-span-3 lg:self-start">
                         <div class="flex items-center gap-3">
                             <span class="flex size-10 items-center justify-center rounded-xl bg-accent-soft text-accent-strong">
                                 <svg class="size-5" aria-hidden="true"><use href="#i-pickaxe"/></svg>
@@ -159,8 +159,8 @@
             <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
                 <h2 class="section-title">Rules</h2>
                 <p class="mt-2 max-w-2xl">
-                    We have just two rules. Everything else is up to you — even hacked
-                    clients are allowed.
+                    We have just two rules. Everything else is up to you. Even hacked
+                    clients are allowed!
                 </p>
 
                 <ol class="mt-8 grid gap-4 md:grid-cols-2">
@@ -189,7 +189,7 @@
                     <div class="max-w-lg">
                         <p class="chip-accent">
                             <svg class="size-3" aria-hidden="true"><use href="#i-package"/></svg>
-                            Minecraft 1.21.1
+                            NeoForge 21.1.228
                         </p>
                         <h2 class="section-title mt-4">Modded server</h2>
                         <p class="mt-2 text-sm/relaxed">
@@ -224,7 +224,7 @@
                         </div>
                         <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
                             <dt class="text-faint">Version</dt>
-                            <dd class="font-medium text-ink">1.21.1 (Java Edition)</dd>
+                            <dd class="font-medium text-ink">Minecraft 1.21.1 (Java Edition)</dd>
                         </div>
                         <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
                             <dt class="text-faint whitespace-nowrap">All packs &amp; worlds</dt>
@@ -246,8 +246,9 @@
                         </span>
                         <h3 class="mt-4 font-semibold text-ink">Fun with little rules</h3>
                         <p class="mt-2 text-sm/relaxed">
-                            Don't lag the server, don't grief. That's it — everything else
-                            is up to you.
+                            We have just two rules. First, don't lag the server. Second,
+                            don't grief. Everything else is up to you. Even hacked clients
+                            are allowed!
                         </p>
                     </div>
                     <div class="card p-6">
@@ -266,7 +267,7 @@
                         </span>
                         <h3 class="mt-4 font-semibold text-ink">Optimized for performance</h3>
                         <p class="mt-2 text-sm/relaxed">
-                            The servers run on GraalVM for that extra bit of performance.
+                            The servers run on GraalVM, which provides extra performance!
                         </p>
                     </div>
                     <div class="card p-6">

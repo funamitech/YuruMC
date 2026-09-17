@@ -209,10 +209,6 @@
     @apply rounded-2xl border border-line bg-surface;
   }
 
-  .link-card {
-    @apply transition hover:-translate-y-0.5 hover:border-line-strong hover:shadow-md hover:shadow-plum-950/5;
-  }
-
   .footer-link {
     @apply text-faint transition-colors hover:text-accent-strong;
   }

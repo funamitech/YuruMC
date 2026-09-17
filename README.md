@@ -1,7 +1,7 @@
 # YuruMC
 
 Website for [mc.funami.tech](https://mc.funami.tech) — YuruMC, a laid-back semi-vanilla
-SMP Minecraft server running since 2021, hosted in Seoul. Part of the
+SMP Minecraft server running since 2021, hosted in Gyeonggi, South Korea. Part of the
 [YuruVerse](https://funami.tech) and built on the same design system as
 [YuruMirror](https://github.com/funamitech/mirror).
 
@@ -65,6 +65,8 @@ error_page 500 502 504 /error/50x.html;
 - Server addresses, rules and the modded server card: `templates/index.html`
 - Navigation and footer links: `templates/partials/nav.html`, `templates/partials/footer.html`
 - Maintenance message: `templates/500.html`
+- Modpack version / loader (chip and "Version" row in the modded card): `templates/index.html` — check `modrinth.index.json` inside the `.mrpack` on the mirror when the pack updates
+- Page title, description and `og:image` are passed as parameters to `partials/head.html` from each page
 - Icons: add Lucide symbols to `templates/partials/icons.html`
 
 ## Scripts

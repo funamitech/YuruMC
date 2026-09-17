@@ -62,10 +62,17 @@
 
   /* Copy-to-clipboard for server addresses (buttons stay hidden without JS/clipboard) */
   if (navigator.clipboard && window.isSecureContext) {
+    var copyStatus = document.createElement('div');
+    copyStatus.className = 'sr-only';
+    copyStatus.setAttribute('aria-live', 'polite');
+    document.body.appendChild(copyStatus);
+
     document.querySelectorAll('button[data-copy]').forEach(function(button) {
       button.hidden = false;
       button.addEventListener('click', function() {
         navigator.clipboard.writeText(button.dataset.copy).then(function() {
+          copyStatus.textContent = '';
+          copyStatus.textContent = 'Copied ' + button.dataset.copy + ' to clipboard';
           button.classList.add('is-copied');
           button.querySelector('[data-copy-icon]').hidden = true;
           button.querySelector('[data-copied-icon]').hidden = false;
