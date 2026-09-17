@@ -34,6 +34,12 @@ const DATA_FILE = join(ROOT, 'data', 'modpacks.json');
 const UA = 'YuruMC-site-builder/2.0 (+https://mc.funami.tech; himesaka@noa.codes)';
 const CF_GAME_MINECRAFT = 432;
 const CF_CLASS_MODPACKS = 4471;
+// A CurseForge modpack manifest lists every bundled project in one flat array,
+// mods and resource packs and shaders alike. Only /v1/mods knows which is which.
+const CF_CLASS_MODS = 6;
+const CF_CLASS_RESOURCE_PACKS = 12;
+const CF_CLASS_SHADER_PACKS = 6552;
+const CF_BULK_CHUNK = 50;
 
 /** A fatal, user-facing problem — printed without a stack trace. */
 class LoudError extends Error {}
@@ -48,6 +54,19 @@ async function getJSON(url, headers = {}) {
     die(`${url} refused us (HTTP ${res.status}).`, 'For CurseForge that means CF_API_KEY is missing, wrong, or not allowed to read this game.');
   }
   if (res.status === 404) die(`${url} does not exist (HTTP 404).`, 'Check the slug/id in the link you passed.');
+  if (!res.ok) die(`${url} returned HTTP ${res.status}.`);
+  return res.json();
+}
+
+async function postJSON(url, body, headers = {}) {
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: { 'User-Agent': UA, Accept: 'application/json', 'Content-Type': 'application/json', ...headers },
+    body: JSON.stringify(body),
+  });
+  if (res.status === 403 || res.status === 401) {
+    die(`${url} refused us (HTTP ${res.status}).`, 'For CurseForge that means CF_API_KEY is missing, wrong, or not allowed to read this game.');
+  }
   if (!res.ok) die(`${url} returned HTTP ${res.status}.`);
   return res.json();
 }
@@ -155,6 +174,7 @@ async function readMrpack(url) {
   const deps = index.dependencies || {};
   const loaderId = Object.keys(deps).find((k) => k !== 'minecraft');
   const files = index.files || [];
+  const under = (dir) => files.filter((f) => (f.path || '').startsWith(`${dir}/`)).length;
   return {
     name: index.name || null,
     version: index.versionId || null,
@@ -163,7 +183,9 @@ async function readMrpack(url) {
     loader: loaderId ? prettyLoader(loaderId) : null,
     loaderVersion: loaderId ? deps[loaderId] : null,
     fileCount: files.length,
-    modCount: files.filter((f) => (f.path || '').startsWith('mods/')).length,
+    modCount: under('mods'),
+    resourcePackCount: under('resourcepacks'),
+    shaderCount: under('shaderpacks'),
   };
 }
 
@@ -181,9 +203,37 @@ async function readCurseManifest(url) {
     minecraft: manifest.minecraft && manifest.minecraft.version || null,
     loader: loaderId ? prettyLoader(loaderId) : null,
     loaderVersion: loaderVersion || null,
-    modCount: (manifest.files || []).length,
+    fileCount: (manifest.files || []).length,
+    projectIds: (manifest.files || []).map((f) => f.projectID).filter((id) => Number.isInteger(id)),
     directUrl: realUrl,
   };
+}
+
+/**
+ * Split a modpack's bundled projects into mods / resource packs / shaders.
+ * The manifest only carries project ids, so ask /v1/mods in bulk (the endpoint
+ * takes a list) and bucket the answers by classId.
+ */
+async function classifyCurseProjects(projectIds, headers) {
+  const counts = { modCount: 0, resourcePackCount: 0, shaderCount: 0, otherCount: 0 };
+  let seen = 0;
+  for (let i = 0; i < projectIds.length; i += CF_BULK_CHUNK) {
+    const chunk = projectIds.slice(i, i + CF_BULK_CHUNK);
+    const { data } = await postJSON('https://api.curseforge.com/v1/mods', { modIds: chunk }, headers);
+    for (const mod of data || []) {
+      seen += 1;
+      if (mod.classId === CF_CLASS_MODS) counts.modCount += 1;
+      else if (mod.classId === CF_CLASS_RESOURCE_PACKS) counts.resourcePackCount += 1;
+      else if (mod.classId === CF_CLASS_SHADER_PACKS) counts.shaderCount += 1;
+      else counts.otherCount += 1;
+    }
+  }
+  if (seen !== projectIds.length) {
+    // Never publish a count we could not account for.
+    die(`CurseForge only classified ${seen} of ${projectIds.length} bundled projects.`,
+      'Re-run; if it keeps happening the pack references a deleted project and the count cannot be trusted.');
+  }
+  return counts;
 }
 
 /* ----------------------------- resolvers ----------------------------- */
@@ -213,6 +263,8 @@ async function resolveModrinth(slug, wantedVersion) {
     loader: (version.loaders || []).map(prettyLoader)[0] || fromPack.loader || null,
     loaderVersion: fromPack.loaderVersion || null,
     modCount: fromPack.modCount ?? null,
+    resourcePackCount: fromPack.resourcePackCount ?? null,
+    shaderCount: fromPack.shaderCount ?? null,
     pageUrl: `https://modrinth.com/modpack/${project.slug}`,
     downloadUrl: file.url || null,
     fileName: file.filename || null,
@@ -247,6 +299,7 @@ async function resolveCurseForge(slug, fileId) {
       'The author disabled third-party downloads; link the project page instead.');
   }
   const fromPack = await readCurseManifest(file.downloadUrl);
+  const counts = await classifyCurseProjects(fromPack.projectIds, headers);
 
   return {
     source: 'curseforge',
@@ -256,7 +309,10 @@ async function resolveCurseForge(slug, fileId) {
     minecraft: minecraft || fromPack.minecraft || null,
     loader: loaderTag ? prettyLoader(loaderTag) : fromPack.loader || null,
     loaderVersion: fromPack.loaderVersion || null,
-    modCount: fromPack.modCount ?? null,
+    fileCount: fromPack.fileCount,
+    modCount: counts.modCount,
+    resourcePackCount: counts.resourcePackCount,
+    shaderCount: counts.shaderCount,
     pageUrl: (mod.links && mod.links.websiteUrl) || `https://www.curseforge.com/minecraft/modpacks/${slug}`,
     downloadUrl: `${(mod.links && mod.links.websiteUrl) || `https://www.curseforge.com/minecraft/modpacks/${slug}`}/files/${file.id}`,
     directUrl: fromPack.directUrl,
@@ -278,6 +334,8 @@ async function resolveMrpackUrl(url) {
     loader: pack.loader,
     loaderVersion: pack.loaderVersion,
     modCount: pack.modCount,
+    resourcePackCount: pack.resourcePackCount,
+    shaderCount: pack.shaderCount,
     fileCount: pack.fileCount,
     pageUrl: url.slice(0, url.lastIndexOf('/') + 1),
     downloadUrl: url,
@@ -357,7 +415,9 @@ async function main(args) {
     const key = match ? match[1] : slugify(pack.slug || pack.name || 'pack');
     file.packs[key] = { id: key, sourceUrl: url, ...pack };
     console.log(`  ${key}: ${pack.name} ${pack.version ?? ''} — Minecraft ${pack.minecraft ?? '?'}, ` +
-      `${pack.loader ?? '?'} ${pack.loaderVersion ?? ''}${pack.modCount != null ? `, ${pack.modCount} mods` : ''}`);
+      `${pack.loader ?? '?'} ${pack.loaderVersion ?? ''}${pack.modCount != null ? `, ${pack.modCount} mods` : ''}` +
+      `${pack.resourcePackCount ? `, ${pack.resourcePackCount} resource packs` : ''}` +
+      `${pack.shaderCount ? `, ${pack.shaderCount} shaderpacks` : ''}`);
   }
 
   file.generated = new Date().toISOString().slice(0, 10);

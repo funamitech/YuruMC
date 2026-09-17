@@ -8,7 +8,7 @@ SMP Minecraft server running since 2021, hosted in Gyeonggi, South Korea. Part o
 ## Tech stack
 
 - Tailwind CSS 4 (CSS-first config in `src/assets/css/input.css` — no `tailwind.config.js`)
-- A ~90-line template builder (`build.js`) that expands shared partials into static pages
+- A ~100-line template builder (`build.js`) that expands shared partials into static pages
 - Vanilla JS, self-hosted Inter variable font, inline SVG icon sprite — **no CDNs, no frameworks**
 - Plain nginx serving `src/` as the webroot
 
@@ -86,8 +86,18 @@ git add data/modpacks.json src && git commit
 | `https://www.curseforge.com/minecraft/modpacks/<slug>[/files/<id>]` | **yes** | `api.curseforge.com` + the pack zip's `manifest.json` |
 | `https://…/anything.mrpack` | no | the pack's own `modrinth.index.json` |
 
-Loader version and mod count are read straight out of the pack archive, over HTTP range
+Loader version and file list are read straight out of the pack archive, over HTTP range
 requests — it reads a few kilobytes of a 170 MB zip instead of downloading it.
+
+**Mods are counted as mods only.** A modpack bundles resource packs and shaderpacks
+alongside actual mods, and neither source hands over a mod count. A `.mrpack` index sorts
+its files into `mods/`, `resourcepacks/` and `shaderpacks/`, so those are counted by path.
+A CurseForge `manifest.json` is one flat list of project ids with no types at all, so the
+script asks `POST /v1/mods` in batches of 50 and buckets the answers by `classId` (6 =
+mod, 12 = resource pack, 6552 = shaderpack). If CurseForge fails to classify even one
+bundled project the script stops rather than publish a count it cannot stand behind. The
+result is `modCount`, `resourcePackCount` and `shaderCount` per pack, and the page renders
+all three — TerraFirmaGreg-Modern ships 273 files, of which 262 are mods.
 
 **`key=` prefix.** `modded=…` stores the entry under that id, and templates then use
 `{{pack.modded.name}}`, `{{pack.modded-survival.loaderVersion}}` and friends. Without a
