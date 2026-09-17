@@ -14,16 +14,11 @@
             <div class="glow -top-40 -left-24 size-[30rem] bg-plum-400/20" aria-hidden="true"></div>
             <div class="glow -top-32 right-0 size-[26rem] bg-plum-300/25" aria-hidden="true"></div>
             <div class="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
-                <p class="chip">
-                    <svg class="size-3.5" aria-hidden="true"><use href="#i-package"/></svg>
-                    Two servers
-                    <span class="text-line-strong">·</span>
-                    <svg class="size-3.5" aria-hidden="true"><use href="#i-cpu"/></svg>
-                    {{pack.modded.modCount}} + {{pack.modded-survival.modCount}} mods
-                    <span class="text-line-strong">·</span>
-                    <svg class="size-3.5" aria-hidden="true"><use href="#i-map-pin"/></svg>
-                    Gyeonggi, South Korea
-                </p>
+                <div class="flex flex-wrap items-center gap-2">
+                    <p class="chip"><svg class="size-3.5" aria-hidden="true"><use href="#i-package"/></svg> Two servers</p>
+                    <p class="chip"><svg class="size-3.5" aria-hidden="true"><use href="#i-cpu"/></svg> {{pack.modded.modCount}} + {{pack.modded-survival.modCount}} mods</p>
+                    <p class="chip"><svg class="size-3.5" aria-hidden="true"><use href="#i-map-pin"/></svg> Gyeonggi, South Korea</p>
+                </div>
                 <h1 class="mt-5 max-w-3xl text-4xl font-bold tracking-tight text-ink sm:text-5xl lg:text-6xl">
                     Modded servers.
                     <span class="block text-faint">Yui said “just one more mod” {{pack.modded.modCount}} times.</span>
@@ -343,7 +338,7 @@
                 </ol>
                 <p class="mt-6 text-sm text-faint">
                     The two rules from the <a class="text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong" href="/#rules">front page</a>
-                    apply here too: don't lag the server, don't grief. Modded gives you *far* more
+                    apply here too: don't lag the server, don't grief. Modded gives you <em>far</em> more
                     creative ways to lag a server. Please be gentle; it lives in someone&#39;s home, not a datacenter.
                 </p>
             </div>
