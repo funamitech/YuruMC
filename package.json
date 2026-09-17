@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "node dev/server.js",
+    "modpack": "node scripts/modpack.js",
     "build": "node build.js && npm run build-css-prod",
-    "lint": "eslint src/assets/js/*.js build.js dev/server.js",
+    "lint": "eslint src/assets/js/*.js build.js dev/server.js scripts/*.js",
     "lint:fix": "npm run lint -- --fix",
     "build-css": "tailwindcss -i src/assets/css/input.css -o src/assets/css/tailwind.css --watch",
     "build-css-prod": "tailwindcss -i src/assets/css/input.css -o src/assets/css/tailwind.css --minify"
@@ -24,7 +25,7 @@
     "extends": "eslint:recommended",
     "overrides": [
       {
-        "files": ["build.js", "dev/**/*.js"],
+        "files": ["build.js", "dev/**/*.js", "scripts/**/*.js"],
         "env": {
           "node": true,
           "browser": false

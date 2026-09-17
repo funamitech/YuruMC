@@ -1,0 +1,43 @@
+{
+  "generated": "2026-09-17",
+  "packs": {
+    "modded": {
+      "id": "modded",
+      "sourceUrl": "https://mirror.funami.tech/yurumc/YuruMC%20Pack%20NeoForged%201.21.mrpack",
+      "source": "mrpack",
+      "name": "YuruMC Pack NeoForged 1.21",
+      "summary": null,
+      "version": "1.0.0",
+      "minecraft": "1.21.1",
+      "loader": "NeoForge",
+      "loaderVersion": "21.1.228",
+      "modCount": 229,
+      "fileCount": 231,
+      "pageUrl": "https://mirror.funami.tech/yurumc/",
+      "downloadUrl": "https://mirror.funami.tech/yurumc/YuruMC%20Pack%20NeoForged%201.21.mrpack",
+      "fileName": "YuruMC Pack NeoForged 1.21.mrpack",
+      "iconUrl": null,
+      "updated": null,
+      "slug": null
+    },
+    "modded-survival": {
+      "id": "modded-survival",
+      "sourceUrl": "https://www.curseforge.com/minecraft/modpacks/terrafirmagreg-modern/files/8813051",
+      "source": "curseforge",
+      "name": "TerraFirmaGreg-Modern",
+      "summary": "Want more survival and exploration with your tech? A TerraFirmaCraft + GregTech modpack for 1.20.1.",
+      "version": "0.13.10",
+      "minecraft": "1.20.1",
+      "loader": "Forge",
+      "loaderVersion": "47.4.13",
+      "modCount": 273,
+      "pageUrl": "https://www.curseforge.com/minecraft/modpacks/terrafirmagreg-modern",
+      "downloadUrl": "https://www.curseforge.com/minecraft/modpacks/terrafirmagreg-modern/files/8813051",
+      "directUrl": "https://mediafilez.forgecdn.net/files/8813/51/TerraFirmaGreg-Modern-0.13.10-curseforge.zip",
+      "fileName": "TerraFirmaGreg-Modern-0.13.10-curseforge.zip",
+      "iconUrl": "https://media.forgecdn.net/avatars/1735/273/639104530548208668.gif",
+      "updated": "2026-09-05",
+      "slug": "terrafirmagreg-modern"
+    }
+  }
+}

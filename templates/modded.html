@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- @include partials/head.html title="Modded servers — YuruMC" description="YuruMC runs two modded Minecraft servers: our own NeoForge pack on modded.mc.funami.tech, and TerraFirmaGreg Modern on survival.modded.mc.funami.tech. Addresses, modpack downloads, versions and loaders — all of it on one page." image="/assets/img/og-hero.jpg" -->
+</head>
+
+<body>
+    <!-- @include partials/nav.html -->
+
+    <main>
+        <!-- Hero -->
+        <section class="relative overflow-hidden border-b border-line">
+            <div class="glow -top-40 -left-24 size-[30rem] bg-plum-400/20" aria-hidden="true"></div>
+            <div class="glow -top-32 right-0 size-[26rem] bg-plum-300/25" aria-hidden="true"></div>
+            <div class="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
+                <p class="chip">
+                    <svg class="size-3.5" aria-hidden="true"><use href="#i-package"/></svg>
+                    Two servers
+                    <span class="text-line-strong">·</span>
+                    <svg class="size-3.5" aria-hidden="true"><use href="#i-cpu"/></svg>
+                    {{pack.modded.modCount}} + {{pack.modded-survival.modCount}} mods
+                    <span class="text-line-strong">·</span>
+                    <svg class="size-3.5" aria-hidden="true"><use href="#i-map-pin"/></svg>
+                    Gyeonggi, South Korea
+                </p>
+                <h1 class="mt-5 max-w-3xl text-4xl font-bold tracking-tight text-ink sm:text-5xl lg:text-6xl">
+                    Modded servers.
+                    <span class="block text-faint">Yui said “just one more mod” 502 times.</span>
+                </h1>
+                <p class="mt-5 max-w-2xl text-lg/relaxed">
+                    The vanilla SMP over on the <a class="text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong" href="/">front page</a>
+                    is the calm one. These two are not. One runs a modpack we built ourselves; the
+                    other runs TerraFirmaGreg, where you start by hitting rocks together and end up
+                    with a GregTech factory. Both are Java Edition only — Yui has to draw the line
+                    somewhere, and she drew it here.
+                </p>
+                <div class="mt-8 flex flex-wrap gap-3">
+                    <a href="#yurumc-pack" class="btn-primary">
+                        <svg class="size-4" aria-hidden="true"><use href="#i-package"/></svg>
+                        Our own pack
+                    </a>
+                    <a href="#terrafirmagreg" class="btn-ghost">
+                        <svg class="size-4 text-accent" aria-hidden="true"><use href="#i-pickaxe"/></svg>
+                        Rocks &amp; GregTech
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Server 1: our own NeoForge pack -->
+        <section id="yurumc-pack" class="scroll-mt-20 border-b border-line bg-surface/50">
+            <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
+                <div class="flex flex-wrap items-center gap-3">
+                    <span class="chip-accent">
+                        <svg class="size-3" aria-hidden="true"><use href="#i-package"/></svg>
+                        {{pack.modded.loader}} {{pack.modded.loaderVersion}}
+                    </span>
+                    <span class="chip">
+                        <svg class="size-3" aria-hidden="true"><use href="#i-check"/></svg>
+                        Homemade, by us, on purpose
+                    </span>
+                </div>
+                <h2 class="section-title mt-4">YuruMC Modded — Yui's other child</h2>
+                <p class="mt-2 max-w-2xl">
+                    Our own modpack, assembled by hand and shipped as a Modrinth-format
+                    <code class="rounded bg-inset px-1.5 py-0.5 font-mono text-[13px] text-accent-strong">.mrpack</code>
+                    straight off our mirror. <strong class="text-ink">{{pack.modded.name}}</strong>
+                    (pack version {{pack.modded.version}}) crams {{pack.modded.modCount}} mods and
+                    two shaderpacks into one file, for Minecraft {{pack.modded.minecraft}} on
+                    {{pack.modded.loader}} {{pack.modded.loaderVersion}}.
+                    Your laptop fans are about to learn what a Create contraption sounds like.
+                </p>
+
+                <div class="mt-8 grid gap-4 lg:grid-cols-5">
+                    <div class="card p-6 lg:col-span-3">
+                        <h3 class="font-semibold text-ink">Getting in</h3>
+                        <ul class="mt-4 divide-y divide-line border-y border-line">
+                            <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-3">
+                                <span class="flex w-32 items-center gap-2 text-sm text-faint">
+                                    <svg class="size-4" aria-hidden="true"><use href="#i-monitor"/></svg>
+                                    Address
+                                </span>
+                                <span class="address">
+                                    <code class="font-mono text-sm font-semibold break-all text-ink">modded.mc.funami.tech</code>
+                                    <button type="button" class="copy-btn" data-copy="modded.mc.funami.tech" aria-label="Copy modded server address" hidden>
+                                        <svg class="size-3.5" data-copy-icon aria-hidden="true"><use href="#i-copy"/></svg>
+                                        <svg class="size-3.5 text-accent-strong" data-copied-icon hidden aria-hidden="true"><use href="#i-check"/></svg>
+                                    </button>
+                                </span>
+                                <span class="chip">no port, we promise</span>
+                            </li>
+                            <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-3">
+                                <span class="flex w-32 items-center gap-2 text-sm text-faint">
+                                    <svg class="size-4" aria-hidden="true"><use href="#i-gamepad"/></svg>
+                                    Edition
+                                </span>
+                                <span class="text-sm font-medium text-ink">Java Edition, Minecraft {{pack.modded.minecraft}}</span>
+                                <span class="chip">no Bedrock here, sorry</span>
+                            </li>
+                            <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-3">
+                                <span class="flex w-32 items-center gap-2 text-sm text-faint">
+                                    <svg class="size-4" aria-hidden="true"><use href="#i-users"/></svg>
+                                    Room for
+                                </span>
+                                <span class="text-sm font-medium text-ink">30 people, no whitelist, no application form</span>
+                            </li>
+                        </ul>
+
+                        <div class="mt-5 flex flex-wrap gap-3">
+                            <a href="{{pack.modded.downloadUrl}}" class="btn-primary">
+                                <svg class="size-4" aria-hidden="true"><use href="#i-download"/></svg>
+                                Download {{pack.modded.fileName}}
+                            </a>
+                            <a href="https://map.modded.mc.funami.tech/" class="btn-ghost">
+                                <svg class="size-4" aria-hidden="true"><use href="#i-map"/></svg>
+                                Live map — go peek
+                            </a>
+                        </div>
+                        <p class="mt-3 text-xs text-faint">
+                            The live map has eleven dimensions on it, including the Aether and a
+                            handful of planets. Yui has not visited most of them.
+                        </p>
+                    </div>
+
+                    <dl class="grid min-w-0 gap-3 text-sm lg:col-span-2 lg:self-start">
+                        <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
+                            <dt class="text-faint">Modpack</dt>
+                            <dd class="min-w-0 font-medium break-words text-ink">{{pack.modded.name}}</dd>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
+                            <dt class="text-faint">Pack version</dt>
+                            <dd class="font-medium text-ink">{{pack.modded.version}}</dd>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
+                            <dt class="text-faint">Minecraft</dt>
+                            <dd class="font-medium text-ink">{{pack.modded.minecraft}} (Java)</dd>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
+                            <dt class="text-faint">Mod loader</dt>
+                            <dd class="font-medium text-ink">{{pack.modded.loader}} {{pack.modded.loaderVersion}}</dd>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
+                            <dt class="text-faint">Mods in the pack</dt>
+                            <dd class="font-medium text-ink tabular-nums">{{pack.modded.modCount}} (+2 shaderpacks)</dd>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
+                            <dt class="text-faint">Live map</dt>
+                            <dd class="min-w-0"><a class="inline-flex items-center gap-1 font-medium break-all text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong" href="https://map.modded.mc.funami.tech/">map.modded.mc.funami.tech<svg class="size-3 flex-none" aria-hidden="true"><use href="#i-external-link"/></svg></a></dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <!-- Server 2: TerraFirmaGreg -->
+        <section id="terrafirmagreg" class="scroll-mt-20 border-b border-line">
+            <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
+                <div class="flex flex-wrap items-center gap-3">
+                    <span class="chip-accent">
+                        <svg class="size-3" aria-hidden="true"><use href="#i-pickaxe"/></svg>
+                        {{pack.modded-survival.loader}} {{pack.modded-survival.loaderVersion}}
+                    </span>
+                    <span class="chip">
+                        <svg class="size-3" aria-hidden="true"><use href="#i-calendar"/></svg>
+                        Pack updated {{pack.modded-survival.updated}}
+                    </span>
+                </div>
+                <h2 class="section-title mt-4">YuruMC Modded Survival — rocks first, reactors later</h2>
+                <p class="mt-2 max-w-2xl">
+                    This one runs an assortment of other people's hard work:
+                    <strong class="text-ink">{{pack.modded-survival.name}} {{pack.modded-survival.version}}</strong>
+                    off CurseForge. In the pack authors' own words —
+                    <em>"{{pack.modded-survival.summary}}"</em> — which is a polite way of saying you
+                    will spend your first evening knapping flint while someone in chat brags about
+                    their steam boiler. {{pack.modded-survival.modCount}} mods, Minecraft
+                    {{pack.modded-survival.minecraft}}, {{pack.modded-survival.loader}}
+                    {{pack.modded-survival.loaderVersion}}, and genuinely no hand-holding.
+                </p>
+
+                <div class="mt-8 grid gap-4 lg:grid-cols-5">
+                    <div class="card p-6 lg:col-span-3">
+                        <h3 class="font-semibold text-ink">Getting in</h3>
+                        <ul class="mt-4 divide-y divide-line border-y border-line">
+                            <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-3">
+                                <span class="flex w-32 items-center gap-2 text-sm text-faint">
+                                    <svg class="size-4" aria-hidden="true"><use href="#i-monitor"/></svg>
+                                    Address
+                                </span>
+                                <span class="address">
+                                    <code class="font-mono text-sm font-semibold break-all text-ink">survival.modded.mc.funami.tech</code>
+                                    <button type="button" class="copy-btn" data-copy="survival.modded.mc.funami.tech" aria-label="Copy modded survival server address" hidden>
+                                        <svg class="size-3.5" data-copy-icon aria-hidden="true"><use href="#i-copy"/></svg>
+                                        <svg class="size-3.5 text-accent-strong" data-copied-icon hidden aria-hidden="true"><use href="#i-check"/></svg>
+                                    </button>
+                                </span>
+                                <span class="chip">also no port</span>
+                            </li>
+                            <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-3">
+                                <span class="flex w-32 items-center gap-2 text-sm text-faint">
+                                    <svg class="size-4" aria-hidden="true"><use href="#i-gamepad"/></svg>
+                                    Edition
+                                </span>
+                                <span class="text-sm font-medium text-ink">Java Edition, Minecraft {{pack.modded-survival.minecraft}}</span>
+                                <span class="chip">survival, difficulty normal</span>
+                            </li>
+                            <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-3">
+                                <span class="flex w-32 items-center gap-2 text-sm text-faint">
+                                    <svg class="size-4" aria-hidden="true"><use href="#i-users"/></svg>
+                                    Room for
+                                </span>
+                                <span class="text-sm font-medium text-ink">30 people, no whitelist, bring a friend to blame</span>
+                            </li>
+                        </ul>
+
+                        <div class="mt-5 flex flex-wrap gap-3">
+                            <a href="{{pack.modded-survival.downloadUrl}}" class="btn-primary">
+                                <svg class="size-4" aria-hidden="true"><use href="#i-download"/></svg>
+                                Get the pack on CurseForge
+                            </a>
+                            <a href="{{pack.modded-survival.pageUrl}}" class="btn-ghost">
+                                <svg class="size-4 text-accent" aria-hidden="true"><use href="#i-external-link"/></svg>
+                                Pack page &amp; changelog
+                            </a>
+                        </div>
+                        <p class="mt-3 text-xs text-faint">
+                            Install <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">{{pack.modded-survival.fileName}}</code>
+                            — the exact file the server runs. No live map for this one yet; you will
+                            have to explore with your actual eyes, like a peasant. (Fitting, really.)
+                        </p>
+                    </div>
+
+                    <dl class="grid min-w-0 gap-3 text-sm lg:col-span-2 lg:self-start">
+                        <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
+                            <dt class="text-faint">Modpack</dt>
+                            <dd class="min-w-0 font-medium break-words text-ink">{{pack.modded-survival.name}}</dd>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
+                            <dt class="text-faint">Pack version</dt>
+                            <dd class="font-medium text-ink">{{pack.modded-survival.version}}</dd>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
+                            <dt class="text-faint">Minecraft</dt>
+                            <dd class="font-medium text-ink">{{pack.modded-survival.minecraft}} (Java)</dd>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
+                            <dt class="text-faint">Mod loader</dt>
+                            <dd class="font-medium text-ink">{{pack.modded-survival.loader}} {{pack.modded-survival.loaderVersion}}</dd>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
+                            <dt class="text-faint">Mods in the pack</dt>
+                            <dd class="font-medium text-ink tabular-nums">{{pack.modded-survival.modCount}}</dd>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
+                            <dt class="text-faint">World type</dt>
+                            <dd class="font-mono text-[13px] font-medium text-ink">tfc:overworld</dd>
+                        </div>
+                    </dl>
+                </div>
+
+                <div class="card mt-4 p-6">
+                    <h3 class="flex items-center gap-2 font-semibold text-ink">
+                        <svg class="size-4 text-accent" aria-hidden="true"><use href="#i-wrench"/></svg>
+                        We fiddled with it slightly
+                    </h3>
+                    <p class="mt-2 max-w-3xl text-sm/relaxed">
+                        The server runs stock {{pack.modded-survival.name}} {{pack.modded-survival.version}}
+                        with three small edits: <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">cubes-without-borders</code>
+                        is left out, and <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">wakes-reforged</code>
+                        plus <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">particular-reforged</code>
+                        are added, because boats should make waves. Client-side either way — install
+                        the pack as published and you are fine.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Which one -->
+        <section class="border-b border-line bg-surface/50">
+            <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
+                <h2 class="section-title">Which one do I want? (Yui's flowchart, without the chart)</h2>
+                <p class="mt-2 max-w-2xl">They are different versions, different loaders and different vibes, so you cannot mix them up. Yui tried.</p>
+                <div class="mt-8 grid gap-4 md:grid-cols-2">
+                    <div class="card p-6">
+                        <span class="flex size-10 items-center justify-center rounded-xl bg-accent-soft text-accent-strong">
+                            <svg class="size-5" aria-hidden="true"><use href="#i-package"/></svg>
+                        </span>
+                        <h3 class="mt-4 font-semibold text-ink">Pick YuruMC Modded if…</h3>
+                        <p class="mt-2 text-sm/relaxed">
+                            …you want the kitchen sink. {{pack.modded.modCount}} mods, magic and
+                            machines and several other dimensions, on Minecraft
+                            {{pack.modded.minecraft}}. One download from our mirror and you are in.
+                        </p>
+                        <p class="mt-3 text-xs text-faint">There is a live map, so your friends can watch you fail from a browser.</p>
+                    </div>
+                    <div class="card p-6">
+                        <span class="flex size-10 items-center justify-center rounded-xl bg-accent-soft text-accent-strong">
+                            <svg class="size-5" aria-hidden="true"><use href="#i-pickaxe"/></svg>
+                        </span>
+                        <h3 class="mt-4 font-semibold text-ink">Pick Modded Survival if…</h3>
+                        <p class="mt-2 text-sm/relaxed">
+                            …you think vanilla survival is too easy and you would like to be
+                            humbled by geology. {{pack.modded-survival.name}} on Minecraft
+                            {{pack.modded-survival.minecraft}}, {{pack.modded-survival.loader}}.
+                            Bring patience; there is no wood pickaxe waiting for you.
+                        </p>
+                        <p class="mt-3 text-xs text-faint">No live map. The wilderness stays wild.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Installing -->
+        <section id="install" class="scroll-mt-20 border-b border-line">
+            <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
+                <h2 class="section-title">Installing a modpack (the short version)</h2>
+                <p class="mt-2 max-w-2xl">
+                    Both packs are ordinary modpack files, so any launcher that imports them will
+                    do. Vanilla launcher will not — this is the one part of YuruMC that needs more
+                    than an address.
+                </p>
+                <ol class="mt-8 grid gap-4 md:grid-cols-3">
+                    <li class="card flex gap-4 p-5">
+                        <span class="flex size-8 flex-none items-center justify-center rounded-lg bg-inset font-mono text-sm font-bold text-accent-strong">1</span>
+                        <div>
+                            <h3 class="font-semibold text-ink">Grab a launcher</h3>
+                            <p class="mt-1 text-sm/relaxed">Anything that can import a pack file — the Modrinth App or Prism Launcher for <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">.mrpack</code>, the CurseForge app or Prism for the CurseForge zip.</p>
+                        </div>
+                    </li>
+                    <li class="card flex gap-4 p-5">
+                        <span class="flex size-8 flex-none items-center justify-center rounded-lg bg-inset font-mono text-sm font-bold text-accent-strong">2</span>
+                        <div>
+                            <h3 class="font-semibold text-ink">Import the pack</h3>
+                            <p class="mt-1 text-sm/relaxed">Our pack: the <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">.mrpack</code> from the mirror. Modded Survival: {{pack.modded-survival.name}} {{pack.modded-survival.version}} from CurseForge. The loader comes with it — you do not install {{pack.modded.loader}} yourself.</p>
+                        </div>
+                    </li>
+                    <li class="card flex gap-4 p-5">
+                        <span class="flex size-8 flex-none items-center justify-center rounded-lg bg-inset font-mono text-sm font-bold text-accent-strong">3</span>
+                        <div>
+                            <h3 class="font-semibold text-ink">Add the server &amp; go</h3>
+                            <p class="mt-1 text-sm/relaxed">Launch the pack, add <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">modded.mc.funami.tech</code> or <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">survival.modded.mc.funami.tech</code>, leave the port empty. Enjoy!</p>
+                        </div>
+                    </li>
+                </ol>
+                <p class="mt-6 text-sm text-faint">
+                    The two rules from the <a class="text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong" href="/#rules">front page</a>
+                    apply here too: don't lag the server, don't grief. Modded gives you *far* more
+                    creative ways to lag a server. Please be gentle; it lives in a house.
+                </p>
+            </div>
+        </section>
+
+        <!-- The attic -->
+        <section class="border-b border-line bg-surface/50">
+            <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
+                <div class="card flex flex-col gap-6 p-6 sm:p-8 md:flex-row md:items-center md:justify-between">
+                    <div class="max-w-xl">
+                        <h2 class="section-title">The attic</h2>
+                        <p class="mt-2 text-sm/relaxed">
+                            Our mirror keeps every YuruMC pack we have ever shipped, plus an old
+                            world archive, in one dusty directory. Only
+                            <strong class="text-ink">{{pack.modded.name}}</strong> is live right
+                            now — the rest are souvenirs from seasons that have ended. Take them
+                            anyway; nobody is stopping you.
+                        </p>
+                    </div>
+                    <a href="https://mirror.funami.tech/yurumc/" class="btn-primary self-start md:self-auto">
+                        <svg class="size-4" aria-hidden="true"><use href="#i-folder-open"/></svg>
+                        mirror.funami.tech/yurumc/
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- @include partials/footer.html -->
+</body>
+
+</html>

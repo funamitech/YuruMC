@@ -122,6 +122,7 @@
                         </ul>
 
                         <div class="mt-5 flex flex-wrap gap-2">
+                            <span class="chip"><svg class="size-3" aria-hidden="true"><use href="#i-box"/></svg>Minecraft 26.2 on Java — no ViaVersion, so match it</span>
                             <span class="chip"><svg class="size-3" aria-hidden="true"><use href="#i-users"/></svg>Bedrock players sneak in through Geyser</span>
                             <a href="https://map.mc.funami.tech/" class="chip-accent transition-colors hover:bg-inset">
                                 <svg class="size-3" aria-hidden="true"><use href="#i-map"/></svg>
@@ -188,55 +189,50 @@
             </div>
         </section>
 
-        <!-- Modded server -->
+        <!-- Modded servers teaser -->
         <section id="modded" class="scroll-mt-20 border-t border-line bg-surface/50">
             <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
                 <div class="card flex flex-col gap-8 p-6 sm:p-8 md:flex-row md:items-center md:justify-between">
-                    <div class="max-w-lg">
+                    <div class="max-w-xl">
                         <p class="chip-accent">
                             <svg class="size-3" aria-hidden="true"><use href="#i-package"/></svg>
-                            NeoForge 21.1.228
+                            Two of them, actually
                         </p>
-                        <h2 class="section-title mt-4">Modded server (Yui's other child)</h2>
+                        <h2 class="section-title mt-4">Modded servers (Yui's other children)</h2>
                         <p class="mt-2 text-sm/relaxed">
-                            YuruMC also runs a modded Minecraft server, because one server
-                            apparently wasn't enough work for Yui. Install the
-                            <strong class="text-ink">YuruMC Pack NeoForged 1.21</strong> modpack
-                            (a Modrinth-format <code class="rounded bg-inset px-1 py-0.5 font-mono text-[13px] text-accent-strong">.mrpack</code>)
-                            from the mirror, then connect to
-                            <code class="rounded bg-inset px-1.5 py-0.5 font-mono text-[13px] text-accent-strong">modded.mc.funami.tech</code>
-                            on Java Edition. Java only — Yui has to draw the line somewhere.
+                            YuruMC also runs <strong class="text-ink">two</strong> modded Minecraft
+                            servers, because one server apparently wasn't enough work for Yui. Our
+                            own {{pack.modded.modCount}}-mod pack on
+                            <code class="rounded bg-inset px-1.5 py-0.5 font-mono text-[13px] text-accent-strong">modded.mc.funami.tech</code>,
+                            and {{pack.modded-survival.name}} — rocks, then GregTech — on
+                            <code class="rounded bg-inset px-1.5 py-0.5 font-mono text-[13px] text-accent-strong">survival.modded.mc.funami.tech</code>.
+                            Addresses, downloads and versions all live on their own page, because
+                            they would not fit here.
                         </p>
                         <div class="mt-5 flex flex-wrap gap-3">
-                            <a href="https://mirror.funami.tech/yurumc/YuruMC%20Pack%20NeoForged%201.21.mrpack" class="btn-primary">
-                                <svg class="size-4" aria-hidden="true"><use href="#i-download"/></svg>
-                                Download the modpack (.mrpack)
+                            <a href="/modded.html" class="btn-primary">
+                                <svg class="size-4" aria-hidden="true"><use href="#i-package"/></svg>
+                                Both modded servers →
                             </a>
-                            <a href="https://map.modded.mc.funami.tech/" class="btn-ghost">
-                                <svg class="size-4" aria-hidden="true"><use href="#i-map"/></svg>
-                                Modded live map — go peek there too
+                            <a href="{{pack.modded.downloadUrl}}" class="btn-ghost">
+                                <svg class="size-4 text-accent" aria-hidden="true"><use href="#i-download"/></svg>
+                                Straight to the .mrpack
                             </a>
                         </div>
-                        <p class="mt-3 text-xs text-faint">230-odd mods and two shaderpacks in one .mrpack. Your laptop fans are about to learn what a Create contraption sounds like.</p>
+                        <p class="mt-3 text-xs text-faint">Java Edition only over there. Yui has to draw the line somewhere.</p>
                     </div>
-                    <dl class="grid min-w-0 gap-3 text-sm sm:min-w-64">
+                    <dl class="grid min-w-0 gap-3 text-sm sm:min-w-72">
                         <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
-                            <dt class="text-faint">Address</dt>
-                            <dd class="flex min-w-0 items-center gap-1 font-mono text-[13px] font-semibold break-all text-ink sm:text-sm">
-                                modded.mc.funami.tech
-                                <button type="button" class="copy-btn" data-copy="modded.mc.funami.tech" aria-label="Copy modded server address" hidden>
-                                    <svg class="size-3.5" data-copy-icon aria-hidden="true"><use href="#i-copy"/></svg>
-                                    <svg class="size-3.5 text-accent-strong" data-copied-icon hidden aria-hidden="true"><use href="#i-check"/></svg>
-                                </button>
-                            </dd>
+                            <dt class="text-faint">YuruMC Modded</dt>
+                            <dd class="font-medium text-ink">MC {{pack.modded.minecraft}} · {{pack.modded.loader}}</dd>
                         </div>
                         <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
-                            <dt class="text-faint">Version</dt>
-                            <dd class="font-medium text-ink">Minecraft 1.21.1 (Java Edition)</dd>
+                            <dt class="text-faint">Modded Survival</dt>
+                            <dd class="font-medium text-ink">MC {{pack.modded-survival.minecraft}} · {{pack.modded-survival.loader}}</dd>
                         </div>
                         <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
-                            <dt class="text-faint whitespace-nowrap">Every pack &amp; old world</dt>
-                            <dd class="min-w-0"><a class="inline-flex items-center gap-1 font-medium break-all text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong" href="https://mirror.funami.tech/yurumc/">mirror.funami.tech/yurumc/<svg class="size-3" aria-hidden="true"><use href="#i-external-link"/></svg></a></dd>
+                            <dt class="text-faint whitespace-nowrap">All the details</dt>
+                            <dd class="min-w-0"><a class="inline-flex items-center gap-1 font-medium text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong" href="/modded.html">/modded.html</a></dd>
                         </div>
                     </dl>
                 </div>
@@ -291,8 +287,9 @@
                         <h3 class="mt-4 font-semibold text-ink">Live map (spy mode)</h3>
                         <p class="mt-2 text-sm/relaxed">
                             Explore the world in your browser with
-                            <a class="text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong" href="https://map.mc.funami.tech/">BlueMap</a> — for the modded
-                            server too. Spy on your friends' half-finished builds. Explore!
+                            <a class="text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong" href="https://map.mc.funami.tech/">BlueMap</a> — and
+                            <a class="text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong" href="https://map.modded.mc.funami.tech/">the modded server has one too</a>.
+                            Spy on your friends' half-finished builds. Explore!
                         </p>
                     </div>
                 </div>

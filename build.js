@@ -7,9 +7,13 @@
  * Inside an included partial, `{{key}}` placeholders are replaced with the
  * parameters given at the include site.
  *
+ * Any page may also use `{{pack.<id>.<field>}}` to pull modpack facts out of
+ * data/modpacks.json — the file `scripts/modpack.js` generates from the real
+ * Modrinth/CurseForge listings. Those values are HTML-escaped on the way in.
+ *
  * Usage: node build.js
  */
-import { readFileSync, writeFileSync, mkdirSync, readdirSync, statSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { join, dirname, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -17,8 +21,35 @@ const ROOT = dirname(fileURLToPath(import.meta.url));
 const TEMPLATES = join(ROOT, 'templates');
 const OUT = join(ROOT, 'src');
 
+const DATA_FILE = join(ROOT, 'data', 'modpacks.json');
+
 const INCLUDE_RE = /<!--\s*@include\s+([\w./-]+)((?:\s+[\w-]+="[^"]*")*)\s*-->/g;
 const PARAM_RE = /([\w-]+)="([^"]*)"/g;
+
+const escapeHTML = (value) => String(value)
+  .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
+/**
+ * Flatten data/modpacks.json into `pack.<id>.<field>` placeholders.
+ * Missing file = no placeholders; pages that use them will warn loudly.
+ */
+function loadModpacks() {
+  if (!existsSync(DATA_FILE)) {
+    console.warn('  warning: data/modpacks.json is missing — run `npm run modpack -- <url>`');
+    return {};
+  }
+  const { packs = {} } = JSON.parse(readFileSync(DATA_FILE, 'utf8'));
+  const flat = {};
+  for (const [id, pack] of Object.entries(packs)) {
+    for (const [field, value] of Object.entries(pack)) {
+      if (value === null || value === undefined) continue;
+      flat[`pack.${id}.${field}`] = escapeHTML(value);
+    }
+  }
+  return flat;
+}
+
+let DATA = loadModpacks();
 
 function expand(source, params = {}, depth = 0) {
   if (depth > 10) throw new Error('include depth exceeded (circular include?)');
@@ -34,8 +65,9 @@ function expand(source, params = {}, depth = 0) {
     return expand(readFileSync(path, 'utf8'), childParams, depth + 1).trimEnd();
   });
 
-  return source.replace(/\{\{([\w-]+)\}\}/g, (m, key) => {
+  return source.replace(/\{\{([\w.-]+)\}\}/g, (m, key) => {
     if (key in params) return params[key];
+    if (key in DATA) return DATA[key];
     console.warn(`  warning: no value for {{${key}}}`);
     return '';
   });
@@ -43,6 +75,7 @@ function expand(source, params = {}, depth = 0) {
 
 /** Expand a single template file (path relative to templates/). */
 export function expandFile(relPath) {
+  DATA = loadModpacks();   // re-read so the dev server picks up modpack.js runs
   const source = readFileSync(join(TEMPLATES, relPath), 'utf8');
   const banner = `<!-- GENERATED from templates/${relPath} — edit there, then run \`npm run build\` -->\n`;
   return banner + expand(source);

@@ -1,14 +1,14 @@
-<!-- GENERATED from templates/index.html — edit there, then run `npm run build` -->
+<!-- GENERATED from templates/modded.html — edit there, then run `npm run build` -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>YuruMC — the laid-back semi-vanilla SMP in Gyeonggi, South Korea</title>
-<meta name="description" content="Semi-vanilla SMP Minecraft server running since 2021 on a student's home server in Gyeonggi, South Korea. Two rules, Java and Bedrock Edition, and one tired Yui Funami keeping it all up. Server address: mc.funami.tech — honestly the only thing you need from this page.">
-<meta property="og:title" content="YuruMC — the laid-back semi-vanilla SMP in Gyeonggi, South Korea">
-<meta property="og:description" content="Semi-vanilla SMP Minecraft server running since 2021 on a student's home server in Gyeonggi, South Korea. Two rules, Java and Bedrock Edition, and one tired Yui Funami keeping it all up. Server address: mc.funami.tech — honestly the only thing you need from this page.">
+<title>Modded servers — YuruMC</title>
+<meta name="description" content="YuruMC runs two modded Minecraft servers: our own NeoForge pack on modded.mc.funami.tech, and TerraFirmaGreg Modern on survival.modded.mc.funami.tech. Addresses, modpack downloads, versions and loaders — all of it on one page.">
+<meta property="og:title" content="Modded servers — YuruMC">
+<meta property="og:description" content="YuruMC runs two modded Minecraft servers: our own NeoForge pack on modded.mc.funami.tech, and TerraFirmaGreg Modern on survival.modded.mc.funami.tech. Addresses, modpack downloads, versions and loaders — all of it on one page.">
 <meta property="og:image" content="https://mc.funami.tech/assets/img/og-hero.jpg">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
@@ -79,96 +79,81 @@
 </header>
 
     <main>
-        <!-- Hero: the server's own build screenshot fades into the canvas -->
-        <section class="relative overflow-hidden">
-            <div class="absolute inset-y-0 right-0 w-[88%] [mask-image:linear-gradient(to_right,transparent,black_55%)] sm:w-[72%] md:w-[64%] md:[mask-image:linear-gradient(to_right,transparent_20%,black_65%)] lg:w-[62%] lg:[mask-image:linear-gradient(to_right,transparent,black_40%)]" aria-hidden="true">
-                <img src="/assets/img/hero-2023-06-24.webp" alt="" fetchpriority="high" width="2560" height="1600"
-                     class="size-full object-cover object-[62%_55%]">
-                <div class="absolute inset-0 bg-canvas/55 md:bg-canvas/40 lg:bg-canvas/20 xl:bg-canvas/10"></div>
-            </div>
-            <div class="glow -top-32 -left-24 size-[28rem] bg-plum-400/20" aria-hidden="true"></div>
-            <div class="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-canvas to-transparent" aria-hidden="true"></div>
-
-            <div class="relative mx-auto flex max-w-6xl items-center px-4 py-16 sm:px-6 lg:min-h-[37rem] lg:py-24">
-                <div class="max-w-2xl">
-                    <p class="chip">
-                        <svg class="size-3.5" aria-hidden="true"><use href="#i-map-pin"/></svg>
-                        Gyeonggi, South Korea
-                        <span class="text-line-strong">·</span>
-                        <svg class="size-3.5" aria-hidden="true"><use href="#i-calendar"/></svg>
-                        Since 2021, somehow
-                    </p>
-                    <h1 class="mt-5 text-4xl font-bold tracking-tight text-ink sm:text-5xl md:max-w-lg lg:max-w-none lg:text-6xl">
-                        The laid-back
-                        <span class="whitespace-nowrap text-accent-strong">semi-vanilla</span> SMP.
-                        <span class="block text-faint">Yui is not.</span>
-                    </h1>
-                    <p class="mt-5 max-w-md text-lg/relaxed xl:max-w-xl">
-                        Welcome to YuruMC! Semi-vanilla SMP Minecraft server running since
-                        2021! Minimal rules, Java and Bedrock Edition, hosted on a student's
-                        home server in Gyeonggi, South Korea. Yui keeps it up between classes. Enjoy!
-                    </p>
-                    <div class="mt-8 flex flex-wrap gap-3">
-                        <a href="#play" class="btn-primary">
-                            <svg class="size-4" aria-hidden="true"><use href="#i-gamepad"/></svg>
-                            Play! (Yui explains how)
-                        </a>
-                        <a href="#rules" class="btn-ghost">
-                            <svg class="size-4 text-accent" aria-hidden="true"><use href="#i-scale"/></svg>
-                            Read the rules. Both of them.
-                        </a>
-                    </div>
-                    <dl class="mt-10 flex flex-wrap gap-x-10 gap-y-4">
-                        <div>
-                            <dt class="text-xs font-medium tracking-wider text-faint uppercase">The only address you need</dt>
-                            <dd class="mt-1 font-mono text-xl font-bold text-ink sm:text-2xl">mc.funami.tech</dd>
-                        </div>
-                        <div>
-                            <dt class="text-xs font-medium tracking-wider text-faint uppercase">Rules, total</dt>
-                            <dd class="mt-1 text-2xl font-bold text-ink tabular-nums">2</dd>
-                        </div>
-                        <div>
-                            <dt class="text-xs font-medium tracking-wider text-faint uppercase">Surviving since</dt>
-                            <dd class="mt-1 text-2xl font-bold text-ink tabular-nums">2021</dd>
-                        </div>
-                    </dl>
+        <!-- Hero -->
+        <section class="relative overflow-hidden border-b border-line">
+            <div class="glow -top-40 -left-24 size-[30rem] bg-plum-400/20" aria-hidden="true"></div>
+            <div class="glow -top-32 right-0 size-[26rem] bg-plum-300/25" aria-hidden="true"></div>
+            <div class="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
+                <p class="chip">
+                    <svg class="size-3.5" aria-hidden="true"><use href="#i-package"/></svg>
+                    Two servers
+                    <span class="text-line-strong">·</span>
+                    <svg class="size-3.5" aria-hidden="true"><use href="#i-cpu"/></svg>
+                    229 + 273 mods
+                    <span class="text-line-strong">·</span>
+                    <svg class="size-3.5" aria-hidden="true"><use href="#i-map-pin"/></svg>
+                    Gyeonggi, South Korea
+                </p>
+                <h1 class="mt-5 max-w-3xl text-4xl font-bold tracking-tight text-ink sm:text-5xl lg:text-6xl">
+                    Modded servers.
+                    <span class="block text-faint">Yui said “just one more mod” 502 times.</span>
+                </h1>
+                <p class="mt-5 max-w-2xl text-lg/relaxed">
+                    The vanilla SMP over on the <a class="text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong" href="/">front page</a>
+                    is the calm one. These two are not. One runs a modpack we built ourselves; the
+                    other runs TerraFirmaGreg, where you start by hitting rocks together and end up
+                    with a GregTech factory. Both are Java Edition only — Yui has to draw the line
+                    somewhere, and she drew it here.
+                </p>
+                <div class="mt-8 flex flex-wrap gap-3">
+                    <a href="#yurumc-pack" class="btn-primary">
+                        <svg class="size-4" aria-hidden="true"><use href="#i-package"/></svg>
+                        Our own pack
+                    </a>
+                    <a href="#terrafirmagreg" class="btn-ghost">
+                        <svg class="size-4 text-accent" aria-hidden="true"><use href="#i-pickaxe"/></svg>
+                        Rocks &amp; GregTech
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- How to play -->
-        <section id="play" class="scroll-mt-20 border-t border-line bg-surface/50">
+        <!-- Server 1: our own NeoForge pack -->
+        <section id="yurumc-pack" class="scroll-mt-20 border-b border-line bg-surface/50">
             <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
-                <h2 class="section-title">How to play (Yui explains it once)</h2>
+                <div class="flex flex-wrap items-center gap-3">
+                    <span class="chip-accent">
+                        <svg class="size-3" aria-hidden="true"><use href="#i-package"/></svg>
+                        NeoForge 21.1.228
+                    </span>
+                    <span class="chip">
+                        <svg class="size-3" aria-hidden="true"><use href="#i-check"/></svg>
+                        Homemade, by us, on purpose
+                    </span>
+                </div>
+                <h2 class="section-title mt-4">YuruMC Modded — Yui's other child</h2>
                 <p class="mt-2 max-w-2xl">
-                    This server is playable on both Java Edition and Bedrock Edition. Use
-                    <code class="rounded bg-inset px-1.5 py-0.5 font-mono text-[13px] text-accent-strong">mc.funami.tech</code>
-                    as the server address — no port needed on either edition. That's the whole
-                    tutorial. No forum signup, no Discord verification, no application form
-                    with a personality test.
+                    Our own modpack, assembled by hand and shipped as a Modrinth-format
+                    <code class="rounded bg-inset px-1.5 py-0.5 font-mono text-[13px] text-accent-strong">.mrpack</code>
+                    straight off our mirror. <strong class="text-ink">YuruMC Pack NeoForged 1.21</strong>
+                    (pack version 1.0.0) crams 229 mods and
+                    two shaderpacks into one file, for Minecraft 1.21.1 on
+                    NeoForge 21.1.228.
+                    Your laptop fans are about to learn what a Create contraption sounds like.
                 </p>
 
                 <div class="mt-8 grid gap-4 lg:grid-cols-5">
-                    <div class="card p-6 lg:col-span-3 lg:self-start">
-                        <div class="flex items-center gap-3">
-                            <span class="flex size-10 items-center justify-center rounded-xl bg-accent-soft text-accent-strong">
-                                <svg class="size-5" aria-hidden="true"><use href="#i-pickaxe"/></svg>
-                            </span>
-                            <div>
-                                <h3 class="font-semibold text-ink">YuruMC — semi-vanilla SMP</h3>
-                                <p class="text-sm text-faint">Semi-vanilla SMP Minecraft server with minimal rules. Survival, maximum Yui.</p>
-                            </div>
-                        </div>
-
-                        <ul class="mt-6 divide-y divide-line border-y border-line">
+                    <div class="card p-6 lg:col-span-3">
+                        <h3 class="font-semibold text-ink">Getting in</h3>
+                        <ul class="mt-4 divide-y divide-line border-y border-line">
                             <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-3">
-                                <span class="flex w-40 items-center gap-2 text-sm text-faint">
+                                <span class="flex w-32 items-center gap-2 text-sm text-faint">
                                     <svg class="size-4" aria-hidden="true"><use href="#i-monitor"/></svg>
-                                    Java Edition
+                                    Address
                                 </span>
-                                <span class="address" data-address="mc.funami.tech">
-                                    <code class="font-mono text-sm font-semibold text-ink">mc.funami.tech</code>
-                                    <button type="button" class="copy-btn" data-copy="mc.funami.tech" aria-label="Copy Java Edition address" hidden>
+                                <span class="address">
+                                    <code class="font-mono text-sm font-semibold break-all text-ink">modded.mc.funami.tech</code>
+                                    <button type="button" class="copy-btn" data-copy="modded.mc.funami.tech" aria-label="Copy modded server address" hidden>
                                         <svg class="size-3.5" data-copy-icon aria-hidden="true"><use href="#i-copy"/></svg>
                                         <svg class="size-3.5 text-accent-strong" data-copied-icon hidden aria-hidden="true"><use href="#i-check"/></svg>
                                     </button>
@@ -176,192 +161,283 @@
                                 <span class="chip">no port, we promise</span>
                             </li>
                             <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-3">
-                                <span class="flex w-40 items-center gap-2 text-sm text-faint">
-                                    <svg class="size-4" aria-hidden="true"><use href="#i-smartphone"/></svg>
-                                    Bedrock Edition
+                                <span class="flex w-32 items-center gap-2 text-sm text-faint">
+                                    <svg class="size-4" aria-hidden="true"><use href="#i-gamepad"/></svg>
+                                    Edition
                                 </span>
-                                <span class="address">
-                                    <code class="font-mono text-sm font-semibold text-ink">mc.funami.tech</code>
-                                    <button type="button" class="copy-btn" data-copy="mc.funami.tech" aria-label="Copy Bedrock Edition address" hidden>
-                                        <svg class="size-3.5" data-copy-icon aria-hidden="true"><use href="#i-copy"/></svg>
-                                        <svg class="size-3.5 text-accent-strong" data-copied-icon hidden aria-hidden="true"><use href="#i-check"/></svg>
-                                    </button>
+                                <span class="text-sm font-medium text-ink">Java Edition, Minecraft 1.21.1</span>
+                                <span class="chip">no Bedrock here, sorry</span>
+                            </li>
+                            <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-3">
+                                <span class="flex w-32 items-center gap-2 text-sm text-faint">
+                                    <svg class="size-4" aria-hidden="true"><use href="#i-users"/></svg>
+                                    Room for
                                 </span>
-                                <span class="chip">port 19132 — the default, leave it alone</span>
+                                <span class="text-sm font-medium text-ink">30 people, no whitelist, no application form</span>
                             </li>
                         </ul>
 
-                        <div class="mt-5 flex flex-wrap gap-2">
-                            <span class="chip"><svg class="size-3" aria-hidden="true"><use href="#i-box"/></svg>Minecraft 26.2 on Java — no ViaVersion, so match it</span>
-                            <span class="chip"><svg class="size-3" aria-hidden="true"><use href="#i-users"/></svg>Bedrock players sneak in through Geyser</span>
-                            <a href="https://map.mc.funami.tech/" class="chip-accent transition-colors hover:bg-inset">
-                                <svg class="size-3" aria-hidden="true"><use href="#i-map"/></svg>
-                                Live map (BlueMap) — go peek
-                                <svg class="size-3" aria-hidden="true"><use href="#i-external-link"/></svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <ol class="grid gap-4 lg:col-span-2">
-                        <li class="card flex gap-4 p-5">
-                            <span class="flex size-8 flex-none items-center justify-center rounded-lg bg-inset font-mono text-sm font-bold text-accent-strong">1</span>
-                            <div>
-                                <h3 class="font-semibold text-ink">Open Multiplayer</h3>
-                                <p class="mt-1 text-sm/relaxed">In Minecraft, go to Multiplayer (Java) or Servers (Bedrock) and add a server. Yui believes in you.</p>
-                            </div>
-                        </li>
-                        <li class="card flex gap-4 p-5">
-                            <span class="flex size-8 flex-none items-center justify-center rounded-lg bg-inset font-mono text-sm font-bold text-accent-strong">2</span>
-                            <div>
-                                <h3 class="font-semibold text-ink">Enter the address</h3>
-                                <p class="mt-1 text-sm/relaxed">Type <code class="rounded bg-inset px-1 py-0.5 font-mono text-[13px] text-accent-strong">mc.funami.tech</code>. Leave the port alone. Yui will know.</p>
-                            </div>
-                        </li>
-                        <li class="card flex gap-4 p-5">
-                            <span class="flex size-8 flex-none items-center justify-center rounded-lg bg-inset font-mono text-sm font-bold text-accent-strong">3</span>
-                            <div>
-                                <h3 class="font-semibold text-ink">Join and have fun (Yui's orders)</h3>
-                                <p class="mt-1 text-sm/relaxed">Read the two rules below — yes, both — and you're set. Enjoy!</p>
-                            </div>
-                        </li>
-                    </ol>
-                </div>
-            </div>
-        </section>
-
-        <!-- Rules -->
-        <section id="rules" class="scroll-mt-20 border-t border-line">
-            <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
-                <h2 class="section-title">Rules (there are two)</h2>
-                <p class="mt-2 max-w-2xl">
-                    We have just two rules. Everything else is up to you. Even hacked
-                    clients are allowed! Yes, really. No, we're not adding a third. The
-                    Student Council reviewed this list; the meeting took ninety seconds.
-                </p>
-
-                <ol class="mt-8 grid gap-4 md:grid-cols-2">
-                    <li class="card flex gap-5 p-6">
-                        <span class="flex size-12 flex-none items-center justify-center rounded-2xl bg-accent-soft font-mono text-xl font-bold text-accent-strong">1</span>
-                        <div>
-                            <h3 class="text-lg font-semibold text-ink">Don't lag the server.</h3>
-                            <p class="mt-1 text-sm/relaxed">This includes lag machine and *ban technique. This is a student's home server — Yui can hear the fans from her desk.</p>
-                        </div>
-                    </li>
-                    <li class="card flex gap-5 p-6">
-                        <span class="flex size-12 flex-none items-center justify-center rounded-2xl bg-accent-soft font-mono text-xl font-bold text-accent-strong">2</span>
-                        <div>
-                            <h3 class="text-lg font-semibold text-ink">Don't grief.</h3>
-                            <p class="mt-1 text-sm/relaxed">You can do anything you want, except griefing or lagging the server! Building an ugly house is legal. Building it on top of someone else's house is not. Yui has a very long memory.</p>
-                        </div>
-                    </li>
-                </ol>
-                <p class="mt-6 text-sm text-faint">That's it. That's the whole rulebook. Yui is very proud of how short it is.</p>
-            </div>
-        </section>
-
-        <!-- Modded servers teaser -->
-        <section id="modded" class="scroll-mt-20 border-t border-line bg-surface/50">
-            <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
-                <div class="card flex flex-col gap-8 p-6 sm:p-8 md:flex-row md:items-center md:justify-between">
-                    <div class="max-w-xl">
-                        <p class="chip-accent">
-                            <svg class="size-3" aria-hidden="true"><use href="#i-package"/></svg>
-                            Two of them, actually
-                        </p>
-                        <h2 class="section-title mt-4">Modded servers (Yui's other children)</h2>
-                        <p class="mt-2 text-sm/relaxed">
-                            YuruMC also runs <strong class="text-ink">two</strong> modded Minecraft
-                            servers, because one server apparently wasn't enough work for Yui. Our
-                            own 229-mod pack on
-                            <code class="rounded bg-inset px-1.5 py-0.5 font-mono text-[13px] text-accent-strong">modded.mc.funami.tech</code>,
-                            and TerraFirmaGreg-Modern — rocks, then GregTech — on
-                            <code class="rounded bg-inset px-1.5 py-0.5 font-mono text-[13px] text-accent-strong">survival.modded.mc.funami.tech</code>.
-                            Addresses, downloads and versions all live on their own page, because
-                            they would not fit here.
-                        </p>
                         <div class="mt-5 flex flex-wrap gap-3">
-                            <a href="/modded.html" class="btn-primary">
-                                <svg class="size-4" aria-hidden="true"><use href="#i-package"/></svg>
-                                Both modded servers →
+                            <a href="https://mirror.funami.tech/yurumc/YuruMC%20Pack%20NeoForged%201.21.mrpack" class="btn-primary">
+                                <svg class="size-4" aria-hidden="true"><use href="#i-download"/></svg>
+                                Download YuruMC Pack NeoForged 1.21.mrpack
                             </a>
-                            <a href="https://mirror.funami.tech/yurumc/YuruMC%20Pack%20NeoForged%201.21.mrpack" class="btn-ghost">
-                                <svg class="size-4 text-accent" aria-hidden="true"><use href="#i-download"/></svg>
-                                Straight to the .mrpack
+                            <a href="https://map.modded.mc.funami.tech/" class="btn-ghost">
+                                <svg class="size-4" aria-hidden="true"><use href="#i-map"/></svg>
+                                Live map — go peek
                             </a>
                         </div>
-                        <p class="mt-3 text-xs text-faint">Java Edition only over there. Yui has to draw the line somewhere.</p>
+                        <p class="mt-3 text-xs text-faint">
+                            The live map has eleven dimensions on it, including the Aether and a
+                            handful of planets. Yui has not visited most of them.
+                        </p>
                     </div>
-                    <dl class="grid min-w-0 gap-3 text-sm sm:min-w-72">
+
+                    <dl class="grid min-w-0 gap-3 text-sm lg:col-span-2 lg:self-start">
                         <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
-                            <dt class="text-faint">YuruMC Modded</dt>
-                            <dd class="font-medium text-ink">MC 1.21.1 · NeoForge</dd>
+                            <dt class="text-faint">Modpack</dt>
+                            <dd class="min-w-0 font-medium break-words text-ink">YuruMC Pack NeoForged 1.21</dd>
                         </div>
                         <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
-                            <dt class="text-faint">Modded Survival</dt>
-                            <dd class="font-medium text-ink">MC 1.20.1 · Forge</dd>
+                            <dt class="text-faint">Pack version</dt>
+                            <dd class="font-medium text-ink">1.0.0</dd>
                         </div>
                         <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
-                            <dt class="text-faint whitespace-nowrap">All the details</dt>
-                            <dd class="min-w-0"><a class="inline-flex items-center gap-1 font-medium text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong" href="/modded.html">/modded.html</a></dd>
+                            <dt class="text-faint">Minecraft</dt>
+                            <dd class="font-medium text-ink">1.21.1 (Java)</dd>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
+                            <dt class="text-faint">Mod loader</dt>
+                            <dd class="font-medium text-ink">NeoForge 21.1.228</dd>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
+                            <dt class="text-faint">Mods in the pack</dt>
+                            <dd class="font-medium text-ink tabular-nums">229 (+2 shaderpacks)</dd>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
+                            <dt class="text-faint">Live map</dt>
+                            <dd class="min-w-0"><a class="inline-flex items-center gap-1 font-medium break-all text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong" href="https://map.modded.mc.funami.tech/">map.modded.mc.funami.tech<svg class="size-3 flex-none" aria-hidden="true"><use href="#i-external-link"/></svg></a></dd>
                         </div>
                     </dl>
                 </div>
             </div>
         </section>
 
-        <!-- Why -->
-        <section class="border-t border-line">
+        <!-- Server 2: TerraFirmaGreg -->
+        <section id="terrafirmagreg" class="scroll-mt-20 border-b border-line">
             <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
-                <h2 class="section-title">Why YuruMC? (Yui makes her case)</h2>
-                <p class="mt-2 max-w-2xl">Every club needs a recruitment poster. Ours is four cards and a screenshot from 2023.</p>
-                <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                <div class="flex flex-wrap items-center gap-3">
+                    <span class="chip-accent">
+                        <svg class="size-3" aria-hidden="true"><use href="#i-pickaxe"/></svg>
+                        Forge 47.4.13
+                    </span>
+                    <span class="chip">
+                        <svg class="size-3" aria-hidden="true"><use href="#i-calendar"/></svg>
+                        Pack updated 2026-09-05
+                    </span>
+                </div>
+                <h2 class="section-title mt-4">YuruMC Modded Survival — rocks first, reactors later</h2>
+                <p class="mt-2 max-w-2xl">
+                    This one runs an assortment of other people's hard work:
+                    <strong class="text-ink">TerraFirmaGreg-Modern 0.13.10</strong>
+                    off CurseForge. In the pack authors' own words —
+                    <em>"Want more survival and exploration with your tech? A TerraFirmaCraft + GregTech modpack for 1.20.1."</em> — which is a polite way of saying you
+                    will spend your first evening knapping flint while someone in chat brags about
+                    their steam boiler. 273 mods, Minecraft
+                    1.20.1, Forge
+                    47.4.13, and genuinely no hand-holding.
+                </p>
+
+                <div class="mt-8 grid gap-4 lg:grid-cols-5">
+                    <div class="card p-6 lg:col-span-3">
+                        <h3 class="font-semibold text-ink">Getting in</h3>
+                        <ul class="mt-4 divide-y divide-line border-y border-line">
+                            <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-3">
+                                <span class="flex w-32 items-center gap-2 text-sm text-faint">
+                                    <svg class="size-4" aria-hidden="true"><use href="#i-monitor"/></svg>
+                                    Address
+                                </span>
+                                <span class="address">
+                                    <code class="font-mono text-sm font-semibold break-all text-ink">survival.modded.mc.funami.tech</code>
+                                    <button type="button" class="copy-btn" data-copy="survival.modded.mc.funami.tech" aria-label="Copy modded survival server address" hidden>
+                                        <svg class="size-3.5" data-copy-icon aria-hidden="true"><use href="#i-copy"/></svg>
+                                        <svg class="size-3.5 text-accent-strong" data-copied-icon hidden aria-hidden="true"><use href="#i-check"/></svg>
+                                    </button>
+                                </span>
+                                <span class="chip">also no port</span>
+                            </li>
+                            <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-3">
+                                <span class="flex w-32 items-center gap-2 text-sm text-faint">
+                                    <svg class="size-4" aria-hidden="true"><use href="#i-gamepad"/></svg>
+                                    Edition
+                                </span>
+                                <span class="text-sm font-medium text-ink">Java Edition, Minecraft 1.20.1</span>
+                                <span class="chip">survival, difficulty normal</span>
+                            </li>
+                            <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-3">
+                                <span class="flex w-32 items-center gap-2 text-sm text-faint">
+                                    <svg class="size-4" aria-hidden="true"><use href="#i-users"/></svg>
+                                    Room for
+                                </span>
+                                <span class="text-sm font-medium text-ink">30 people, no whitelist, bring a friend to blame</span>
+                            </li>
+                        </ul>
+
+                        <div class="mt-5 flex flex-wrap gap-3">
+                            <a href="https://www.curseforge.com/minecraft/modpacks/terrafirmagreg-modern/files/8813051" class="btn-primary">
+                                <svg class="size-4" aria-hidden="true"><use href="#i-download"/></svg>
+                                Get the pack on CurseForge
+                            </a>
+                            <a href="https://www.curseforge.com/minecraft/modpacks/terrafirmagreg-modern" class="btn-ghost">
+                                <svg class="size-4 text-accent" aria-hidden="true"><use href="#i-external-link"/></svg>
+                                Pack page &amp; changelog
+                            </a>
+                        </div>
+                        <p class="mt-3 text-xs text-faint">
+                            Install <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">TerraFirmaGreg-Modern-0.13.10-curseforge.zip</code>
+                            — the exact file the server runs. No live map for this one yet; you will
+                            have to explore with your actual eyes, like a peasant. (Fitting, really.)
+                        </p>
+                    </div>
+
+                    <dl class="grid min-w-0 gap-3 text-sm lg:col-span-2 lg:self-start">
+                        <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
+                            <dt class="text-faint">Modpack</dt>
+                            <dd class="min-w-0 font-medium break-words text-ink">TerraFirmaGreg-Modern</dd>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
+                            <dt class="text-faint">Pack version</dt>
+                            <dd class="font-medium text-ink">0.13.10</dd>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
+                            <dt class="text-faint">Minecraft</dt>
+                            <dd class="font-medium text-ink">1.20.1 (Java)</dd>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
+                            <dt class="text-faint">Mod loader</dt>
+                            <dd class="font-medium text-ink">Forge 47.4.13</dd>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
+                            <dt class="text-faint">Mods in the pack</dt>
+                            <dd class="font-medium text-ink tabular-nums">273</dd>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
+                            <dt class="text-faint">World type</dt>
+                            <dd class="font-mono text-[13px] font-medium text-ink">tfc:overworld</dd>
+                        </div>
+                    </dl>
+                </div>
+
+                <div class="card mt-4 p-6">
+                    <h3 class="flex items-center gap-2 font-semibold text-ink">
+                        <svg class="size-4 text-accent" aria-hidden="true"><use href="#i-wrench"/></svg>
+                        We fiddled with it slightly
+                    </h3>
+                    <p class="mt-2 max-w-3xl text-sm/relaxed">
+                        The server runs stock TerraFirmaGreg-Modern 0.13.10
+                        with three small edits: <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">cubes-without-borders</code>
+                        is left out, and <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">wakes-reforged</code>
+                        plus <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">particular-reforged</code>
+                        are added, because boats should make waves. Client-side either way — install
+                        the pack as published and you are fine.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Which one -->
+        <section class="border-b border-line bg-surface/50">
+            <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
+                <h2 class="section-title">Which one do I want? (Yui's flowchart, without the chart)</h2>
+                <p class="mt-2 max-w-2xl">They are different versions, different loaders and different vibes, so you cannot mix them up. Yui tried.</p>
+                <div class="mt-8 grid gap-4 md:grid-cols-2">
                     <div class="card p-6">
                         <span class="flex size-10 items-center justify-center rounded-xl bg-accent-soft text-accent-strong">
-                            <svg class="size-5" aria-hidden="true"><use href="#i-scale"/></svg>
+                            <svg class="size-5" aria-hidden="true"><use href="#i-package"/></svg>
                         </span>
-                        <h3 class="mt-4 font-semibold text-ink">Fun with little rules</h3>
+                        <h3 class="mt-4 font-semibold text-ink">Pick YuruMC Modded if…</h3>
                         <p class="mt-2 text-sm/relaxed">
-                            We have just two rules. First, don't lag the server. Second,
-                            don't grief. Everything else is up to you. Even hacked clients
-                            are allowed!
+                            …you want the kitchen sink. 229 mods, magic and
+                            machines and several other dimensions, on Minecraft
+                            1.21.1. One download from our mirror and you are in.
                         </p>
+                        <p class="mt-3 text-xs text-faint">There is a live map, so your friends can watch you fail from a browser.</p>
                     </div>
                     <div class="card p-6">
                         <span class="flex size-10 items-center justify-center rounded-xl bg-accent-soft text-accent-strong">
-                            <svg class="size-5" aria-hidden="true"><use href="#i-smartphone"/></svg>
+                            <svg class="size-5" aria-hidden="true"><use href="#i-pickaxe"/></svg>
                         </span>
-                        <h3 class="mt-4 font-semibold text-ink">Java and Bedrock, one address</h3>
+                        <h3 class="mt-4 font-semibold text-ink">Pick Modded Survival if…</h3>
                         <p class="mt-2 text-sm/relaxed">
-                            One address for both editions. Bedrock players join the same
-                            world through Geyser. Yui refuses to remember two addresses.
+                            …you think vanilla survival is too easy and you would like to be
+                            humbled by geology. TerraFirmaGreg-Modern on Minecraft
+                            1.20.1, Forge.
+                            Bring patience; there is no wood pickaxe waiting for you.
+                        </p>
+                        <p class="mt-3 text-xs text-faint">No live map. The wilderness stays wild.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Installing -->
+        <section id="install" class="scroll-mt-20 border-b border-line">
+            <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
+                <h2 class="section-title">Installing a modpack (the short version)</h2>
+                <p class="mt-2 max-w-2xl">
+                    Both packs are ordinary modpack files, so any launcher that imports them will
+                    do. Vanilla launcher will not — this is the one part of YuruMC that needs more
+                    than an address.
+                </p>
+                <ol class="mt-8 grid gap-4 md:grid-cols-3">
+                    <li class="card flex gap-4 p-5">
+                        <span class="flex size-8 flex-none items-center justify-center rounded-lg bg-inset font-mono text-sm font-bold text-accent-strong">1</span>
+                        <div>
+                            <h3 class="font-semibold text-ink">Grab a launcher</h3>
+                            <p class="mt-1 text-sm/relaxed">Anything that can import a pack file — the Modrinth App or Prism Launcher for <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">.mrpack</code>, the CurseForge app or Prism for the CurseForge zip.</p>
+                        </div>
+                    </li>
+                    <li class="card flex gap-4 p-5">
+                        <span class="flex size-8 flex-none items-center justify-center rounded-lg bg-inset font-mono text-sm font-bold text-accent-strong">2</span>
+                        <div>
+                            <h3 class="font-semibold text-ink">Import the pack</h3>
+                            <p class="mt-1 text-sm/relaxed">Our pack: the <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">.mrpack</code> from the mirror. Modded Survival: TerraFirmaGreg-Modern 0.13.10 from CurseForge. The loader comes with it — you do not install NeoForge yourself.</p>
+                        </div>
+                    </li>
+                    <li class="card flex gap-4 p-5">
+                        <span class="flex size-8 flex-none items-center justify-center rounded-lg bg-inset font-mono text-sm font-bold text-accent-strong">3</span>
+                        <div>
+                            <h3 class="font-semibold text-ink">Add the server &amp; go</h3>
+                            <p class="mt-1 text-sm/relaxed">Launch the pack, add <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">modded.mc.funami.tech</code> or <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">survival.modded.mc.funami.tech</code>, leave the port empty. Enjoy!</p>
+                        </div>
+                    </li>
+                </ol>
+                <p class="mt-6 text-sm text-faint">
+                    The two rules from the <a class="text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong" href="/#rules">front page</a>
+                    apply here too: don't lag the server, don't grief. Modded gives you *far* more
+                    creative ways to lag a server. Please be gentle; it lives in a house.
+                </p>
+            </div>
+        </section>
+
+        <!-- The attic -->
+        <section class="border-b border-line bg-surface/50">
+            <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
+                <div class="card flex flex-col gap-6 p-6 sm:p-8 md:flex-row md:items-center md:justify-between">
+                    <div class="max-w-xl">
+                        <h2 class="section-title">The attic</h2>
+                        <p class="mt-2 text-sm/relaxed">
+                            Our mirror keeps every YuruMC pack we have ever shipped, plus an old
+                            world archive, in one dusty directory. Only
+                            <strong class="text-ink">YuruMC Pack NeoForged 1.21</strong> is live right
+                            now — the rest are souvenirs from seasons that have ended. Take them
+                            anyway; nobody is stopping you.
                         </p>
                     </div>
-                    <div class="card p-6">
-                        <span class="flex size-10 items-center justify-center rounded-xl bg-accent-soft text-accent-strong">
-                            <svg class="size-5" aria-hidden="true"><use href="#i-cpu"/></svg>
-                        </span>
-                        <h3 class="mt-4 font-semibold text-ink">Optimized for Best Performance</h3>
-                        <p class="mt-2 text-sm/relaxed">
-                            The servers run on GraalVM, which provides extra performance!
-                            A student's home server needs all the help it can get — so does
-                            Yui, honestly. It shares one box with Mastodon, Lemmy, a Bluesky
-                            PDS and a swarm of Matrix sync workers, and none of them asked
-                            first. (The Matrix homeserver itself moved next door to the
-                            Oomuro house.)
-                        </p>
-                    </div>
-                    <div class="card p-6">
-                        <span class="flex size-10 items-center justify-center rounded-xl bg-accent-soft text-accent-strong">
-                            <svg class="size-5" aria-hidden="true"><use href="#i-map"/></svg>
-                        </span>
-                        <h3 class="mt-4 font-semibold text-ink">Live map (spy mode)</h3>
-                        <p class="mt-2 text-sm/relaxed">
-                            Explore the world in your browser with
-                            <a class="text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong" href="https://map.mc.funami.tech/">BlueMap</a> — and
-                            <a class="text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong" href="https://map.modded.mc.funami.tech/">the modded server has one too</a>.
-                            Spy on your friends' half-finished builds. Explore!
-                        </p>
-                    </div>
+                    <a href="https://mirror.funami.tech/yurumc/" class="btn-primary self-start md:self-auto">
+                        <svg class="size-4" aria-hidden="true"><use href="#i-folder-open"/></svg>
+                        mirror.funami.tech/yurumc/
+                    </a>
                 </div>
             </div>
         </section>
