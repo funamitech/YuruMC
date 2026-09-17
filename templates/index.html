@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- @include partials/head.html title="YuruMC — semi-vanilla SMP Minecraft server in Seoul" description="Semi-vanilla SMP Minecraft server running since 2021. Two rules, Java and Bedrock Edition, hosted in Seoul, South Korea. Server address: mc.funami.tech" -->
+</head>
+
+<body>
+    <!-- @include partials/nav.html -->
+
+    <main>
+        <!-- Hero: the server's own build screenshot fades into the canvas -->
+        <section class="relative overflow-hidden">
+            <div class="absolute inset-y-0 right-0 w-[88%] [mask-image:linear-gradient(to_right,transparent,black_55%)] sm:w-[72%] lg:w-[62%] lg:[mask-image:linear-gradient(to_right,transparent,black_40%)]" aria-hidden="true">
+                <img src="/assets/img/hero-2023-06-24.webp" alt="" fetchpriority="high" width="2560" height="1600"
+                     class="size-full object-cover object-[62%_55%]">
+                <div class="absolute inset-0 bg-canvas/55 sm:bg-canvas/25 lg:bg-canvas/10"></div>
+            </div>
+            <div class="glow -top-32 -left-24 size-[28rem] bg-plum-400/20" aria-hidden="true"></div>
+            <div class="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-canvas to-transparent" aria-hidden="true"></div>
+
+            <div class="relative mx-auto flex max-w-6xl items-center px-4 py-16 sm:px-6 lg:min-h-[37rem] lg:py-24">
+                <div class="max-w-2xl">
+                    <p class="chip">
+                        <svg class="size-3.5" aria-hidden="true"><use href="#i-map-pin"/></svg>
+                        Seoul, South Korea
+                        <span class="text-line-strong">·</span>
+                        <svg class="size-3.5" aria-hidden="true"><use href="#i-calendar"/></svg>
+                        Since 2021
+                    </p>
+                    <h1 class="mt-5 text-4xl font-bold tracking-tight text-ink sm:text-5xl lg:text-6xl">
+                        The laid-back
+                        <span class="whitespace-nowrap text-accent-strong">semi-vanilla</span> SMP.
+                    </h1>
+                    <p class="mt-5 max-w-xl text-lg/relaxed">
+                        Welcome to YuruMC! A semi-vanilla SMP Minecraft server running since
+                        2021 — minimal rules, Java and Bedrock Edition, hosted in Seoul,
+                        South Korea. Enjoy!
+                    </p>
+                    <div class="mt-8 flex flex-wrap gap-3">
+                        <a href="#play" class="btn-primary">
+                            <svg class="size-4" aria-hidden="true"><use href="#i-gamepad"/></svg>
+                            How to play
+                        </a>
+                        <a href="#rules" class="btn-ghost">
+                            <svg class="size-4 text-accent" aria-hidden="true"><use href="#i-scale"/></svg>
+                            Read the rules
+                        </a>
+                    </div>
+                    <dl class="mt-10 flex flex-wrap gap-x-10 gap-y-4">
+                        <div>
+                            <dt class="text-xs font-medium tracking-wider text-faint uppercase">Server address</dt>
+                            <dd class="mt-1 font-mono text-xl font-bold text-ink sm:text-2xl">mc.funami.tech</dd>
+                        </div>
+                        <div>
+                            <dt class="text-xs font-medium tracking-wider text-faint uppercase">Rules</dt>
+                            <dd class="mt-1 text-2xl font-bold text-ink tabular-nums">2</dd>
+                        </div>
+                        <div>
+                            <dt class="text-xs font-medium tracking-wider text-faint uppercase">Running since</dt>
+                            <dd class="mt-1 text-2xl font-bold text-ink tabular-nums">2021</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to play -->
+        <section id="play" class="scroll-mt-20 border-t border-line bg-surface/50">
+            <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
+                <h2 class="section-title">How to play</h2>
+                <p class="mt-2 max-w-2xl">
+                    This server is playable on both Java Edition and Bedrock Edition. Use
+                    <code class="rounded bg-inset px-1.5 py-0.5 font-mono text-[13px] text-accent-strong">mc.funami.tech</code>
+                    as the server address — no port needed on either edition.
+                </p>
+
+                <div class="mt-8 grid gap-4 lg:grid-cols-5">
+                    <div class="card p-6 lg:col-span-3">
+                        <div class="flex items-center gap-3">
+                            <span class="flex size-10 items-center justify-center rounded-xl bg-accent-soft text-accent-strong">
+                                <svg class="size-5" aria-hidden="true"><use href="#i-pickaxe"/></svg>
+                            </span>
+                            <div>
+                                <h3 class="font-semibold text-ink">YuruMC — semi-vanilla SMP</h3>
+                                <p class="text-sm text-faint">The main server. Survival, minimal rules.</p>
+                            </div>
+                        </div>
+
+                        <ul class="mt-6 divide-y divide-line border-y border-line">
+                            <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-3">
+                                <span class="flex w-40 items-center gap-2 text-sm text-faint">
+                                    <svg class="size-4" aria-hidden="true"><use href="#i-monitor"/></svg>
+                                    Java Edition
+                                </span>
+                                <span class="address" data-address="mc.funami.tech">
+                                    <code class="font-mono text-sm font-semibold text-ink">mc.funami.tech</code>
+                                    <button type="button" class="copy-btn" data-copy="mc.funami.tech" aria-label="Copy Java Edition address" hidden>
+                                        <svg class="size-3.5" data-copy-icon aria-hidden="true"><use href="#i-copy"/></svg>
+                                        <svg class="size-3.5 text-accent-strong" data-copied-icon hidden aria-hidden="true"><use href="#i-check"/></svg>
+                                    </button>
+                                </span>
+                            </li>
+                            <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-3">
+                                <span class="flex w-40 items-center gap-2 text-sm text-faint">
+                                    <svg class="size-4" aria-hidden="true"><use href="#i-smartphone"/></svg>
+                                    Bedrock Edition
+                                </span>
+                                <span class="address">
+                                    <code class="font-mono text-sm font-semibold text-ink">mc.funami.tech</code>
+                                    <button type="button" class="copy-btn" data-copy="mc.funami.tech" aria-label="Copy Bedrock Edition address" hidden>
+                                        <svg class="size-3.5" data-copy-icon aria-hidden="true"><use href="#i-copy"/></svg>
+                                        <svg class="size-3.5 text-accent-strong" data-copied-icon hidden aria-hidden="true"><use href="#i-check"/></svg>
+                                    </button>
+                                </span>
+                                <span class="chip">port 19132 (default)</span>
+                            </li>
+                        </ul>
+
+                        <div class="mt-5 flex flex-wrap gap-2">
+                            <span class="chip"><svg class="size-3" aria-hidden="true"><use href="#i-users"/></svg>Bedrock players join through Geyser</span>
+                            <a href="https://map.mc.funami.tech/" class="chip-accent transition-colors hover:bg-inset">
+                                <svg class="size-3" aria-hidden="true"><use href="#i-map"/></svg>
+                                Live map (BlueMap)
+                                <svg class="size-3" aria-hidden="true"><use href="#i-external-link"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <ol class="grid gap-4 lg:col-span-2">
+                        <li class="card flex gap-4 p-5">
+                            <span class="flex size-8 flex-none items-center justify-center rounded-lg bg-inset font-mono text-sm font-bold text-accent-strong">1</span>
+                            <div>
+                                <h3 class="font-semibold text-ink">Open Multiplayer</h3>
+                                <p class="mt-1 text-sm/relaxed">In Minecraft, go to Multiplayer (Java) or Servers (Bedrock) and add a server.</p>
+                            </div>
+                        </li>
+                        <li class="card flex gap-4 p-5">
+                            <span class="flex size-8 flex-none items-center justify-center rounded-lg bg-inset font-mono text-sm font-bold text-accent-strong">2</span>
+                            <div>
+                                <h3 class="font-semibold text-ink">Enter the address</h3>
+                                <p class="mt-1 text-sm/relaxed">Type <code class="rounded bg-inset px-1 py-0.5 font-mono text-[13px] text-accent-strong">mc.funami.tech</code>. Leave the port alone.</p>
+                            </div>
+                        </li>
+                        <li class="card flex gap-4 p-5">
+                            <span class="flex size-8 flex-none items-center justify-center rounded-lg bg-inset font-mono text-sm font-bold text-accent-strong">3</span>
+                            <div>
+                                <h3 class="font-semibold text-ink">Join and have fun</h3>
+                                <p class="mt-1 text-sm/relaxed">Read the two rules below and you're set. Enjoy!</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rules -->
+        <section id="rules" class="scroll-mt-20 border-t border-line">
+            <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
+                <h2 class="section-title">Rules</h2>
+                <p class="mt-2 max-w-2xl">
+                    We have just two rules. Everything else is up to you — even hacked
+                    clients are allowed.
+                </p>
+
+                <ol class="mt-8 grid gap-4 md:grid-cols-2">
+                    <li class="card flex gap-5 p-6">
+                        <span class="flex size-12 flex-none items-center justify-center rounded-2xl bg-accent-soft font-mono text-xl font-bold text-accent-strong">1</span>
+                        <div>
+                            <h3 class="text-lg font-semibold text-ink">Don't lag the server.</h3>
+                            <p class="mt-1 text-sm/relaxed">This includes lag machines and *ban techniques.</p>
+                        </div>
+                    </li>
+                    <li class="card flex gap-5 p-6">
+                        <span class="flex size-12 flex-none items-center justify-center rounded-2xl bg-accent-soft font-mono text-xl font-bold text-accent-strong">2</span>
+                        <div>
+                            <h3 class="text-lg font-semibold text-ink">Don't grief.</h3>
+                            <p class="mt-1 text-sm/relaxed">You can do anything you want, except griefing or lagging the server.</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Modded server -->
+        <section id="modded" class="scroll-mt-20 border-t border-line bg-surface/50">
+            <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
+                <div class="card flex flex-col gap-8 p-8 md:flex-row md:items-center md:justify-between">
+                    <div class="max-w-lg">
+                        <p class="chip-accent">
+                            <svg class="size-3" aria-hidden="true"><use href="#i-package"/></svg>
+                            Minecraft 1.21.1
+                        </p>
+                        <h2 class="section-title mt-4">Modded server</h2>
+                        <p class="mt-2 text-sm/relaxed">
+                            YuruMC also runs a modded Minecraft server. Install the
+                            <strong class="text-ink">YuruMC Pack NeoForged 1.21</strong> modpack
+                            (a Modrinth-format <code class="rounded bg-inset px-1 py-0.5 font-mono text-[13px] text-accent-strong">.mrpack</code>)
+                            from the mirror, then connect to
+                            <code class="rounded bg-inset px-1.5 py-0.5 font-mono text-[13px] text-accent-strong">modded.mc.funami.tech</code>
+                            on Java Edition.
+                        </p>
+                        <div class="mt-5 flex flex-wrap gap-3">
+                            <a href="https://mirror.funami.tech/yurumc/YuruMC%20Pack%20NeoForged%201.21.mrpack" class="btn-primary">
+                                <svg class="size-4" aria-hidden="true"><use href="#i-download"/></svg>
+                                Download the modpack
+                            </a>
+                            <a href="https://map.modded.mc.funami.tech/" class="btn-ghost">
+                                <svg class="size-4" aria-hidden="true"><use href="#i-map"/></svg>
+                                Modded live map
+                            </a>
+                        </div>
+                    </div>
+                    <dl class="grid gap-3 text-sm sm:min-w-64">
+                        <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
+                            <dt class="text-faint">Address</dt>
+                            <dd class="flex items-center gap-1 font-mono font-semibold text-ink">
+                                modded.mc.funami.tech
+                                <button type="button" class="copy-btn" data-copy="modded.mc.funami.tech" aria-label="Copy modded server address" hidden>
+                                    <svg class="size-3.5" data-copy-icon aria-hidden="true"><use href="#i-copy"/></svg>
+                                    <svg class="size-3.5 text-accent-strong" data-copied-icon hidden aria-hidden="true"><use href="#i-check"/></svg>
+                                </button>
+                            </dd>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
+                            <dt class="text-faint">Version</dt>
+                            <dd class="font-medium text-ink">1.21.1 (Java Edition)</dd>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
+                            <dt class="text-faint whitespace-nowrap">All packs &amp; worlds</dt>
+                            <dd><a class="footer-link inline-flex items-center gap-1 font-medium" href="https://mirror.funami.tech/yurumc/">mirror.funami.tech/yurumc/<svg class="size-3" aria-hidden="true"><use href="#i-external-link"/></svg></a></dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why -->
+        <section class="border-t border-line">
+            <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
+                <h2 class="section-title">Why YuruMC?</h2>
+                <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                    <div class="card p-6">
+                        <span class="flex size-10 items-center justify-center rounded-xl bg-accent-soft text-accent-strong">
+                            <svg class="size-5" aria-hidden="true"><use href="#i-scale"/></svg>
+                        </span>
+                        <h3 class="mt-4 font-semibold text-ink">Fun with little rules</h3>
+                        <p class="mt-2 text-sm/relaxed">
+                            Don't lag the server, don't grief. That's it — everything else
+                            is up to you.
+                        </p>
+                    </div>
+                    <div class="card p-6">
+                        <span class="flex size-10 items-center justify-center rounded-xl bg-accent-soft text-accent-strong">
+                            <svg class="size-5" aria-hidden="true"><use href="#i-smartphone"/></svg>
+                        </span>
+                        <h3 class="mt-4 font-semibold text-ink">Java and Bedrock</h3>
+                        <p class="mt-2 text-sm/relaxed">
+                            One address for both editions. Bedrock players join the same
+                            world through Geyser.
+                        </p>
+                    </div>
+                    <div class="card p-6">
+                        <span class="flex size-10 items-center justify-center rounded-xl bg-accent-soft text-accent-strong">
+                            <svg class="size-5" aria-hidden="true"><use href="#i-cpu"/></svg>
+                        </span>
+                        <h3 class="mt-4 font-semibold text-ink">Optimized for performance</h3>
+                        <p class="mt-2 text-sm/relaxed">
+                            The servers run on GraalVM for that extra bit of performance.
+                        </p>
+                    </div>
+                    <div class="card p-6">
+                        <span class="flex size-10 items-center justify-center rounded-xl bg-accent-soft text-accent-strong">
+                            <svg class="size-5" aria-hidden="true"><use href="#i-map"/></svg>
+                        </span>
+                        <h3 class="mt-4 font-semibold text-ink">Live map</h3>
+                        <p class="mt-2 text-sm/relaxed">
+                            Explore the world in your browser with
+                            <a class="footer-link underline decoration-line underline-offset-2" href="https://map.mc.funami.tech/">BlueMap</a> — for the modded
+                            server too.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- @include partials/footer.html -->
+</body>
+
+</html>

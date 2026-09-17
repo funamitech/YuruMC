@@ -1,0 +1,53 @@
+<header class="sticky top-0 z-40 border-b border-line/70 bg-canvas/85 backdrop-blur-md">
+    <nav class="mx-auto flex h-14 max-w-6xl items-center gap-1 px-4 sm:px-6" aria-label="Main">
+        <a href="/" class="-mx-1.5 me-auto flex items-center gap-2.5 rounded-lg px-1.5 py-1 transition-colors hover:bg-inset">
+            <img src="/assets/img/yuifunami-300px.png" alt="" width="28" height="28" class="size-7 rounded-full">
+            <span class="text-[15px] font-semibold tracking-tight text-ink">YuruMC</span>
+        </a>
+
+        <a class="nav-link hidden md:inline-flex" href="/#play">Play</a>
+        <a class="nav-link hidden md:inline-flex" href="/#rules">Rules</a>
+
+        <div class="relative hidden md:block" data-dropdown>
+            <button type="button" class="nav-link" aria-expanded="false" aria-haspopup="true">
+                More
+                <svg class="size-3.5 transition-transform duration-200" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+            </button>
+            <div class="dropdown-panel" hidden>
+                <a class="menu-item" href="/#modded"><svg class="size-4" aria-hidden="true"><use href="#i-package"/></svg>Modded server</a>
+                <a class="menu-item" href="https://map.mc.funami.tech/"><svg class="size-4" aria-hidden="true"><use href="#i-map"/></svg>Live map<svg class="ms-auto size-3 text-faint" aria-hidden="true"><use href="#i-external-link"/></svg></a>
+                <a class="menu-item" href="https://map.modded.mc.funami.tech/"><svg class="size-4" aria-hidden="true"><use href="#i-map"/></svg>Modded live map<svg class="ms-auto size-3 text-faint" aria-hidden="true"><use href="#i-external-link"/></svg></a>
+                <a class="menu-item" href="https://mirror.funami.tech/yurumc/"><svg class="size-4" aria-hidden="true"><use href="#i-download"/></svg>Modpacks &amp; downloads<svg class="ms-auto size-3 text-faint" aria-hidden="true"><use href="#i-external-link"/></svg></a>
+                <div class="my-1.5 border-t border-line"></div>
+                <a class="menu-item" href="https://funami.tech"><svg class="size-4" aria-hidden="true"><use href="#i-globe"/></svg>Back to YuruVerse<svg class="ms-auto size-3 text-faint" aria-hidden="true"><use href="#i-external-link"/></svg></a>
+            </div>
+        </div>
+
+        <a class="icon-btn hidden md:inline-flex" href="https://github.com/funamitech/YuruMC" aria-label="Source on GitHub">
+            <svg class="size-4" aria-hidden="true"><use href="#i-github"/></svg>
+        </a>
+        <button type="button" class="icon-btn" id="theme-toggle" aria-label="Toggle color theme">
+            <svg class="size-4 theme-icon-light" aria-hidden="true"><use href="#i-moon"/></svg>
+            <svg class="size-4 theme-icon-dark" aria-hidden="true"><use href="#i-sun"/></svg>
+        </button>
+        <button type="button" class="icon-btn md:hidden" id="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menu">
+            <svg class="size-4" data-icon-open aria-hidden="true"><use href="#i-menu"/></svg>
+            <svg class="size-4" data-icon-close hidden aria-hidden="true"><use href="#i-x"/></svg>
+        </button>
+    </nav>
+
+    <div id="mobile-menu" class="border-t border-line px-4 pb-4 pt-2 md:hidden" hidden>
+        <nav class="grid gap-0.5" aria-label="Mobile">
+            <a class="menu-item" href="/#play"><svg class="size-4" aria-hidden="true"><use href="#i-gamepad"/></svg>How to play</a>
+            <a class="menu-item" href="/#rules"><svg class="size-4" aria-hidden="true"><use href="#i-scale"/></svg>Rules</a>
+            <a class="menu-item" href="/#modded"><svg class="size-4" aria-hidden="true"><use href="#i-package"/></svg>Modded server</a>
+            <div class="my-1.5 border-t border-line"></div>
+            <a class="menu-item" href="https://map.mc.funami.tech/"><svg class="size-4" aria-hidden="true"><use href="#i-map"/></svg>Live map<svg class="ms-auto size-3 text-faint" aria-hidden="true"><use href="#i-external-link"/></svg></a>
+            <a class="menu-item" href="https://map.modded.mc.funami.tech/"><svg class="size-4" aria-hidden="true"><use href="#i-map"/></svg>Modded live map<svg class="ms-auto size-3 text-faint" aria-hidden="true"><use href="#i-external-link"/></svg></a>
+            <a class="menu-item" href="https://mirror.funami.tech/yurumc/"><svg class="size-4" aria-hidden="true"><use href="#i-download"/></svg>Modpacks &amp; downloads<svg class="ms-auto size-3 text-faint" aria-hidden="true"><use href="#i-external-link"/></svg></a>
+            <div class="my-1.5 border-t border-line"></div>
+            <a class="menu-item" href="https://github.com/funamitech/YuruMC"><svg class="size-4" aria-hidden="true"><use href="#i-github"/></svg>Source on GitHub</a>
+            <a class="menu-item" href="https://funami.tech"><svg class="size-4" aria-hidden="true"><use href="#i-globe"/></svg>Back to YuruVerse<svg class="ms-auto size-3 text-faint" aria-hidden="true"><use href="#i-external-link"/></svg></a>
+        </nav>
+    </div>
+</header>
