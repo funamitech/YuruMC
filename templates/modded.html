@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <!-- @include partials/head.html title="Modded servers — YuruMC" description="YuruMC runs two modded Minecraft servers: our own {{pack.modded.loader}} pack on modded.mc.funami.tech, and {{pack.modded-survival.name}} on survival.modded.mc.funami.tech. Addresses, modpack downloads, versions and loaders — all of it on one page." image="/assets/img/og-hero.jpg" -->
+    <!-- @include partials/head.html title="Modded servers: YuruMC" description="YuruMC runs two modded Minecraft servers: our own {{pack.modded.loader}} pack on modded.mc.funami.tech, and {{pack.modded-survival.name}} on survival.modded.mc.funami.tech. Addresses, modpack downloads, versions and loaders, all on one page." image="/assets/img/og-hero.jpg" -->
 </head>
 
 <body>
@@ -24,7 +24,7 @@
                     <span class="block text-faint">Yui said “just one more mod” {{pack.modded.modCount}} times.</span>
                 </h1>
                 <p class="mt-5 max-w-2xl text-lg/relaxed">
-                    The vanilla SMP over on the <a class="text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong" href="/">front page</a> is the calm one. These two are not. One is a building server running a modpack we assembled ourselves. The other runs TerraFirmaGreg, where you start by hitting rocks together and end up with a GregTech factory. Both are Java Edition only, but the Bedrock crowd gets the vanilla server, which is honestly the better deal.
+                    The <a class="text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong" href="/">vanilla SMP</a> is the calm one. These two are not. One is a building server running our own modpack. The other runs TerraFirmaGreg, where you start by hitting rocks together and end up with a GregTech factory. Both Java Edition only.
                 </p>
                 <div class="mt-8 flex flex-wrap gap-3">
                     <a href="#yurumc-pack" class="btn-primary">
@@ -106,7 +106,7 @@
                             </a>
                             <a href="https://map.modded.mc.funami.tech/" class="btn-ghost">
                                 <svg class="size-4" aria-hidden="true"><use href="#i-map"/></svg>
-                                Live map — watch us fail
+                                Live map
                             </a>
                         </div>
                         <p class="mt-3 text-xs text-faint">
@@ -165,12 +165,12 @@
                         Pack updated {{pack.modded-survival.updated}}
                     </span>
                 </div>
-                <h2 class="section-title mt-4">YuruMC Modded Survival — rocks first, reactors later</h2>
+                <h2 class="section-title mt-4">YuruMC Modded Survival: rocks first, reactors later</h2>
                 <p class="mt-2 max-w-2xl">
                     This one runs an assortment of other people's hard work:
                     <strong class="text-ink">{{pack.modded-survival.name}} {{pack.modded-survival.version}}</strong>
-                    off CurseForge. In the pack authors' own words —
-                    <em>"{{pack.modded-survival.summary}}"</em> — which is a polite way of saying you
+                    off CurseForge. In the pack authors' own words,
+                    <em>"{{pack.modded-survival.summary}}"</em>. Which is a polite way of saying you
                     will spend your first evening knapping flint while someone in chat brags about
                     their steam boiler. {{pack.modded-survival.modCount}} mods, Minecraft
                     {{pack.modded-survival.minecraft}}, {{pack.modded-survival.loader}}
@@ -224,8 +224,8 @@
                         </div>
                         <p class="mt-3 text-xs text-faint">
                             Install <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">{{pack.modded-survival.fileName}}</code>
-                            — the exact file the server runs. No live map for this one yet; you will
-                            have to explore with your actual eyes, like a peasant. (Fitting, really.)
+                            , the exact file the server runs. No live map for this one yet. You will
+                            have to explore with your actual eyes, like a peasant.
                         </p>
                     </div>
 
@@ -259,7 +259,7 @@
         <section class="border-b border-line bg-surface/50">
             <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
                 <h2 class="section-title">Which one do I want?</h2>
-                <p class="mt-2 max-w-2xl">They are different versions, different loaders and different vibes, so you cannot mix them up. Yui tried.</p>
+                <p class="mt-2 max-w-2xl">Different versions, different loaders, different vibes.</p>
                 <div class="mt-8 grid gap-4 md:grid-cols-2">
                     <div class="card p-6">
                         <span class="flex size-10 items-center justify-center rounded-xl bg-accent-soft text-accent-strong">
@@ -267,9 +267,9 @@
                         </span>
                         <h3 class="mt-4 font-semibold text-ink">Pick YuruMC Modded if…</h3>
                         <p class="mt-2 text-sm/relaxed">
-                            …you want the kitchen sink. {{pack.modded.modCount}} mods, magic and machines and several other dimensions, on Minecraft {{pack.modded.minecraft}}. One download from our mirror and you are in. Fair warning: it's adventure mode, so your first act on the server will be asking an op for permission to punch a tree.
+                            ...you want the kitchen sink. {{pack.modded.modCount}} mods on Minecraft {{pack.modded.minecraft}}, one download from our mirror and you are in. It's adventure mode, so your first act on the server will be asking an op for permission to punch a tree.
                         </p>
-                        <p class="mt-3 text-xs text-faint">There is a live map, so your friends can watch you fail from a browser.</p>
+                        <p class="mt-3 text-xs text-faint">There is a live map.</p>
                     </div>
                     <div class="card p-6">
                         <span class="flex size-10 items-center justify-center rounded-xl bg-accent-soft text-accent-strong">
@@ -277,10 +277,10 @@
                         </span>
                         <h3 class="mt-4 font-semibold text-ink">Pick Modded Survival if…</h3>
                         <p class="mt-2 text-sm/relaxed">
-                            …you think vanilla survival is too easy and you would like to be
-                            humbled by geology. {{pack.modded-survival.name}} on Minecraft
+                            ...you think vanilla survival is too easy.
+                            {{pack.modded-survival.name}} on Minecraft
                             {{pack.modded-survival.minecraft}}, {{pack.modded-survival.loader}}.
-                            Bring patience; there is no wood pickaxe waiting for you.
+                            There is no wood pickaxe waiting for you.
                         </p>
                         <p class="mt-3 text-xs text-faint">No live map. The wilderness stays wild.</p>
                     </div>
@@ -294,7 +294,7 @@
                 <h2 class="section-title">Installing a modpack</h2>
                 <p class="mt-2 max-w-2xl">
                     Both packs are ordinary modpack files, so any launcher that imports them will
-                    do. Vanilla launcher will not — this is the one part of YuruMC that needs more
+                    do. The vanilla launcher will not. This is the one part of YuruMC that needs more
                     than an address.
                 </p>
                 <ol class="mt-8 grid gap-4 md:grid-cols-3">
@@ -302,7 +302,7 @@
                         <span class="flex size-8 flex-none items-center justify-center rounded-lg bg-inset font-mono text-sm font-bold text-accent-strong">1</span>
                         <div>
                             <h3 class="font-semibold text-ink">Grab a launcher</h3>
-                            <p class="mt-1 text-sm/relaxed">Anything that can import a pack file — the Modrinth App or Prism Launcher for <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">.mrpack</code>, the CurseForge app or Prism for the CurseForge zip.</p>
+                            <p class="mt-1 text-sm/relaxed">Anything that can import a pack file: the Modrinth App or Prism Launcher for <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">.mrpack</code>, the CurseForge app or Prism for the CurseForge zip.</p>
                         </div>
                     </li>
                     <li class="card flex gap-4 p-5">

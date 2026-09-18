@@ -16,7 +16,7 @@
   --font-sans: "InterVariable", "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-mono: ui-monospace, "JetBrains Mono", "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
 
-  /* Brand plum ramp — from Yui's uniform (#7f6f79) */
+  /* Brand plum ramp, from Yui's uniform (#7f6f79) */
   --color-plum-50: #faf8f9;
   --color-plum-100: #f3eff2;
   --color-plum-200: #e8e1e6;

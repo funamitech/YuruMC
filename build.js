@@ -8,7 +8,7 @@
  * parameters given at the include site.
  *
  * Any page may also use `{{pack.<id>.<field>}}` to pull modpack facts out of
- * data/modpacks.json — the file `scripts/modpack.js` generates from the real
+ * data/modpacks.json, the file `scripts/modpack.js` generates from the real
  * Modrinth/CurseForge listings. Those values are HTML-escaped on the way in.
  *
  * Usage: node build.js
@@ -35,7 +35,7 @@ const escapeHTML = (value) => String(value)
  */
 function loadModpacks() {
   if (!existsSync(DATA_FILE)) {
-    console.warn('  warning: data/modpacks.json is missing — run `npm run modpack -- <url>`');
+    console.warn('  warning: data/modpacks.json is missing, run `npm run modpack -- <url>`');
     return {};
   }
   const { packs = {} } = JSON.parse(readFileSync(DATA_FILE, 'utf8'));
@@ -77,7 +77,7 @@ function expand(source, params = {}, depth = 0) {
 export function expandFile(relPath) {
   DATA = loadModpacks();   // re-read so the dev server picks up modpack.js runs
   const source = readFileSync(join(TEMPLATES, relPath), 'utf8');
-  const banner = `<!-- GENERATED from templates/${relPath} — edit there, then run \`npm run build\` -->\n`;
+  const banner = `<!-- GENERATED from templates/${relPath} // edit there, then run \`npm run build\` -->\n`;
   return banner + expand(source);
 }
 
