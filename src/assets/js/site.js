@@ -8,6 +8,13 @@
 
   var root = document.documentElement;
 
+  /* The only UI string that lives in JS. {addr} is the copied address. */
+  var STRINGS = {
+    en: { copied: 'Copied {addr} to clipboard' },
+    ko: { copied: 'Copied {addr} to clipboard' }
+  };
+  var t = STRINGS[root.lang] || STRINGS.en;
+
   /* Theme toggle (system preference by default, explicit choice persisted) */
   var themeToggle = document.getElementById('theme-toggle');
   if (themeToggle) {
@@ -72,7 +79,7 @@
       button.addEventListener('click', function() {
         navigator.clipboard.writeText(button.dataset.copy).then(function() {
           copyStatus.textContent = '';
-          copyStatus.textContent = 'Copied ' + button.dataset.copy + ' to clipboard';
+          copyStatus.textContent = t.copied.replace('{addr}', button.dataset.copy);
           button.classList.add('is-copied');
           button.querySelector('[data-copy-icon]').hidden = true;
           button.querySelector('[data-copied-icon]').hidden = false;
