@@ -2,7 +2,7 @@
 <html lang="ko">
 
 <head>
-    <!-- @include partials/head.html title="Modded servers: YuruMC" description="YuruMC runs two modded Minecraft servers: our own {{pack.modded.loader}} pack on modded.mc.funami.tech, and {{pack.modded-survival.name}} on survival.modded.mc.funami.tech. Addresses, modpack downloads, versions and loaders, all on one page." image="/assets/img/og-hero.jpg" path="/modded.html" -->
+    <!-- @include partials/head.html title="모드 서버: YuruMC" description="YuruMC는 두 개의 모드 마인크래프트 서버를 운영하고 있어요. modded.mc.funami.tech의 자체 {{pack.modded.loader}} 팩 서버와, survival.modded.mc.funami.tech의 {{pack.modded-survival.name}} 서버. 접속 주소, 모드팩 다운로드, 버전과 로더 정보를 한 페이지에서 확인하세요." image="/assets/img/og-hero.jpg" path="/modded.html" -->
 </head>
 
 <body>
@@ -15,25 +15,25 @@
             <div class="glow -top-32 right-0 size-[26rem] bg-plum-300/25" aria-hidden="true"></div>
             <div class="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
                 <div class="flex flex-wrap items-center gap-2">
-                    <p class="chip"><svg class="size-3.5" aria-hidden="true"><use href="#i-package"/></svg> Two servers</p>
-                    <p class="chip"><svg class="size-3.5" aria-hidden="true"><use href="#i-cpu"/></svg> {{pack.modded.modCount}} + {{pack.modded-survival.modCount}} mods</p>
-                    <p class="chip"><svg class="size-3.5" aria-hidden="true"><use href="#i-map-pin"/></svg> Gyeonggi, South Korea</p>
+                    <p class="chip"><svg class="size-3.5" aria-hidden="true"><use href="#i-package"/></svg> 서버 2개</p>
+                    <p class="chip"><svg class="size-3.5" aria-hidden="true"><use href="#i-cpu"/></svg> {{pack.modded.modCount}} + {{pack.modded-survival.modCount}}개 모드</p>
+                    <p class="chip"><svg class="size-3.5" aria-hidden="true"><use href="#i-map-pin"/></svg> 대한민국 경기도</p>
                 </div>
-                <h1 class="mt-5 max-w-3xl text-4xl font-bold tracking-tight text-ink sm:text-5xl lg:text-6xl">
-                    Modded servers.
-                    <span class="block text-faint">Yui said “just one more mod” {{pack.modded.modCount}} times.</span>
+                <h1 class=”mt-5 max-w-3xl text-4xl font-bold tracking-tight text-ink sm:text-5xl lg:text-6xl”>
+                    모드 서버.
+                    <span class=”block text-faint”>유이가 “모드 하나만 더”를 {{pack.modded.modCount}}번 반복했어요.</span>
                 </h1>
-                <p class="mt-5 max-w-2xl text-lg/relaxed">
-                    The <a class="text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong" href="/ko/">vanilla SMP</a> is the calm one. These two are not. One is a building server running our own modpack. The other runs TerraFirmaGreg, where you start by hitting rocks together and end up with a GregTech factory. Both Java Edition only.
+                <p class=”mt-5 max-w-2xl text-lg/relaxed”>
+                    <a class=”text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong” href=”/ko/”>바닐라 SMP</a>가 평온한 쪽이라면, 여기 두 서버는 아니에요. 하나는 자체 모드팩으로 돌아가는 건축 서버, 다른 하나는 돌멩이를 부딪히는 것부터 시작해서 GregTech 공장까지 세워야 하는 TerraFirmaGreg 서버예요. 둘 다 Java 에디션 전용이에요.
                 </p>
                 <div class="mt-8 flex flex-wrap gap-3">
                     <a href="#yurumc-pack" class="btn-primary">
                         <svg class="size-4" aria-hidden="true"><use href="#i-package"/></svg>
-                        Our own pack
+                        자체 제작 모드팩
                     </a>
                     <a href="#terrafirmagreg" class="btn-ghost">
                         <svg class="size-4 text-accent" aria-hidden="true"><use href="#i-pickaxe"/></svg>
-                        Rocks &amp; GregTech
+                        돌멩이 &amp; GregTech
                     </a>
                 </div>
             </div>
@@ -49,102 +49,99 @@
                     </span>
                     <span class="chip">
                         <svg class="size-3" aria-hidden="true"><use href="#i-check"/></svg>
-                        Homemade, by us, on purpose
+                        직접 정성껏 만든 팩
                     </span>
                 </div>
-                <h2 class="section-title mt-4">YuruMC Modded, handle with care</h2>
+                <h2 class="section-title mt-4">YuruMC 모드 서버, 살살 다뤄주세요</h2>
                 <p class="mt-2 max-w-2xl">
-                    Our own modpack, assembled by hand and shipped as a Modrinth-format
+                    미러에서 바로 받을 수 있는 Modrinth 형식
                     <code class="rounded bg-inset px-1.5 py-0.5 font-mono text-[13px] text-accent-strong">.mrpack</code>
-                    straight off our mirror. <strong class="text-ink">{{pack.modded.name}}</strong>
-                    (pack version {{pack.modded.version}}) crams {{pack.modded.modCount}} mods and
-                    {{pack.modded.shaderCount}} shaderpacks into one file, for Minecraft {{pack.modded.minecraft}} on
-                    {{pack.modded.loader}} {{pack.modded.loaderVersion}}.
-                    Your laptop fans are about to learn what a Create contraption sounds like.
+                    파일로 직접 구성한 자체 모드팩이에요. <strong class="text-ink">{{pack.modded.name}}</strong>
+                    (팩 버전 {{pack.modded.version}})은 마인크래프트 {{pack.modded.minecraft}}의
+                    {{pack.modded.loader}} {{pack.modded.loaderVersion}} 환경에서 구동되며, {{pack.modded.modCount}}개 모드와
+                    {{pack.modded.shaderCount}}개 셰이더팩이 이 파일 하나에 다 들어있어요.
+                    곧 노트북 팬이 Create 기계 장치 돌아가는 소리를 내기 시작할 거예요.
                 </p>
 
                 <div class="mt-8 grid gap-4 lg:grid-cols-5">
                     <div class="card p-6 lg:col-span-3">
-                        <h3 class="font-semibold text-ink">Getting in</h3>
+                        <h3 class="font-semibold text-ink">접속 방법</h3>
                         <ul class="mt-4 divide-y divide-line border-y border-line">
                             <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-3">
                                 <span class="flex w-32 items-center gap-2 text-sm text-faint">
                                     <svg class="size-4" aria-hidden="true"><use href="#i-monitor"/></svg>
-                                    Address
+                                    서버 주소
                                 </span>
                                 <span class="address">
                                     <code class="font-mono text-sm font-semibold break-all text-ink">modded.mc.funami.tech</code>
-                                    <button type="button" class="copy-btn" data-copy="modded.mc.funami.tech" aria-label="Copy modded server address" hidden>
+                                    <button type="button" class="copy-btn" data-copy="modded.mc.funami.tech" aria-label="모드 서버 주소 복사" hidden>
                                         <svg class="size-3.5" data-copy-icon aria-hidden="true"><use href="#i-copy"/></svg>
                                         <svg class="size-3.5 text-accent-strong" data-copied-icon hidden aria-hidden="true"><use href="#i-check"/></svg>
                                     </button>
                                 </span>
-                                <span class="chip">no port here either</span>
+                                <span class="chip">여기도 포트 없음</span>
                             </li>
                             <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-3">
                                 <span class="flex w-32 items-center gap-2 text-sm text-faint">
                                     <svg class="size-4" aria-hidden="true"><use href="#i-gamepad"/></svg>
-                                    Edition
+                                    에디션
                                 </span>
-                                <span class="text-sm font-medium text-ink">Java Edition, Minecraft {{pack.modded.minecraft}}</span>
-                                <span class="chip">no Bedrock here, sorry</span>
-                                <span class="chip">building server, adventure mode</span>
+                                <span class="text-sm font-medium text-ink">Java 에디션, 마인크래프트 {{pack.modded.minecraft}}</span>
+                                <span class="chip">베드락 미지원</span>
+                                <span class="chip">건축 서버, 모험 모드</span>
                             </li>
                             <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-3">
                                 <span class="flex w-32 items-center gap-2 text-sm text-faint">
                                     <svg class="size-4" aria-hidden="true"><use href="#i-users"/></svg>
-                                    Room for
+                                    정원
                                 </span>
-                                <span class="text-sm font-medium text-ink">30 people, ask in the Matrix space for build access</span>
+                                <span class="text-sm font-medium text-ink">30명, 건축 권한은 Matrix 스페이스에서 요청해 주세요</span>
                             </li>
                         </ul>
 
                         <div class="mt-5 flex flex-wrap gap-3">
                             <a href="{{pack.modded.downloadUrl}}" class="btn-primary">
                                 <svg class="size-4" aria-hidden="true"><use href="#i-download"/></svg>
-                                Download {{pack.modded.fileName}}
+                                {{pack.modded.fileName}} 다운로드
                             </a>
                             <a href="https://map.modded.mc.funami.tech/" class="btn-ghost">
                                 <svg class="size-4" aria-hidden="true"><use href="#i-map"/></svg>
-                                Live map
+                                라이브 맵
                             </a>
                         </div>
                         <p class="mt-3 text-xs text-faint">
-                            This one is for building, not surviving. Everyone starts in adventure
-                            mode so nothing can be griefed, which makes it registration by another
-                            name: join
-                            <a class="font-medium text-accent-strong hover:underline" href="https://matrix.to/#/%23yurumc-space:funami.tech"><code class="font-mono">#yurumc-space:funami.tech</code></a>
-                            and ask for permission to build.
+                            이 서버는 건축용이에요. 모든 플레이어가 모험 모드로 시작하기 때문에 테러가 불가능하고, 사실상 가입 절차나 마찬가지예요.
+                            <a class="font-medium text-accent-strong hover:underline" href="https://matrix.to/#/%23yurumc-space:funami.tech"><code class="font-mono">#yurumc-space:funami.tech</code></a>에
+                            들어와서 건축 권한을 요청해 주세요.
                         </p>
                         <p class="mt-3 text-xs text-faint">
-                            The live map has eleven dimensions on it, including the Aether and a
-                            handful of planets. Yui has not visited most of them.
+                            라이브 맵에는 에테르를 포함한 11개 차원이 있어요. 유이는 그 대부분에 가본 적이 없어요.
                         </p>
                     </div>
 
                     <dl class="grid min-w-0 gap-3 text-sm lg:col-span-2 lg:self-start">
                         <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
-                            <dt class="text-faint">Modpack</dt>
+                            <dt class="text-faint">모드팩</dt>
                             <dd class="min-w-0 font-medium break-words text-ink">{{pack.modded.name}}</dd>
                         </div>
                         <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
-                            <dt class="text-faint">Pack version</dt>
+                            <dt class="text-faint">팩 버전</dt>
                             <dd class="font-medium text-ink">{{pack.modded.version}}</dd>
                         </div>
                         <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
-                            <dt class="text-faint">Minecraft</dt>
+                            <dt class="text-faint">마인크래프트</dt>
                             <dd class="font-medium text-ink">{{pack.modded.minecraft}} (Java)</dd>
                         </div>
                         <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
-                            <dt class="text-faint">Mod loader</dt>
+                            <dt class="text-faint">모드 로더</dt>
                             <dd class="font-medium text-ink">{{pack.modded.loader}} {{pack.modded.loaderVersion}}</dd>
                         </div>
                         <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
-                            <dt class="text-faint">Mods in the pack</dt>
-                            <dd class="font-medium text-ink tabular-nums">{{pack.modded.modCount}} (+{{pack.modded.shaderCount}} shaderpacks)</dd>
+                            <dt class="text-faint">포함된 모드</dt>
+                            <dd class="font-medium text-ink tabular-nums">{{pack.modded.modCount}}개 (+셰이더팩 {{pack.modded.shaderCount}}개)</dd>
                         </div>
                         <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
-                            <dt class="text-faint">Live map</dt>
+                            <dt class="text-faint">라이브 맵</dt>
                             <dd class="min-w-0"><a class="inline-flex items-center gap-1 font-medium break-all text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong" href="https://map.modded.mc.funami.tech/">map.modded.mc.funami.tech<svg class="size-3 flex-none" aria-hidden="true"><use href="#i-external-link"/></svg></a></dd>
                         </div>
                     </dl>
@@ -162,93 +159,92 @@
                     </span>
                     <span class="chip">
                         <svg class="size-3" aria-hidden="true"><use href="#i-calendar"/></svg>
-                        Pack updated {{pack.modded-survival.updated}}
+                        팩 업데이트 {{pack.modded-survival.updated}}
                     </span>
                 </div>
-                <h2 class="section-title mt-4">YuruMC Modded Survival: rocks first, reactors later</h2>
+                <h2 class="section-title mt-4">YuruMC 모드 서바이벌: 일단 돌부터, 원자로는 나중에</h2>
                 <p class="mt-2 max-w-2xl">
-                    This one runs an assortment of other people's hard work:
-                    <strong class="text-ink">{{pack.modded-survival.name}} {{pack.modded-survival.version}}</strong>
-                    off CurseForge. In the pack authors' own words,
-                    <em>"{{pack.modded-survival.summary}}"</em>. Which is a polite way of saying you
-                    will spend your first evening knapping flint while someone in chat brags about
-                    their steam boiler. {{pack.modded-survival.modCount}} mods, Minecraft
+                    이 서버는 다른 분들의 노고가 담긴
+                    <strong class="text-ink">{{pack.modded-survival.name}} {{pack.modded-survival.version}}</strong>을
+                    CurseForge에서 가져와 운영하고 있어요. 모드팩 제작자의 말을 빌리면,
+                    <em>"{{pack.modded-survival.summary}}"</em>라고 하네요. 좀 더 솔직히 말하면
+                    첫날 저녁 내내 부싯돌이나 깎고 있을 때 채팅에서 누군가 증기 보일러를 자랑하고
+                    있을 거라는 뜻이에요. {{pack.modded-survival.modCount}}개 모드, 마인크래프트
                     {{pack.modded-survival.minecraft}}, {{pack.modded-survival.loader}}
-                    {{pack.modded-survival.loaderVersion}}, and genuinely no hand-holding.
+                    {{pack.modded-survival.loaderVersion}} 기반이고, 친절한 가이드 같은 건 진짜 없어요.
                 </p>
 
                 <div class="mt-8 grid gap-4 lg:grid-cols-5">
                     <div class="card p-6 lg:col-span-3">
-                        <h3 class="font-semibold text-ink">Getting in, the hard way</h3>
+                        <h3 class="font-semibold text-ink">접속 방법, 빡센 버전</h3>
                         <ul class="mt-4 divide-y divide-line border-y border-line">
                             <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-3">
                                 <span class="flex w-32 items-center gap-2 text-sm text-faint">
                                     <svg class="size-4" aria-hidden="true"><use href="#i-monitor"/></svg>
-                                    Address
+                                    서버 주소
                                 </span>
                                 <span class="address">
                                     <code class="font-mono text-sm font-semibold break-all text-ink">survival.modded.mc.funami.tech</code>
-                                    <button type="button" class="copy-btn" data-copy="survival.modded.mc.funami.tech" aria-label="Copy modded survival server address" hidden>
+                                    <button type="button" class="copy-btn" data-copy="survival.modded.mc.funami.tech" aria-label="모드 서바이벌 서버 주소 복사" hidden>
                                         <svg class="size-3.5" data-copy-icon aria-hidden="true"><use href="#i-copy"/></svg>
                                         <svg class="size-3.5 text-accent-strong" data-copied-icon hidden aria-hidden="true"><use href="#i-check"/></svg>
                                     </button>
                                 </span>
-                                <span class="chip">same deal, no port</span>
+                                <span class="chip">마찬가지로 포트 없음</span>
                             </li>
                             <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-3">
                                 <span class="flex w-32 items-center gap-2 text-sm text-faint">
                                     <svg class="size-4" aria-hidden="true"><use href="#i-gamepad"/></svg>
-                                    Edition
+                                    에디션
                                 </span>
-                                <span class="text-sm font-medium text-ink">Java Edition, Minecraft {{pack.modded-survival.minecraft}}</span>
-                                <span class="chip">survival, difficulty normal</span>
+                                <span class="text-sm font-medium text-ink">Java 에디션, 마인크래프트 {{pack.modded-survival.minecraft}}</span>
+                                <span class="chip">서바이벌, 난이도 보통</span>
                             </li>
                             <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-3">
                                 <span class="flex w-32 items-center gap-2 text-sm text-faint">
                                     <svg class="size-4" aria-hidden="true"><use href="#i-users"/></svg>
-                                    Room for
+                                    정원
                                 </span>
-                                <span class="text-sm font-medium text-ink">30 people, no whitelist, bring a friend to blame</span>
+                                <span class="text-sm font-medium text-ink">30명, 화이트리스트 없음, 탓할 친구도 데려와도 돼요</span>
                             </li>
                         </ul>
 
                         <div class="mt-5 flex flex-wrap gap-3">
                             <a href="{{pack.modded-survival.downloadUrl}}" class="btn-primary">
                                 <svg class="size-4" aria-hidden="true"><use href="#i-download"/></svg>
-                                Get the pack on CurseForge
+                                CurseForge에서 팩 받기
                             </a>
                             <a href="{{pack.modded-survival.pageUrl}}" class="btn-ghost">
                                 <svg class="size-4 text-accent" aria-hidden="true"><use href="#i-external-link"/></svg>
-                                Pack page &amp; changelog
+                                팩 페이지 &amp; 변경 내역
                             </a>
                         </div>
                         <p class="mt-3 text-xs text-faint">
-                            Install <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">{{pack.modded-survival.fileName}}</code>
-                            , the exact file the server runs. No live map for this one yet. You will
-                            have to explore with your actual eyes, like a peasant.
+                            서버와 동일한 파일인 <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">{{pack.modded-survival.fileName}}</code>을
+                            설치하세요. 이 서버에는 아직 라이브 맵이 없어요. 직접 눈으로 탐험해야 해요, 원시인처럼.
                         </p>
                     </div>
 
                     <dl class="grid min-w-0 gap-3 text-sm lg:col-span-2 lg:self-start">
                         <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
-                            <dt class="text-faint">Modpack</dt>
+                            <dt class="text-faint">모드팩</dt>
                             <dd class="min-w-0 font-medium break-words text-ink">{{pack.modded-survival.name}}</dd>
                         </div>
                         <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
-                            <dt class="text-faint">Pack version</dt>
+                            <dt class="text-faint">팩 버전</dt>
                             <dd class="font-medium text-ink">{{pack.modded-survival.version}}</dd>
                         </div>
                         <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
-                            <dt class="text-faint">Minecraft</dt>
+                            <dt class="text-faint">마인크래프트</dt>
                             <dd class="font-medium text-ink">{{pack.modded-survival.minecraft}} (Java)</dd>
                         </div>
                         <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
-                            <dt class="text-faint">Mod loader</dt>
+                            <dt class="text-faint">모드 로더</dt>
                             <dd class="font-medium text-ink">{{pack.modded-survival.loader}} {{pack.modded-survival.loaderVersion}}</dd>
                         </div>
                         <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
-                            <dt class="text-faint">Mods in the pack</dt>
-                            <dd class="font-medium text-ink tabular-nums">{{pack.modded-survival.modCount}} (+{{pack.modded-survival.resourcePackCount}} resource packs, {{pack.modded-survival.shaderCount}} shaderpacks)</dd>
+                            <dt class="text-faint">포함된 모드</dt>
+                            <dd class="font-medium text-ink tabular-nums">{{pack.modded-survival.modCount}}개 (+리소스팩 {{pack.modded-survival.resourcePackCount}}개, 셰이더팩 {{pack.modded-survival.shaderCount}}개)</dd>
                         </div>
                     </dl>
                 </div>
@@ -258,31 +254,31 @@
         <!-- Which one -->
         <section class="border-b border-line bg-surface/50">
             <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
-                <h2 class="section-title">Which one do I want?</h2>
-                <p class="mt-2 max-w-2xl">Different versions, different loaders, different vibes.</p>
+                <h2 class="section-title">어떤 걸 고를까?</h2>
+                <p class="mt-2 max-w-2xl">버전도, 로더도, 분위기도 전부 달라요.</p>
                 <div class="mt-8 grid gap-4 md:grid-cols-2">
                     <div class="card p-6">
                         <span class="flex size-10 items-center justify-center rounded-xl bg-accent-soft text-accent-strong">
                             <svg class="size-5" aria-hidden="true"><use href="#i-package"/></svg>
                         </span>
-                        <h3 class="mt-4 font-semibold text-ink">Pick YuruMC Modded if…</h3>
+                        <h3 class="mt-4 font-semibold text-ink">YuruMC 모드 서버를 고른다면</h3>
                         <p class="mt-2 text-sm/relaxed">
-                            ...you want the kitchen sink. {{pack.modded.modCount}} mods on Minecraft {{pack.modded.minecraft}}, one download from our mirror and you are in. It's adventure mode, so your first act on the server will be asking an op for permission to punch a tree.
+                            모든 게 다 들어있는 걸 원할 때. 마인크래프트 {{pack.modded.minecraft}} 기반, {{pack.modded.modCount}}개 모드, 미러에서 한 번만 받으면 바로 시작이에요. 모험 모드라서, 서버에 들어오면 가장 먼저 관리자에게 나무 캘 권한을 요청해야 해요.
                         </p>
-                        <p class="mt-3 text-xs text-faint">There is a live map.</p>
+                        <p class="mt-3 text-xs text-faint">라이브 맵이 있어요.</p>
                     </div>
                     <div class="card p-6">
                         <span class="flex size-10 items-center justify-center rounded-xl bg-accent-soft text-accent-strong">
                             <svg class="size-5" aria-hidden="true"><use href="#i-pickaxe"/></svg>
                         </span>
-                        <h3 class="mt-4 font-semibold text-ink">Pick Modded Survival if…</h3>
+                        <h3 class="mt-4 font-semibold text-ink">모드 서바이벌을 고른다면</h3>
                         <p class="mt-2 text-sm/relaxed">
-                            ...you think vanilla survival is too easy.
-                            {{pack.modded-survival.name}} on Minecraft
-                            {{pack.modded-survival.minecraft}}, {{pack.modded-survival.loader}}.
-                            There is no wood pickaxe waiting for you.
+                            바닐라 서바이벌이 너무 쉽다고 느낄 때.
+                            마인크래프트 {{pack.modded-survival.minecraft}} 기반의
+                            {{pack.modded-survival.name}}, {{pack.modded-survival.loader}}.
+                            여기서는 나무 곡괭이 같은 건 기다려주지 않아요.
                         </p>
-                        <p class="mt-3 text-xs text-faint">No live map. The wilderness stays wild.</p>
+                        <p class="mt-3 text-xs text-faint">라이브 맵 없음. 야생은 야생 그대로.</p>
                     </div>
                 </div>
             </div>
@@ -291,39 +287,38 @@
         <!-- Installing -->
         <section id="install" class="scroll-mt-20 border-b border-line">
             <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
-                <h2 class="section-title">Installing a modpack</h2>
+                <h2 class="section-title">모드팩 설치하기</h2>
                 <p class="mt-2 max-w-2xl">
-                    Both packs are ordinary modpack files, so any launcher that imports them will
-                    do. The vanilla launcher will not. This is the one part of YuruMC that needs more
-                    than an address.
+                    두 팩 모두 일반적인 모드팩 파일이라 가져오기 기능이 있는 런처면 뭐든 괜찮아요.
+                    바닐라 런처는 안 돼요. YuruMC에서 주소 말고 뭔가 더 필요한 건 이 부분뿐이에요.
                 </p>
                 <ol class="mt-8 grid gap-4 md:grid-cols-3">
                     <li class="card flex gap-4 p-5">
                         <span class="flex size-8 flex-none items-center justify-center rounded-lg bg-inset font-mono text-sm font-bold text-accent-strong">1</span>
                         <div>
-                            <h3 class="font-semibold text-ink">Grab a launcher</h3>
-                            <p class="mt-1 text-sm/relaxed">Anything that can import a pack file: the Modrinth App or Prism Launcher for <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">.mrpack</code>, the CurseForge app or Prism for the CurseForge zip.</p>
+                            <h3 class="font-semibold text-ink">런처 준비</h3>
+                            <p class="mt-1 text-sm/relaxed">팩 파일을 가져올 수 있는 런처면 돼요. <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">.mrpack</code>은 Modrinth 앱이나 Prism Launcher, CurseForge zip은 CurseForge 앱이나 Prism을 사용하세요.</p>
                         </div>
                     </li>
                     <li class="card flex gap-4 p-5">
                         <span class="flex size-8 flex-none items-center justify-center rounded-lg bg-inset font-mono text-sm font-bold text-accent-strong">2</span>
                         <div>
-                            <h3 class="font-semibold text-ink">Import the pack</h3>
-                            <p class="mt-1 text-sm/relaxed">Our pack: the <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">.mrpack</code> from the mirror. Modded Survival: {{pack.modded-survival.name}} {{pack.modded-survival.version}} from CurseForge. The loader ships inside the pack, so you never install (Neo)Forge yourself.</p>
+                            <h3 class="font-semibold text-ink">팩 가져오기</h3>
+                            <p class="mt-1 text-sm/relaxed">자체 팩은 미러의 <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">.mrpack</code> 파일을, 모드 서바이벌은 CurseForge에서 {{pack.modded-survival.name}} {{pack.modded-survival.version}}을 받으세요. 로더가 팩 안에 포함되어 있어서 (네오)포지를 따로 설치할 필요 없어요.</p>
                         </div>
                     </li>
                     <li class="card flex gap-4 p-5">
                         <span class="flex size-8 flex-none items-center justify-center rounded-lg bg-inset font-mono text-sm font-bold text-accent-strong">3</span>
                         <div>
-                            <h3 class="font-semibold text-ink">Add the server &amp; go</h3>
-                            <p class="mt-1 text-sm/relaxed">Launch the pack, add <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">modded.mc.funami.tech</code> or <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">survival.modded.mc.funami.tech</code>, leave the port empty. Enjoy!</p>
+                            <h3 class="font-semibold text-ink">서버 추가 후 접속</h3>
+                            <p class="mt-1 text-sm/relaxed">팩을 실행하고 <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">modded.mc.funami.tech</code> 또는 <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">survival.modded.mc.funami.tech</code>를 추가하세요. 포트는 비워두면 돼요. 재밌게 즐기세요!</p>
                         </div>
                     </li>
                 </ol>
                 <p class="mt-6 text-sm text-faint">
-                    The two rules from the <a class="text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong" href="/ko/#rules">front page</a>
-                    apply here too: don't lag the server, don't grief. Modded gives you <em>far</em> more
-                    creative ways to lag a server. Please be gentle; it lives in someone&#39;s home, not a datacenter.
+                    <a class="text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong" href="/ko/#rules">메인 페이지</a>의
+                    규칙 두 개가 여기서도 적용돼요. 렉 유발 금지, 테러 금지. 모드 서버에서는 렉을 유발할 수 있는
+                    <em>훨씬</em> 창의적인 방법들이 많아요. 부디 살살 다뤄주세요. 데이터센터가 아니라 누군가의 집에서 돌아가는 서버예요.
                 </p>
             </div>
         </section>
@@ -333,12 +328,12 @@
             <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
                 <div class="card flex flex-col gap-6 p-6 sm:p-8 md:flex-row md:items-center md:justify-between">
                     <div class="max-w-xl">
-                        <h2 class="section-title">The attic</h2>
+                        <h2 class="section-title">다락방</h2>
                         <p class="mt-2 text-sm/relaxed">
-                            Our mirror holds the current and past YuruMC modpack builds and a 1.17
-                            world archive. Only <strong class="text-ink">{{pack.modded.name}}</strong>
-                            is live; everything else is either retired or just visiting. Take
-                            whatever you want, we don't lock the attic.
+                            미러에는 과거와 현재의 YuruMC 모드팩 빌드와 1.17
+                            월드 아카이브가 보관되어 있어요. 지금은 <strong class="text-ink">{{pack.modded.name}}</strong>만
+                            운영 중이고, 나머지는 은퇴했거나 잠시 들른 것들이에요.
+                            다락방은 안 잠가두니까 필요한 건 마음껏 가져가세요.
                         </p>
                     </div>
                     <a href="https://mirror.funami.tech/yurumc/" class="btn-primary self-start md:self-auto">

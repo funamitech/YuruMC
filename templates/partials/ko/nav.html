@@ -5,40 +5,40 @@
             <span class="text-[15px] font-semibold tracking-tight text-ink">YuruMC</span>
         </a>
 
-        <a class="nav-link hidden md:inline-flex" href="/ko/#play">Play</a>
-        <a class="nav-link hidden md:inline-flex" href="/ko/#rules">Rules</a>
-        <a class="nav-link hidden md:inline-flex" href="/ko/modded.html">Modded</a>
+        <a class="nav-link hidden md:inline-flex" href="/ko/#play">플레이</a>
+        <a class="nav-link hidden md:inline-flex" href="/ko/#rules">규칙</a>
+        <a class="nav-link hidden md:inline-flex" href="/ko/modded.html">모드 서버</a>
 
         <div class="relative hidden md:block" data-dropdown>
             <button type="button" class="nav-link" aria-expanded="false" aria-haspopup="true">
-                Maps &amp; more
+                맵 &amp; 더보기
                 <svg class="size-3.5 transition-transform duration-200" aria-hidden="true"><use href="#i-chevron-down"/></svg>
             </button>
             <div class="dropdown-panel" hidden>
-                <a class="menu-item" href="https://map.mc.funami.tech/"><svg class="size-4" aria-hidden="true"><use href="#i-map"/></svg>Live map<svg class="ms-auto size-3 text-faint" aria-hidden="true"><use href="#i-external-link"/></svg></a>
-                <a class="menu-item" href="https://map.modded.mc.funami.tech/"><svg class="size-4" aria-hidden="true"><use href="#i-map"/></svg>Modded live map<svg class="ms-auto size-3 text-faint" aria-hidden="true"><use href="#i-external-link"/></svg></a>
-                <a class="menu-item" href="https://mirror.funami.tech/yurumc/"><svg class="size-4" aria-hidden="true"><use href="#i-download"/></svg>Modpacks &amp; downloads<svg class="ms-auto size-3 text-faint" aria-hidden="true"><use href="#i-external-link"/></svg></a>
+                <a class="menu-item" href="https://map.mc.funami.tech/"><svg class="size-4" aria-hidden="true"><use href="#i-map"/></svg>라이브 맵<svg class="ms-auto size-3 text-faint" aria-hidden="true"><use href="#i-external-link"/></svg></a>
+                <a class="menu-item" href="https://map.modded.mc.funami.tech/"><svg class="size-4" aria-hidden="true"><use href="#i-map"/></svg>모드 서버 라이브 맵<svg class="ms-auto size-3 text-faint" aria-hidden="true"><use href="#i-external-link"/></svg></a>
+                <a class="menu-item" href="https://mirror.funami.tech/yurumc/"><svg class="size-4" aria-hidden="true"><use href="#i-download"/></svg>모드팩 &amp; 다운로드<svg class="ms-auto size-3 text-faint" aria-hidden="true"><use href="#i-external-link"/></svg></a>
                 <div class="my-1.5 border-t border-line"></div>
-                <a class="menu-item" href="https://funami.tech"><svg class="size-4" aria-hidden="true"><use href="#i-globe"/></svg>Back to YuruVerse<svg class="ms-auto size-3 text-faint" aria-hidden="true"><use href="#i-external-link"/></svg></a>
+                <a class="menu-item" href="https://funami.tech"><svg class="size-4" aria-hidden="true"><use href="#i-globe"/></svg>YuruVerse로 돌아가기<svg class="ms-auto size-3 text-faint" aria-hidden="true"><use href="#i-external-link"/></svg></a>
             </div>
         </div>
 
-        <a class="nav-link hidden md:inline-flex" href="https://github.com/sponsors/NoaHimesaka1873" title="Sponsor YuruMC on GitHub, the power bill is real">
+        <a class="nav-link hidden md:inline-flex" href="https://github.com/sponsors/NoaHimesaka1873" title="GitHub에서 YuruMC 후원하기, 전기세가 진짜예요">
             <svg class="size-3.5 text-accent" aria-hidden="true"><use href="#i-heart"/></svg>
-            Sponsor Yui
+            유이 후원하기
         </a>
-        <a class="icon-btn hidden md:inline-flex" href="https://github.com/funamitech/YuruMC" aria-label="Source on GitHub">
+        <a class="icon-btn hidden md:inline-flex" href="https://github.com/funamitech/YuruMC" aria-label="GitHub 소스 코드">
             <svg class="size-4" aria-hidden="true"><use href="#i-github"/></svg>
         </a>
-        <a class="nav-link px-2 lg:px-3" href="{{langhref}}" hreflang="en" title="Read this page in English">
+        <a class="nav-link px-2 lg:px-3" href="{{langhref}}" hreflang="en" title="이 페이지를 영어로 읽기">
             <svg class="size-3.5" aria-hidden="true"><use href="#i-languages"/></svg>
             <span class="md:max-lg:sr-only" lang="en">English</span>
         </a>
-        <button type="button" class="icon-btn" id="theme-toggle" aria-label="Toggle color theme" title="Yui prefers light mode">
+        <button type="button" class="icon-btn" id="theme-toggle" aria-label="색상 테마 전환" title="유이는 라이트 모드를 좋아해요">
             <svg class="size-4 theme-icon-light" aria-hidden="true"><use href="#i-moon"/></svg>
             <svg class="size-4 theme-icon-dark" aria-hidden="true"><use href="#i-sun"/></svg>
         </button>
-        <button type="button" class="icon-btn md:hidden" id="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menu">
+        <button type="button" class="icon-btn md:hidden" id="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="메뉴">
             <svg class="size-4" data-icon-open aria-hidden="true"><use href="#i-menu"/></svg>
             <svg class="size-4" data-icon-close hidden aria-hidden="true"><use href="#i-x"/></svg>
         </button>
@@ -46,19 +46,19 @@
 
     <div id="mobile-menu" class="border-t border-line px-4 pb-4 pt-2 md:hidden" hidden>
         <nav class="grid gap-0.5" aria-label="Mobile">
-            <p class="px-3 py-1.5 text-xs text-faint">Server address: <code class="font-mono font-semibold text-ink">mc.funami.tech</code>. Yui put it here too, just in case.</p>
-            <a class="menu-item" href="https://github.com/sponsors/NoaHimesaka1873"><svg class="size-4 text-accent" aria-hidden="true"><use href="#i-heart"/></svg>Help pay Yui&#39;s power bill<svg class="ms-auto size-3 text-faint" aria-hidden="true"><use href="#i-external-link"/></svg></a>
+            <p class="px-3 py-1.5 text-xs text-faint">서버 주소: <code class="font-mono font-semibold text-ink">mc.funami.tech</code>. 유이가 혹시 몰라서 여기에도 적어뒀어요.</p>
+            <a class="menu-item" href="https://github.com/sponsors/NoaHimesaka1873"><svg class="size-4 text-accent" aria-hidden="true"><use href="#i-heart"/></svg>유이의 전기세 후원하기<svg class="ms-auto size-3 text-faint" aria-hidden="true"><use href="#i-external-link"/></svg></a>
             <div class="my-1.5 border-t border-line"></div>
-            <a class="menu-item" href="/ko/#play"><svg class="size-4" aria-hidden="true"><use href="#i-gamepad"/></svg>How to play</a>
-            <a class="menu-item" href="/ko/#rules"><svg class="size-4" aria-hidden="true"><use href="#i-scale"/></svg>Rules</a>
-            <a class="menu-item" href="/ko/modded.html"><svg class="size-4" aria-hidden="true"><use href="#i-package"/></svg>Modded servers</a>
+            <a class="menu-item" href="/ko/#play"><svg class="size-4" aria-hidden="true"><use href="#i-gamepad"/></svg>접속 방법</a>
+            <a class="menu-item" href="/ko/#rules"><svg class="size-4" aria-hidden="true"><use href="#i-scale"/></svg>규칙</a>
+            <a class="menu-item" href="/ko/modded.html"><svg class="size-4" aria-hidden="true"><use href="#i-package"/></svg>모드 서버</a>
             <div class="my-1.5 border-t border-line"></div>
-            <a class="menu-item" href="https://map.mc.funami.tech/"><svg class="size-4" aria-hidden="true"><use href="#i-map"/></svg>Live map<svg class="ms-auto size-3 text-faint" aria-hidden="true"><use href="#i-external-link"/></svg></a>
-            <a class="menu-item" href="https://map.modded.mc.funami.tech/"><svg class="size-4" aria-hidden="true"><use href="#i-map"/></svg>Modded live map<svg class="ms-auto size-3 text-faint" aria-hidden="true"><use href="#i-external-link"/></svg></a>
-            <a class="menu-item" href="https://mirror.funami.tech/yurumc/"><svg class="size-4" aria-hidden="true"><use href="#i-download"/></svg>Modpacks &amp; downloads<svg class="ms-auto size-3 text-faint" aria-hidden="true"><use href="#i-external-link"/></svg></a>
+            <a class="menu-item" href="https://map.mc.funami.tech/"><svg class="size-4" aria-hidden="true"><use href="#i-map"/></svg>라이브 맵<svg class="ms-auto size-3 text-faint" aria-hidden="true"><use href="#i-external-link"/></svg></a>
+            <a class="menu-item" href="https://map.modded.mc.funami.tech/"><svg class="size-4" aria-hidden="true"><use href="#i-map"/></svg>모드 서버 라이브 맵<svg class="ms-auto size-3 text-faint" aria-hidden="true"><use href="#i-external-link"/></svg></a>
+            <a class="menu-item" href="https://mirror.funami.tech/yurumc/"><svg class="size-4" aria-hidden="true"><use href="#i-download"/></svg>모드팩 &amp; 다운로드<svg class="ms-auto size-3 text-faint" aria-hidden="true"><use href="#i-external-link"/></svg></a>
             <div class="my-1.5 border-t border-line"></div>
-            <a class="menu-item" href="https://github.com/funamitech/YuruMC"><svg class="size-4" aria-hidden="true"><use href="#i-github"/></svg>Source on GitHub</a>
-            <a class="menu-item" href="https://funami.tech"><svg class="size-4" aria-hidden="true"><use href="#i-globe"/></svg>Back to YuruVerse<svg class="ms-auto size-3 text-faint" aria-hidden="true"><use href="#i-external-link"/></svg></a>
+            <a class="menu-item" href="https://github.com/funamitech/YuruMC"><svg class="size-4" aria-hidden="true"><use href="#i-github"/></svg>GitHub 소스 코드</a>
+            <a class="menu-item" href="https://funami.tech"><svg class="size-4" aria-hidden="true"><use href="#i-globe"/></svg>YuruVerse로 돌아가기<svg class="ms-auto size-3 text-faint" aria-hidden="true"><use href="#i-external-link"/></svg></a>
         </nav>
     </div>
 </header>
