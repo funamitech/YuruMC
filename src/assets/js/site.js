@@ -11,7 +11,7 @@
   /* The only UI string that lives in JS. {addr} is the copied address. */
   var STRINGS = {
     en: { copied: 'Copied {addr} to clipboard' },
-    ko: { copied: 'Copied {addr} to clipboard' }
+    ko: { copied: '{addr} 주소를 복사했어요' }
   };
   var t = STRINGS[root.lang] || STRINGS.en;
 

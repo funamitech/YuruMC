@@ -2,7 +2,7 @@
 <html lang="ko">
 
 <head>
-    <!-- @include partials/head.html font="PretendardVariable" title="모드 서버: YuruMC" description="YuruMC는 두 개의 모드 마인크래프트 서버를 운영하고 있어요. modded.mc.funami.tech의 자체 네오포지 팩 서버와, survival.modded.mc.funami.tech의 {{pack.modded-survival.name}} 서버. 접속 주소, 모드팩 다운로드, 버전과 로더 정보를 한 페이지에서 확인하세요." image="/assets/img/og-hero.jpg" path="/modded.html" -->
+    <!-- @include partials/head.html font="PretendardVariable" title="모드 서버: YuruMC" description="YuruMC는 마인크래프트 모드 서버 두 개를 운영하고 있어요. modded.mc.funami.tech의 자체 네오포지 팩 서버와, survival.modded.mc.funami.tech의 {{pack.modded-survival.name}} 서버. 접속 주소, 모드팩 다운로드, 버전과 로더 정보를 한 페이지에서 확인하세요." image="/assets/img/og-hero.jpg" path="/modded.html" -->
 </head>
 
 <body>
@@ -56,7 +56,7 @@
                 <p class="mt-2 max-w-2xl">
                     미러에서 바로 받을 수 있는 Modrinth 형식
                     <code class="rounded bg-inset px-1.5 py-0.5 font-mono text-[13px] text-accent-strong">.mrpack</code>
-                    파일로 직접 구성한 자체 모드팩이에요. <strong class="text-ink">{{pack.modded.name}}</strong>
+                    파일로 직접 구성한 자체 모드팩이에요. {{pack.modded.name}}
                     (팩 버전 {{pack.modded.version}})은 마인크래프트 {{pack.modded.minecraft}}의
                     네오포지 {{pack.modded.loaderVersion}} 환경에서 구동되며, {{pack.modded.modCount}}개 모드와
                     {{pack.modded.shaderCount}}개 셰이더팩이 이 파일 하나에 다 들어있어요.
@@ -110,12 +110,12 @@
                             </a>
                         </div>
                         <p class="mt-3 text-xs text-faint">
-                            이 서버는 건축용이에요. 모든 플레이어가 모험 모드로 시작하기 때문에 테러가 불가능하고, 사실상 가입 절차나 마찬가지예요.
+                            이 서버는 건축용이에요. 모든 플레이어가 모험 모드로 시작하기 때문에 테러는 불가능해요. 건축 권한을 따로 받아야 하니까, 이게 사실상 가입 절차예요.
                             <a class="font-medium text-accent-strong hover:underline" href="https://matrix.to/#/%23yurumc-space:funami.tech"><code class="font-mono">#yurumc-space:funami.tech</code></a>에
                             들어와서 건축 권한을 요청해 주세요.
                         </p>
                         <p class="mt-3 text-xs text-faint">
-                            라이브 맵에는 에테르를 포함한 11개 차원이 있어요. 유이는 그 대부분에 가본 적이 없어요.
+                            라이브 맵에는 에더랑 행성 몇 개를 포함한 11개 차원이 있어요. 대부분은 유이도 아직 안 가 봤어요.
                         </p>
                     </div>
 
@@ -165,9 +165,9 @@
                 <h2 class="section-title mt-4">YuruMC 모드 서바이벌: 일단 돌부터, 원자로는 나중에</h2>
                 <p class="mt-2 max-w-2xl">
                     이 서버는 다른 분들의 노고가 담긴
-                    <strong class="text-ink">{{pack.modded-survival.name}} {{pack.modded-survival.version}}</strong>을
+                    {{pack.modded-survival.name}} {{pack.modded-survival.version}}을
                     CurseForge에서 가져와 운영하고 있어요. 모드팩 제작자의 말을 빌리면,
-                    <em>"기술과 함께 더 많은 생존과 탐험을 원하세요? 1.20.1용 TerraFirmaCraft + GregTech 모드팩입니다."</em>라고 하네요. 좀 더 솔직히 말하면
+                    "기술과 함께 더 많은 생존과 탐험을 원하세요? 1.20.1용 TerraFirmaCraft + GregTech 모드팩입니다."라고 하네요. 좀 더 솔직히 말하면
                     첫날 저녁 내내 부싯돌이나 깎고 있을 때 채팅에서 누군가 증기 보일러를 자랑하고
                     있을 거라는 뜻이에요. {{pack.modded-survival.modCount}}개 모드, 마인크래프트
                     {{pack.modded-survival.minecraft}}, 포지
@@ -205,7 +205,7 @@
                                     <svg class="size-4" aria-hidden="true"><use href="#i-users"/></svg>
                                     정원
                                 </span>
-                                <span class="text-sm font-medium text-ink">30명, 화이트리스트 없음, 탓할 친구도 데려와도 돼요</span>
+                                <span class="text-sm font-medium text-ink">30명, 화이트리스트 없음, 탓할 친구 하나쯤 데려오세요</span>
                             </li>
                         </ul>
 
@@ -265,7 +265,7 @@
                         <p class="mt-2 text-sm/relaxed">
                             모든 게 다 들어있는 걸 원할 때. 마인크래프트 {{pack.modded.minecraft}} 기반, {{pack.modded.modCount}}개 모드, 미러에서 한 번만 받으면 바로 시작이에요. 모험 모드라서, 서버에 들어오면 가장 먼저 관리자에게 나무 캘 권한을 요청해야 해요.
                         </p>
-                        <p class="mt-3 text-xs text-faint">라이브 맵이 있어요.</p>
+                        <p class="mt-3 text-xs text-faint">라이브 맵 있음.</p>
                     </div>
                     <div class="card p-6">
                         <span class="flex size-10 items-center justify-center rounded-xl bg-accent-soft text-accent-strong">
@@ -276,7 +276,7 @@
                             바닐라 서바이벌이 너무 쉽다고 느낄 때.
                             마인크래프트 {{pack.modded-survival.minecraft}} 기반의
                             {{pack.modded-survival.name}}, 포지.
-                            여기서는 나무 곡괭이 같은 건 기다려주지 않아요.
+                            여기엔 나무 곡괭이 같은 건 없어요.
                         </p>
                         <p class="mt-3 text-xs text-faint">라이브 맵 없음. 야생은 야생 그대로.</p>
                     </div>
@@ -318,7 +318,7 @@
                 <p class="mt-6 text-sm text-faint">
                     <a class="text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong" href="/ko/#rules">메인 페이지</a>의
                     규칙 두 개가 여기서도 적용돼요. 렉 유발 금지, 테러 금지. 모드 서버에서는 렉을 유발할 수 있는
-                    <em>훨씬</em> 창의적인 방법들이 많아요. 부디 살살 다뤄주세요. 데이터센터가 아니라 누군가의 집에서 돌아가는 서버예요.
+                    훨씬 창의적인 방법들이 많아요. 부디 살살 다뤄주세요. 데이터센터가 아니라 누군가의 집에서 돌아가는 서버예요.
                 </p>
             </div>
         </section>
@@ -331,7 +331,7 @@
                         <h2 class="section-title">다락방</h2>
                         <p class="mt-2 text-sm/relaxed">
                             미러에는 과거와 현재의 YuruMC 모드팩 빌드와 1.17
-                            월드 아카이브가 보관되어 있어요. 지금은 <strong class="text-ink">{{pack.modded.name}}</strong>만
+                            월드 아카이브가 보관되어 있어요. 지금은 {{pack.modded.name}}만
                             운영 중이고, 나머지는 은퇴했거나 잠시 들른 것들이에요.
                             다락방은 안 잠가두니까 필요한 건 마음껏 가져가세요.
                         </p>
