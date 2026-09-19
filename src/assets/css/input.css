@@ -10,6 +10,19 @@
   src: url("/assets/fonts/InterVariable.woff2") format("woff2");
 }
 
+/* Korean pages only (see html:lang(ko) below). Pretendard's Latin is
+   Inter-derived, so it carries Latin text there too. English pages never
+   reference this family, so they never download the 2 MB file.
+   SIL OFL 1.1, licence shipped next to it as Pretendard-OFL.txt. */
+@font-face {
+  font-family: "Pretendard Variable";
+  font-style: normal;
+  font-weight: 45 920;
+  font-display: swap;
+  src: url("/assets/fonts/PretendardVariable.woff2") format("woff2-variations"),
+       url("/assets/fonts/PretendardVariable.woff2") format("woff2");
+}
+
 /* ----------------------------------------------------------------- tokens */
 
 @theme {
@@ -110,6 +123,11 @@
 
   body {
     @apply flex min-h-svh flex-col bg-canvas font-sans text-[15px]/relaxed text-fg antialiased;
+  }
+
+  /* Korean pages: Pretendard is the default face for all text, Latin included */
+  html:lang(ko) body {
+    font-family: "Pretendard Variable", "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
   }
 
   /* Korean breaks between words, never inside one; long tokens may still wrap */

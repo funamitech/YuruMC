@@ -2,7 +2,7 @@
 <html lang="ko">
 
 <head>
-    <!-- @include partials/head.html title="모드 서버: YuruMC" description="YuruMC는 두 개의 모드 마인크래프트 서버를 운영하고 있어요. modded.mc.funami.tech의 자체 네오포지 팩 서버와, survival.modded.mc.funami.tech의 {{pack.modded-survival.name}} 서버. 접속 주소, 모드팩 다운로드, 버전과 로더 정보를 한 페이지에서 확인하세요." image="/assets/img/og-hero.jpg" path="/modded.html" -->
+    <!-- @include partials/head.html font="PretendardVariable" title="모드 서버: YuruMC" description="YuruMC는 두 개의 모드 마인크래프트 서버를 운영하고 있어요. modded.mc.funami.tech의 자체 네오포지 팩 서버와, survival.modded.mc.funami.tech의 {{pack.modded-survival.name}} 서버. 접속 주소, 모드팩 다운로드, 버전과 로더 정보를 한 페이지에서 확인하세요." image="/assets/img/og-hero.jpg" path="/modded.html" -->
 </head>
 
 <body>
@@ -19,12 +19,12 @@
                     <p class="chip"><svg class="size-3.5" aria-hidden="true"><use href="#i-cpu"/></svg> {{pack.modded.modCount}} + {{pack.modded-survival.modCount}}개 모드</p>
                     <p class="chip"><svg class="size-3.5" aria-hidden="true"><use href="#i-map-pin"/></svg> 대한민국 경기도</p>
                 </div>
-                <h1 class=”mt-5 max-w-3xl text-4xl font-bold tracking-tight text-ink sm:text-5xl lg:text-6xl”>
+                <h1 class="mt-5 max-w-3xl text-4xl font-bold tracking-tight text-ink sm:text-5xl lg:text-6xl">
                     모드 서버.
-                    <span class=”block text-faint”>유이가 “모드 하나만 더”를 {{pack.modded.modCount}}번 반복했어요.</span>
+                    <span class="block text-faint">유이가 “모드 하나만 더”를 {{pack.modded.modCount}}번 반복했어요.</span>
                 </h1>
-                <p class=”mt-5 max-w-2xl text-lg/relaxed”>
-                    <a class=”text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong” href=”/ko/”>바닐라 SMP</a>가 평온한 쪽이라면, 여기 두 서버는 아니에요. 하나는 자체 모드팩으로 돌아가는 건축 서버, 다른 하나는 돌멩이를 부딪히는 것부터 시작해서 GregTech 공장까지 세워야 하는 TerraFirmaGreg 서버예요. 둘 다 Java 에디션 전용이에요.
+                <p class="mt-5 max-w-2xl text-lg/relaxed">
+                    <a class="text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong" href="/ko/">바닐라 SMP</a>가 평온한 쪽이라면, 여기 두 서버는 아니에요. 하나는 자체 모드팩으로 돌아가는 건축 서버, 다른 하나는 돌멩이를 부딪히는 것부터 시작해서 GregTech 공장까지 세워야 하는 TerraFirmaGreg 서버예요. 둘 다 Java 에디션 전용이에요.
                 </p>
                 <div class="mt-8 flex flex-wrap gap-3">
                     <a href="#yurumc-pack" class="btn-primary">
@@ -293,23 +293,23 @@
                     바닐라 런처는 안 돼요. YuruMC에서 주소 말고 뭔가 더 필요한 건 이 부분뿐이에요.
                 </p>
                 <ol class="mt-8 grid gap-4 md:grid-cols-3">
-                    <li class="card flex gap-4 p-5">
+                    <li class="card flex min-w-0 gap-4 p-5">
                         <span class="flex size-8 flex-none items-center justify-center rounded-lg bg-inset font-mono text-sm font-bold text-accent-strong">1</span>
-                        <div>
+                        <div class="min-w-0">
                             <h3 class="font-semibold text-ink">런처 준비</h3>
                             <p class="mt-1 text-sm/relaxed">팩 파일을 가져올 수 있는 런처면 돼요. <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">.mrpack</code>은 Modrinth 앱이나 Prism Launcher, CurseForge zip은 CurseForge 앱이나 Prism을 사용하세요.</p>
                         </div>
                     </li>
-                    <li class="card flex gap-4 p-5">
+                    <li class="card flex min-w-0 gap-4 p-5">
                         <span class="flex size-8 flex-none items-center justify-center rounded-lg bg-inset font-mono text-sm font-bold text-accent-strong">2</span>
-                        <div>
+                        <div class="min-w-0">
                             <h3 class="font-semibold text-ink">팩 가져오기</h3>
                             <p class="mt-1 text-sm/relaxed">자체 팩은 미러의 <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">.mrpack</code> 파일을, 모드 서바이벌은 CurseForge에서 {{pack.modded-survival.name}} {{pack.modded-survival.version}}을 받으세요. 로더가 팩 안에 포함되어 있어서 (네오)포지를 따로 설치할 필요 없어요.</p>
                         </div>
                     </li>
-                    <li class="card flex gap-4 p-5">
+                    <li class="card flex min-w-0 gap-4 p-5">
                         <span class="flex size-8 flex-none items-center justify-center rounded-lg bg-inset font-mono text-sm font-bold text-accent-strong">3</span>
-                        <div>
+                        <div class="min-w-0">
                             <h3 class="font-semibold text-ink">서버 추가 후 접속</h3>
                             <p class="mt-1 text-sm/relaxed">팩을 실행하고 <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">modded.mc.funami.tech</code> 또는 <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">survival.modded.mc.funami.tech</code>를 추가하세요. 포트는 비워두면 돼요. 재밌게 즐기세요!</p>
                         </div>
