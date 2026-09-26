@@ -5,10 +5,10 @@
 <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>YuruMC: 대한민국 경기도의 느긋한 세미 바닐라 SMP</title>
-<meta name="description" content="2021년부터 대한민국 경기도의 학생 홈서버에서 운영 중인 세미 바닐라 SMP 마인크래프트 서버. 규칙은 딱 두 개, Java 에디션과 베드락 에디션 모두 지원. 지친 후나미 유이가 혼자 다 굴리고 있어요. 서버 주소: mc.funami.tech.">
-<meta property="og:title" content="YuruMC: 대한민국 경기도의 느긋한 세미 바닐라 SMP">
-<meta property="og:description" content="2021년부터 대한민국 경기도의 학생 홈서버에서 운영 중인 세미 바닐라 SMP 마인크래프트 서버. 규칙은 딱 두 개, Java 에디션과 베드락 에디션 모두 지원. 지친 후나미 유이가 혼자 다 굴리고 있어요. 서버 주소: mc.funami.tech.">
+<title>YuruMC: 경기도에서 굴러가는 느긋한 세미 바닐라 SMP</title>
+<meta name="description" content="2021년부터 경기도 학생 홈서버에서 돌아가는 세미 바닐라 SMP 마인크래프트 서버. 규칙은 딱 두 개뿐이고 Java랑 베드락 둘 다 돼. 서버 주소: mc.funami.tech.">
+<meta property="og:title" content="YuruMC: 경기도에서 굴러가는 느긋한 세미 바닐라 SMP">
+<meta property="og:description" content="2021년부터 경기도 학생 홈서버에서 돌아가는 세미 바닐라 SMP 마인크래프트 서버. 규칙은 딱 두 개뿐이고 Java랑 베드락 둘 다 돼. 서버 주소: mc.funami.tech.">
 <meta property="og:image" content="https://mc.funami.tech/assets/img/og-hero.jpg">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
@@ -51,9 +51,9 @@
             </div>
         </div>
 
-        <a class="nav-link hidden md:inline-flex" href="https://github.com/sponsors/NoaHimesaka1873" title="GitHub에서 YuruMC 후원하기, 전기세가 진짜예요">
+        <a class="nav-link hidden md:inline-flex" href="https://github.com/sponsors/NoaHimesaka1873" title="전기세 좀 도와줘">
             <svg class="size-3.5 text-accent" aria-hidden="true"><use href="#i-heart"/></svg>
-            유이 후원하기
+            후원
         </a>
         <a class="icon-btn hidden md:inline-flex" href="https://github.com/funamitech/YuruMC" aria-label="GitHub 소스 코드">
             <svg class="size-4" aria-hidden="true"><use href="#i-github"/></svg>
@@ -62,7 +62,7 @@
             <svg class="size-3.5" aria-hidden="true"><use href="#i-languages"/></svg>
             <span class="md:max-lg:sr-only" lang="en">English</span>
         </a>
-        <button type="button" class="icon-btn" id="theme-toggle" aria-label="색상 테마 전환" title="유이는 라이트 모드를 좋아해요">
+        <button type="button" class="icon-btn" id="theme-toggle" aria-label="테마 전환" title="유이는 라이트 모드파야">
             <svg class="size-4 theme-icon-light" aria-hidden="true"><use href="#i-moon"/></svg>
             <svg class="size-4 theme-icon-dark" aria-hidden="true"><use href="#i-sun"/></svg>
         </button>
@@ -74,8 +74,8 @@
 
     <div id="mobile-menu" class="border-t border-line px-4 pb-4 pt-2 md:hidden" hidden>
         <nav class="grid gap-0.5" aria-label="모바일 메뉴">
-            <p class="px-3 py-1.5 text-xs text-faint">서버 주소: <code class="font-mono font-semibold text-ink">mc.funami.tech</code>. 유이가 혹시 몰라서 여기에도 적어뒀어요.</p>
-            <a class="menu-item" href="https://github.com/sponsors/NoaHimesaka1873"><svg class="size-4 text-accent" aria-hidden="true"><use href="#i-heart"/></svg>유이의 전기세 후원하기<svg class="ms-auto size-3 text-faint" aria-hidden="true"><use href="#i-external-link"/></svg></a>
+            <p class="px-3 py-1.5 text-xs text-faint">서버 주소: <code class="font-mono font-semibold text-ink">mc.funami.tech</code>. 혹시 몰라서 여기에도 적어둠.</p>
+            <a class="menu-item" href="https://github.com/sponsors/NoaHimesaka1873"><svg class="size-4 text-accent" aria-hidden="true"><use href="#i-heart"/></svg>전기세 좀 도와주기<svg class="ms-auto size-3 text-faint" aria-hidden="true"><use href="#i-external-link"/></svg></a>
             <div class="my-1.5 border-t border-line"></div>
             <a class="menu-item" href="/ko/#play"><svg class="size-4" aria-hidden="true"><use href="#i-gamepad"/></svg>접속 방법</a>
             <a class="menu-item" href="/ko/#rules"><svg class="size-4" aria-hidden="true"><use href="#i-scale"/></svg>규칙</a>
@@ -105,19 +105,19 @@
             <div class="relative mx-auto flex max-w-6xl items-center px-4 py-16 sm:px-6 lg:min-h-[37rem] lg:py-24">
                 <div class="max-w-2xl">
                     <div class="flex flex-wrap items-center gap-2">
-                        <p class="chip"><svg class="size-3.5" aria-hidden="true"><use href="#i-map-pin"/></svg> 대한민국 경기도</p>
-                        <p class="chip"><svg class="size-3.5" aria-hidden="true"><use href="#i-calendar"/></svg> 어쩌다 보니 2021년부터</p>
+                        <p class="chip"><svg class="size-3.5" aria-hidden="true"><use href="#i-map-pin"/></svg> 경기도</p>
+                        <p class="chip"><svg class="size-3.5" aria-hidden="true"><use href="#i-calendar"/></svg> 2021년부터 어쩌다 보니</p>
                     </div>
                     <h1 class="mt-5 text-4xl font-bold tracking-tight text-ink sm:text-5xl md:max-w-lg lg:max-w-none lg:text-6xl">
                         느긋한
                         <span class="whitespace-nowrap text-accent-strong">세미 바닐라</span> SMP.
-                        <span class="block text-faint">유이는 안 느긋해요.</span>
+                        <span class="block text-faint">유이는 안 느긋하지.</span>
                     </h1>
                     <p class="mt-5 max-w-md text-lg/relaxed xl:max-w-xl">
-                        YuruMC에 오신 걸 환영해요! 2021년부터 운영 중인 세미 바닐라 SMP
-                        마인크래프트 서버예요! 규칙은 거의 없고, Java 에디션과 베드락 에디션 둘 다
-                        지원해요. 대한민국 경기도 학생의 홈서버에서 돌아가고 있고, 유이가 수업
-                        사이사이에 관리하고 있어요. 재밌게 즐겨주세요!
+                        YuruMC 왔어? 세미 바닐라 SMP
+                        마인크래프트 서버야. 규칙은 사실상 없고, Java 에디션이랑
+                        베드락 에디션 둘 다 돼. 경기도 학생 홈서버에서 유이가 수업
+                        틈틈이 어찌저찌 굴리는 중이야. 놀러 와!
                     </p>
                     <div class="mt-8 flex flex-wrap gap-3">
                         <a href="#play" class="btn-primary">
@@ -126,7 +126,7 @@
                         </a>
                         <a href="#rules" class="btn-ghost">
                             <svg class="size-4 text-accent" aria-hidden="true"><use href="#i-scale"/></svg>
-                            규칙 읽기. 딱 두 개뿐이에요.
+                            규칙 보기
                         </a>
                     </div>
                     <dl class="mt-10 flex flex-wrap gap-x-10 gap-y-4">
@@ -152,7 +152,7 @@
             <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
                 <h2 class="section-title">접속 방법</h2>
                 <p class="mt-2 max-w-2xl">
-                    유이가 딱 한 번만 설명할 거예요. 서버 주소에 <code class="rounded bg-inset px-1.5 py-0.5 font-mono text-[13px] text-accent-strong">mc.funami.tech</code>를 입력하세요. Java 에디션은 포트가 필요 없어요. 베드락 에디션은 포트 칸에 이미 19132가 적혀 있을 텐데, 그대로 두면 돼요. 튜토리얼 끝.
+                    서버 주소는 <code class="rounded bg-inset px-1.5 py-0.5 font-mono text-[13px] text-accent-strong">mc.funami.tech</code>야. 이 페이지에서 네 번은 나와. 어차피 끝까지 안 읽을 거잖아.
                 </p>
 
                 <div class="mt-8 grid gap-4 lg:grid-cols-5">
@@ -163,7 +163,7 @@
                             </span>
                             <div>
                                 <h3 class="font-semibold text-ink">YuruMC 세미 바닐라 SMP</h3>
-                                <p class="text-sm text-faint">규칙 두 개, Java와 베드락, 지친 유이 한 명.</p>
+                                <p class="text-sm text-faint">메인 서버. 베드락도 들어올 수 있어.</p>
                             </div>
                         </div>
 
@@ -180,7 +180,7 @@
                                         <svg class="size-3.5 text-accent-strong" data-copied-icon hidden aria-hidden="true"><use href="#i-check"/></svg>
                                     </button>
                                 </span>
-                                <span class="chip">포트 필요 없어요, 진짜예요</span>
+                                <span class="chip">포트 칸 비워 둬</span>
                             </li>
                             <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-3">
                                 <span class="flex w-40 items-center gap-2 text-sm text-faint">
@@ -194,14 +194,14 @@
                                         <svg class="size-3.5 text-accent-strong" data-copied-icon hidden aria-hidden="true"><use href="#i-check"/></svg>
                                     </button>
                                 </span>
-                                <span class="chip">포트 19132 (기본값, 그대로 두세요)</span>
+                                <span class="chip">포트 19132 (기본값이니까 건드리지 마)</span>
                             </li>
                         </ul>
 
 
                         <div class="mt-5 flex flex-wrap gap-2">
-                            <span class="chip"><svg class="size-3" aria-hidden="true"><use href="#i-box"/></svg>Java 마인크래프트 26.2, ViaVersion 없음, 버전 맞춰주세요</span>
-                            <span class="chip"><svg class="size-3" aria-hidden="true"><use href="#i-users"/></svg>베드락 유저는 Geyser로 접속</span>
+                            <span class="chip"><svg class="size-3" aria-hidden="true"><use href="#i-box"/></svg>마인크래프트 26.2 Java, ViaVersion 없으니까 버전 맞춰</span>
+                            <span class="chip"><svg class="size-3" aria-hidden="true"><use href="#i-users"/></svg>베드락은 Geyser로 들어옴</span>
                             <a href="https://map.mc.funami.tech/" class="chip-accent transition-colors hover:bg-inset">
                                 <svg class="size-3" aria-hidden="true"><use href="#i-map"/></svg>
                                 BlueMap 구경하기
@@ -215,21 +215,21 @@
                             <span class="flex size-8 flex-none items-center justify-center rounded-lg bg-inset font-mono text-sm font-bold text-accent-strong">1</span>
                             <div class="min-w-0">
                                 <h3 class="font-semibold text-ink">멀티플레이 열기</h3>
-                                <p class="mt-1 text-sm/relaxed">마인크래프트에서 멀티플레이(Java) 또는 서버(베드락)로 들어가서 서버를 추가하세요. 다들 해본 적 있죠?</p>
+                                <p class="mt-1 text-sm/relaxed">마인크래프트에서 멀티플레이(Java) 아니면 서버(베드락) 눌러서 서버를 추가해. 해봤지?</p>
                             </div>
                         </li>
                         <li class="card flex min-w-0 gap-4 p-5">
                             <span class="flex size-8 flex-none items-center justify-center rounded-lg bg-inset font-mono text-sm font-bold text-accent-strong">2</span>
                             <div class="min-w-0">
                                 <h3 class="font-semibold text-ink">주소 입력</h3>
-                                <p class="mt-1 text-sm/relaxed"><code class="rounded bg-inset px-1 py-0.5 font-mono text-[13px] text-accent-strong">mc.funami.tech</code>를 입력하세요. Java 에디션은 이것만 하면 돼요. 베드락 유저는 포트를 19132 그대로 두세요.</p>
+                                <p class="mt-1 text-sm/relaxed"><code class="rounded bg-inset px-1 py-0.5 font-mono text-[13px] text-accent-strong">mc.funami.tech</code> 넣으면 돼. Java는 이게 전부야. 베드락은 포트 19132 그대로 놔둬.</p>
                             </div>
                         </li>
                         <li class="card flex min-w-0 gap-4 p-5">
                             <span class="flex size-8 flex-none items-center justify-center rounded-lg bg-inset font-mono text-sm font-bold text-accent-strong">3</span>
                             <div class="min-w-0">
-                                <h3 class="font-semibold text-ink">접속해서 즐기기</h3>
-                                <p class="mt-1 text-sm/relaxed">아래 규칙 두 개를 읽으면(네, 둘 다요) 준비 끝이에요. 재밌게 즐기세요!</p>
+                                <h3 class="font-semibold text-ink">접속</h3>
+                                <p class="mt-1 text-sm/relaxed">아래 규칙 두 개 읽으면 끝이야. 하고 싶은 거 해.</p>
                             </div>
                         </li>
                     </ol>
@@ -240,28 +240,28 @@
         <!-- Rules -->
         <section id="rules" class="scroll-mt-20 border-t border-line">
             <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
-                <h2 class="section-title">규칙 (딱 두 개예요)</h2>
+                <h2 class="section-title">규칙</h2>
                 <p class="mt-2 max-w-2xl">
-                    나머지는 전부 자유예요. 핵 클라이언트도 허용! 네, 진짜예요.
+                    규칙은 딱 두 개야.
                 </p>
 
                 <ol class="mt-8 grid gap-4 md:grid-cols-2">
                     <li class="card flex gap-5 p-6">
                         <span class="flex size-12 flex-none items-center justify-center rounded-2xl bg-accent-soft font-mono text-xl font-bold text-accent-strong">1</span>
                         <div>
-                            <h3 class="text-lg font-semibold text-ink">서버에 렉 걸리게 하지 마세요.</h3>
-                            <p class="mt-1 text-sm/relaxed">렉 머신이나 *밴 기술 같은 것도 다 포함이에요. 학생이 집에서 돌리는 서버거든요. 유이는 책상에서 팬 돌아가는 소리를 다 들을 수 있답니다.</p>
+                            <h3 class="text-lg font-semibold text-ink">서버에 렉 걸지 마</h3>
+                            <p class="mt-1 text-sm/relaxed">렉 머신 안 되고 청크밴, 책밴도 안 돼. 학생이 돌리는 홈서버거든. 유이 책상에서 팬 소리 다 들려.</p>
                         </div>
                     </li>
                     <li class="card flex gap-5 p-6">
                         <span class="flex size-12 flex-none items-center justify-center rounded-2xl bg-accent-soft font-mono text-xl font-bold text-accent-strong">2</span>
                         <div>
-                            <h3 class="text-lg font-semibold text-ink">테러하지 마세요.</h3>
-                            <p class="mt-1 text-sm/relaxed">테러랑 렉 유발만 빼면 뭘 해도 괜찮아요! 못생긴 집을 짓는 건 합법이에요. 남의 집 위에 짓는 건 안 돼요. 유이는 기억력이 아주 좋거든요.</p>
+                            <h3 class="text-lg font-semibold text-ink">그리핑 금지</h3>
+                            <p class="mt-1 text-sm/relaxed">못생긴 집 짓는 건 합법이야. 남의 집 위에 짓는 건 안 돼. 유이 기억력 좋거든.</p>
                         </div>
                     </li>
                 </ol>
-                <p class="mt-6 text-sm text-faint">규칙은 이게 전부예요.</p>
+                <p class="mt-6 text-sm text-faint">이게 전부야. 나머지는 다 괜찮아. 핵 클라이언트도 돼, 진짜로.</p>
             </div>
         </section>
 
@@ -272,15 +272,14 @@
                     <div class="max-w-xl">
                         <p class="chip-accent">
                             <svg class="size-3" aria-hidden="true"><use href="#i-package"/></svg>
-                            사실 두 개나 있어요
+                            모드 서버 두 개 있어
                         </p>
                         <h2 class="section-title mt-4">모드 서버</h2>
                         <p class="mt-2 text-sm/relaxed">
-                            YuruMC는 두 개의 모드 서버도 운영하고 있어요.
-                            229개 모드가 들어간 자체 제작 팩은
-                            <code class="rounded bg-inset px-1.5 py-0.5 font-mono text-[13px] text-accent-strong">modded.mc.funami.tech</code>,
-                            TerraFirmaGreg-Modern(돌부터 시작해서 GregTech까지)은
-                            <code class="rounded bg-inset px-1.5 py-0.5 font-mono text-[13px] text-accent-strong">survival.modded.mc.funami.tech</code>에서 즐길 수 있어요.
+                            모드 229개 넣은 자체 팩은
+                            <code class="rounded bg-inset px-1.5 py-0.5 font-mono text-[13px] text-accent-strong">modded.mc.funami.tech</code>에 있고,
+                            돌멩이부터 GregTech 공장까지 올라가는 TerraFirmaGreg-Modern은
+                            <code class="rounded bg-inset px-1.5 py-0.5 font-mono text-[13px] text-accent-strong">survival.modded.mc.funami.tech</code>에서 돌아가.
                         </p>
                         <div class="mt-5 flex flex-wrap gap-3">
                             <a href="/ko/modded.html" class="btn-primary">
@@ -292,16 +291,16 @@
                                 .mrpack 바로 받기
                             </a>
                         </div>
-                        <p class="mt-3 text-xs text-faint">아쉽게도 Java 에디션 전용이에요. 베드락 유저 분들은 바닐라 서버를 이용해 주세요.</p>
+                        <p class="mt-3 text-xs text-faint">Java 에디션 전용이야. 베드락은 바닐라 서버로 가면 돼.</p>
                     </div>
                     <dl class="grid min-w-0 gap-3 text-sm sm:min-w-72">
                         <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
                             <dt class="text-faint">YuruMC 모드</dt>
-                            <dd class="font-medium text-ink">MC 1.21.1 · 네오포지</dd>
+                            <dd class="font-medium text-ink">MC 1.21.1 · NeoForge</dd>
                         </div>
                         <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
                             <dt class="text-faint">모드 서바이벌</dt>
-                            <dd class="font-medium text-ink">MC 1.20.1 · 포지</dd>
+                            <dd class="font-medium text-ink">MC 1.20.1 · Forge</dd>
                         </div>
                         <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
                             <dt class="text-faint whitespace-nowrap">상세 정보</dt>
@@ -315,33 +314,33 @@
         <!-- Why -->
         <section class="border-t border-line">
             <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
-                <h2 class="section-title">이런 서버예요</h2>
+                <h2 class="section-title">이런 서버야</h2>
                 <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                     <div class="card p-6">
                         <span class="flex size-10 items-center justify-center rounded-xl bg-accent-soft text-accent-strong">
                             <svg class="size-5" aria-hidden="true"><use href="#i-scale"/></svg>
                         </span>
-                        <h3 class="mt-4 font-semibold text-ink">규칙은 딱 두 개</h3>
+                        <h3 class="mt-4 font-semibold text-ink">규칙 두 개</h3>
                         <p class="mt-2 text-sm/relaxed">
-                            서버에 렉 유발 금지. 테러 금지. 나머지는 전부 자유예요. 핵 클라이언트도 허용!
+                            외울 것도 없어. 렉 걸지 마, 그리핑 하지 마. 이거면 돼.
                         </p>
                     </div>
                     <div class="card p-6">
                         <span class="flex size-10 items-center justify-center rounded-xl bg-accent-soft text-accent-strong">
                             <svg class="size-5" aria-hidden="true"><use href="#i-smartphone"/></svg>
                         </span>
-                        <h3 class="mt-4 font-semibold text-ink">Java와 베드락</h3>
+                        <h3 class="mt-4 font-semibold text-ink">Java랑 베드락</h3>
                         <p class="mt-2 text-sm/relaxed">
-                            주소 하나로 두 에디션 모두 접속. 베드락 유저도 Geyser를 통해 같은 월드에서 플레이해요.
+                            주소 하나로 Java든 베드락이든 다 돼. 베드락은 Geyser로 들어오고 같은 월드에서 놀아.
                         </p>
                     </div>
                     <div class="card p-6">
                         <span class="flex size-10 items-center justify-center rounded-xl bg-accent-soft text-accent-strong">
                             <svg class="size-5" aria-hidden="true"><use href="#i-cpu"/></svg>
                         </span>
-                        <h3 class="mt-4 font-semibold text-ink">GraalVM 기반</h3>
+                        <h3 class="mt-4 font-semibold text-ink">GraalVM</h3>
                         <p class="mt-2 text-sm/relaxed">
-                            모든 서버가 GraalVM 위에서 돌아가요. 허락도 없이 같이 살게 된 다른 YuruVerse 서비스들과 한 집 살림 중이에요.
+                            마크 서버 전부 GraalVM으로 돌려. YuruVerse 집에 얹혀사는 거야. RAM 4분의 1을 혼자 먹어서 다른 서비스들이 처음엔 뭐라 했는데 이젠 포기했어.
                         </p>
                     </div>
                     <div class="card p-6">
@@ -350,10 +349,9 @@
                         </span>
                         <h3 class="mt-4 font-semibold text-ink">라이브 맵</h3>
                         <p class="mt-2 text-sm/relaxed">
-                            브라우저에서
-                            <a class="text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong" href="https://map.mc.funami.tech/">BlueMap</a>으로 월드를 구경해 보세요.
-                            <a class="text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong" href="https://map.modded.mc.funami.tech/">모드 건축 서버 맵도 있어요.</a>
-                            탐험해 보세요!
+                            <a class="text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong" href="https://map.mc.funami.tech/">BlueMap</a>으로 브라우저에서 월드 구경할 수 있어.
+                            <a class="text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong" href="https://map.modded.mc.funami.tech/">모드 건축 서버 맵도 있어</a>.
+                            둘러봐!
                         </p>
                     </div>
                 </div>
@@ -370,14 +368,12 @@
                     <span class="font-semibold tracking-tight text-ink">YuruMC</span>
                 </a>
                 <p class="mt-3 text-sm leading-relaxed text-faint">
-                    2021년부터 대한민국 경기도에서
-                    <svg class="inline size-3.5 text-accent" aria-hidden="true"><use href="#i-heart"/></svg><span class="sr-only">사랑</span>을
-                    담아 운영 중인 느긋한 세미 바닐라 SMP.
+                    2021년부터 경기도에서 굴러가는 느긋한 세미 바닐라 SMP.
                 </p>
                 <div class="mt-4 flex gap-1">
                     <a class="icon-btn" href="https://bsky.app/profile/funami.tech" aria-label="Bluesky"><svg class="size-4" aria-hidden="true"><use href="#i-bluesky"/></svg></a>
                     <a class="icon-btn" href="https://github.com/funamitech/YuruMC" aria-label="GitHub"><svg class="size-4" aria-hidden="true"><use href="#i-github"/></svg></a>
-                    <a class="icon-btn" href="mailto:yui+SPAM[at]funami[dot]tech" title="+SPAM을 빼고 @와 .을 넣어서 보내세요" aria-label="이메일"><svg class="size-4" aria-hidden="true"><use href="#i-mail"/></svg></a>
+                    <a class="icon-btn" href="mailto:yui+SPAM[at]funami[dot]tech" title="+SPAM 빼고 @랑 . 넣어서 보내" aria-label="이메일"><svg class="size-4" aria-hidden="true"><use href="#i-mail"/></svg></a>
                 </div>
             </div>
 
@@ -405,9 +401,9 @@
                 <div class="col-span-2 sm:col-span-1">
                     <h3 class="mb-3 text-xs font-semibold uppercase tracking-wider text-faint">YuruMC</h3>
                     <ul class="space-y-2 text-faint">
-                        <li class="flex items-start gap-2"><svg class="mt-1 size-3.5 flex-none" aria-hidden="true"><use href="#i-map-pin"/></svg>대한민국 경기도</li>
-                        <li class="flex items-start gap-2"><svg class="mt-1 size-3.5 flex-none" aria-hidden="true"><use href="#i-server"/></svg>2021년부터 운영 중</li>
-                        <li class="flex items-start gap-2"><svg class="mt-1 size-3.5 flex-none" aria-hidden="true"><use href="#i-gamepad"/></svg>Java + 베드락 에디션</li>
+                        <li class="flex items-start gap-2"><svg class="mt-1 size-3.5 flex-none" aria-hidden="true"><use href="#i-map-pin"/></svg>경기도</li>
+                        <li class="flex items-start gap-2"><svg class="mt-1 size-3.5 flex-none" aria-hidden="true"><use href="#i-server"/></svg>2021년부터</li>
+                        <li class="flex items-start gap-2"><svg class="mt-1 size-3.5 flex-none" aria-hidden="true"><use href="#i-gamepad"/></svg>Java + 베드락</li>
                     </ul>
                 </div>
             </div>
@@ -417,6 +413,7 @@
             <p>&copy; 2021&ndash;2026 <a class="footer-link" href="https://funami.tech">funami.tech YuruVerse</a>. Some Rights Reserved.</p>
             <p>자매 사이트: <a class="footer-link" href="https://funami.tech">YuruVerse</a> &middot; <a class="footer-link" href="https://noa.codes">noa.codes</a></p>
         </div>
+        <p class="mt-4 text-xs text-faint" data-mtl-note>AI 번역이야. 유이한테 한국어 시키면 서버 터져.</p>
     </div>
 </footer>
 <!-- Inline SVG icon sprite (Lucide, ISC license + Simple Icons, CC0). Reference with: <svg><use href="#i-name"/></svg> -->

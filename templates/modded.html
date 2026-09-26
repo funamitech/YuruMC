@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <!-- @include partials/head.html font="InterVariable" title="Modded servers: YuruMC" description="YuruMC runs two modded Minecraft servers: our own {{pack.modded.loader}} pack on modded.mc.funami.tech, and {{pack.modded-survival.name}} on survival.modded.mc.funami.tech. Addresses, modpack downloads, versions and loaders, all on one page." image="/assets/img/og-hero.jpg" path="/modded.html" -->
+    <!-- @include partials/head.html font="InterVariable" title="Modded servers: YuruMC" description="YuruMC runs two modded Minecraft servers: our own {{pack.modded.loader}} pack on modded.mc.funami.tech, and {{pack.modded-survival.name}} on survival.modded.mc.funami.tech. One pack is ours, the other one starts you with rocks." image="/assets/img/og-hero.jpg" path="/modded.html" -->
 </head>
 
 <body>
@@ -24,7 +24,7 @@
                     <span class="block text-faint">Yui said “just one more mod” {{pack.modded.modCount}} times.</span>
                 </h1>
                 <p class="mt-5 max-w-2xl text-lg/relaxed">
-                    The <a class="text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong" href="/">vanilla SMP</a> is the calm one. These two are not. One is a building server running our own modpack. The other runs TerraFirmaGreg, where you start by hitting rocks together and end up with a GregTech factory. Both Java Edition only.
+                    Two modded servers, both Java Edition only. One runs our own pack for building. The other runs TerraFirmaGreg, where you start by hitting rocks together and end up with a GregTech factory. The <a class="text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong" href="/">vanilla SMP</a> will be there when you need a break.
                 </p>
                 <div class="mt-8 flex flex-wrap gap-3">
                     <a href="#yurumc-pack" class="btn-primary">
@@ -95,7 +95,7 @@
                                     <svg class="size-4" aria-hidden="true"><use href="#i-users"/></svg>
                                     Room for
                                 </span>
-                                <span class="text-sm font-medium text-ink">30 people, ask in the Matrix space for build access</span>
+                                <span class="text-sm font-medium text-ink">30 people</span>
                             </li>
                         </ul>
 
@@ -110,11 +110,8 @@
                             </a>
                         </div>
                         <p class="mt-3 text-xs text-faint">
-                            This one is for building, not surviving. Everyone starts in adventure
-                            mode so nothing can be griefed, which makes it registration by another
-                            name: join
-                            <a class="font-medium text-accent-strong hover:underline" href="https://matrix.to/#/%23yurumc-space:funami.tech"><code class="font-mono">#yurumc-space:funami.tech</code></a>
-                            and ask for permission to build.
+                            Everyone starts in adventure mode so nothing gets griefed. It's registration by another name. Ask for build access in
+                            <a class="font-medium text-accent-strong hover:underline" href="https://matrix.to/#/%23yurumc-space:funami.tech"><code class="font-mono">#yurumc-space:funami.tech</code></a>.
                         </p>
                         <p class="mt-3 text-xs text-faint">
                             The live map has eleven dimensions on it, including the Aether and a
@@ -170,7 +167,7 @@
                     This one runs an assortment of other people's hard work:
                     <strong class="text-ink">{{pack.modded-survival.name}} {{pack.modded-survival.version}}</strong>
                     off CurseForge. In the pack authors' own words,
-                    <em>"{{pack.modded-survival.summary}}"</em>. Which is a polite way of saying you
+                    <em>"{{pack.modded-survival.summary}}"</em> Which is a polite way of saying you
                     will spend your first evening knapping flint while someone in chat brags about
                     their steam boiler. {{pack.modded-survival.modCount}} mods, Minecraft
                     {{pack.modded-survival.minecraft}}, {{pack.modded-survival.loader}}
@@ -223,8 +220,7 @@
                             </a>
                         </div>
                         <p class="mt-3 text-xs text-faint">
-                            Install <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">{{pack.modded-survival.fileName}}</code>
-                            , the exact file the server runs. No live map for this one yet. You will
+                            Install <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">{{pack.modded-survival.fileName}}</code>, the exact file the server runs. No live map for this one yet. You will
                             have to explore with your actual eyes, like a peasant.
                         </p>
                     </div>
@@ -259,15 +255,15 @@
         <section class="border-b border-line bg-surface/50">
             <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
                 <h2 class="section-title">Which one do I want?</h2>
-                <p class="mt-2 max-w-2xl">Different versions, different loaders, different vibes.</p>
+                <p class="mt-2 max-w-2xl">Both will ruin your sleep schedule.</p>
                 <div class="mt-8 grid gap-4 md:grid-cols-2">
                     <div class="card p-6">
                         <span class="flex size-10 items-center justify-center rounded-xl bg-accent-soft text-accent-strong">
                             <svg class="size-5" aria-hidden="true"><use href="#i-package"/></svg>
                         </span>
-                        <h3 class="mt-4 font-semibold text-ink">Pick YuruMC Modded if…</h3>
+                        <h3 class="mt-4 font-semibold text-ink">YuruMC Modded</h3>
                         <p class="mt-2 text-sm/relaxed">
-                            ...you want the kitchen sink. {{pack.modded.modCount}} mods on Minecraft {{pack.modded.minecraft}}, one download from our mirror and you are in. It's adventure mode, so your first act on the server will be asking an op for permission to punch a tree.
+                            Our pack, {{pack.modded.modCount}} mods. Create and the Aether in the same world. Someone will build a train through your living room.
                         </p>
                         <p class="mt-3 text-xs text-faint">There is a live map.</p>
                     </div>
@@ -275,12 +271,9 @@
                         <span class="flex size-10 items-center justify-center rounded-xl bg-accent-soft text-accent-strong">
                             <svg class="size-5" aria-hidden="true"><use href="#i-pickaxe"/></svg>
                         </span>
-                        <h3 class="mt-4 font-semibold text-ink">Pick Modded Survival if…</h3>
+                        <h3 class="mt-4 font-semibold text-ink">Modded Survival</h3>
                         <p class="mt-2 text-sm/relaxed">
-                            ...you think vanilla survival is too easy.
-                            {{pack.modded-survival.name}} on Minecraft
-                            {{pack.modded-survival.minecraft}}, {{pack.modded-survival.loader}}.
-                            There is no wood pickaxe waiting for you.
+                            For people who got bored of vanilla survival. TerraFirmaGreg replaces most of the game you thought you knew. There is no wood pickaxe.
                         </p>
                         <p class="mt-3 text-xs text-faint">No live map. The wilderness stays wild.</p>
                     </div>
@@ -309,7 +302,7 @@
                         <span class="flex size-8 flex-none items-center justify-center rounded-lg bg-inset font-mono text-sm font-bold text-accent-strong">2</span>
                         <div class="min-w-0">
                             <h3 class="font-semibold text-ink">Import the pack</h3>
-                            <p class="mt-1 text-sm/relaxed">Our pack: the <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">.mrpack</code> from the mirror. Modded Survival: {{pack.modded-survival.name}} {{pack.modded-survival.version}} from CurseForge. The loader ships inside the pack, so you never install (Neo)Forge yourself.</p>
+                            <p class="mt-1 text-sm/relaxed">Our pack: the <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">.mrpack</code> from the mirror. Modded Survival: {{pack.modded-survival.name}} {{pack.modded-survival.version}} from CurseForge. The launcher sets up (Neo)Forge from the pack, so you never install it yourself.</p>
                         </div>
                     </li>
                     <li class="card flex min-w-0 gap-4 p-5">
@@ -321,9 +314,9 @@
                     </li>
                 </ol>
                 <p class="mt-6 text-sm text-faint">
-                    The two rules from the <a class="text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong" href="/#rules">front page</a>
+                    The rules from the <a class="text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong" href="/#rules">front page</a>
                     apply here too: don't lag the server, don't grief. Modded gives you <em>far</em> more
-                    creative ways to lag a server. Please be gentle; it lives in someone&#39;s home, not a datacenter.
+                    creative ways to lag a server. Please be gentle. It lives in someone&#39;s home, not a datacenter.
                 </p>
             </div>
         </section>
@@ -337,7 +330,7 @@
                         <p class="mt-2 text-sm/relaxed">
                             Our mirror holds the current and past YuruMC modpack builds and a 1.17
                             world archive. Only <strong class="text-ink">{{pack.modded.name}}</strong>
-                            is live; everything else is either retired or just visiting. Take
+                            is live. Everything else is either retired or just visiting. Take
                             whatever you want, we don't lock the attic.
                         </p>
                     </div>

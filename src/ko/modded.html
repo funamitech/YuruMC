@@ -6,9 +6,9 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>모드 서버: YuruMC</title>
-<meta name="description" content="YuruMC는 마인크래프트 모드 서버 두 개를 운영하고 있어요. modded.mc.funami.tech의 자체 네오포지 팩 서버와, survival.modded.mc.funami.tech의 TerraFirmaGreg-Modern 서버. 접속 주소, 모드팩 다운로드, 버전과 로더 정보를 한 페이지에서 확인하세요.">
+<meta name="description" content="YuruMC 모드 서버 두 개. modded.mc.funami.tech에서 자체 NeoForge 팩, survival.modded.mc.funami.tech에서 TerraFirmaGreg-Modern. 접속 정보랑 모드팩 다운로드 전부 여기 있어.">
 <meta property="og:title" content="모드 서버: YuruMC">
-<meta property="og:description" content="YuruMC는 마인크래프트 모드 서버 두 개를 운영하고 있어요. modded.mc.funami.tech의 자체 네오포지 팩 서버와, survival.modded.mc.funami.tech의 TerraFirmaGreg-Modern 서버. 접속 주소, 모드팩 다운로드, 버전과 로더 정보를 한 페이지에서 확인하세요.">
+<meta property="og:description" content="YuruMC 모드 서버 두 개. modded.mc.funami.tech에서 자체 NeoForge 팩, survival.modded.mc.funami.tech에서 TerraFirmaGreg-Modern. 접속 정보랑 모드팩 다운로드 전부 여기 있어.">
 <meta property="og:image" content="https://mc.funami.tech/assets/img/og-hero.jpg">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
@@ -51,9 +51,9 @@
             </div>
         </div>
 
-        <a class="nav-link hidden md:inline-flex" href="https://github.com/sponsors/NoaHimesaka1873" title="GitHub에서 YuruMC 후원하기, 전기세가 진짜예요">
+        <a class="nav-link hidden md:inline-flex" href="https://github.com/sponsors/NoaHimesaka1873" title="전기세 좀 도와줘">
             <svg class="size-3.5 text-accent" aria-hidden="true"><use href="#i-heart"/></svg>
-            유이 후원하기
+            후원
         </a>
         <a class="icon-btn hidden md:inline-flex" href="https://github.com/funamitech/YuruMC" aria-label="GitHub 소스 코드">
             <svg class="size-4" aria-hidden="true"><use href="#i-github"/></svg>
@@ -62,7 +62,7 @@
             <svg class="size-3.5" aria-hidden="true"><use href="#i-languages"/></svg>
             <span class="md:max-lg:sr-only" lang="en">English</span>
         </a>
-        <button type="button" class="icon-btn" id="theme-toggle" aria-label="색상 테마 전환" title="유이는 라이트 모드를 좋아해요">
+        <button type="button" class="icon-btn" id="theme-toggle" aria-label="테마 전환" title="유이는 라이트 모드파야">
             <svg class="size-4 theme-icon-light" aria-hidden="true"><use href="#i-moon"/></svg>
             <svg class="size-4 theme-icon-dark" aria-hidden="true"><use href="#i-sun"/></svg>
         </button>
@@ -74,8 +74,8 @@
 
     <div id="mobile-menu" class="border-t border-line px-4 pb-4 pt-2 md:hidden" hidden>
         <nav class="grid gap-0.5" aria-label="모바일 메뉴">
-            <p class="px-3 py-1.5 text-xs text-faint">서버 주소: <code class="font-mono font-semibold text-ink">mc.funami.tech</code>. 유이가 혹시 몰라서 여기에도 적어뒀어요.</p>
-            <a class="menu-item" href="https://github.com/sponsors/NoaHimesaka1873"><svg class="size-4 text-accent" aria-hidden="true"><use href="#i-heart"/></svg>유이의 전기세 후원하기<svg class="ms-auto size-3 text-faint" aria-hidden="true"><use href="#i-external-link"/></svg></a>
+            <p class="px-3 py-1.5 text-xs text-faint">서버 주소: <code class="font-mono font-semibold text-ink">mc.funami.tech</code>. 혹시 몰라서 여기에도 적어둠.</p>
+            <a class="menu-item" href="https://github.com/sponsors/NoaHimesaka1873"><svg class="size-4 text-accent" aria-hidden="true"><use href="#i-heart"/></svg>전기세 좀 도와주기<svg class="ms-auto size-3 text-faint" aria-hidden="true"><use href="#i-external-link"/></svg></a>
             <div class="my-1.5 border-t border-line"></div>
             <a class="menu-item" href="/ko/#play"><svg class="size-4" aria-hidden="true"><use href="#i-gamepad"/></svg>접속 방법</a>
             <a class="menu-item" href="/ko/#rules"><svg class="size-4" aria-hidden="true"><use href="#i-scale"/></svg>규칙</a>
@@ -99,15 +99,15 @@
             <div class="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
                 <div class="flex flex-wrap items-center gap-2">
                     <p class="chip"><svg class="size-3.5" aria-hidden="true"><use href="#i-package"/></svg> 서버 2개</p>
-                    <p class="chip"><svg class="size-3.5" aria-hidden="true"><use href="#i-cpu"/></svg> 229 + 262개 모드</p>
-                    <p class="chip"><svg class="size-3.5" aria-hidden="true"><use href="#i-map-pin"/></svg> 대한민국 경기도</p>
+                    <p class="chip"><svg class="size-3.5" aria-hidden="true"><use href="#i-cpu"/></svg> 모드 229개 + 262개</p>
+                    <p class="chip"><svg class="size-3.5" aria-hidden="true"><use href="#i-map-pin"/></svg> 경기도</p>
                 </div>
                 <h1 class="mt-5 max-w-3xl text-4xl font-bold tracking-tight text-ink sm:text-5xl lg:text-6xl">
-                    모드 서버.
-                    <span class="block text-faint">유이가 “모드 하나만 더”를 229번 반복했어요.</span>
+                    유이가 '모드 하나만 더'를
+                    <span class="block text-faint">229번이나 말한 서버</span>
                 </h1>
                 <p class="mt-5 max-w-2xl text-lg/relaxed">
-                    <a class="text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong" href="/ko/">바닐라 SMP</a>가 평온한 쪽이라면, 여기 두 서버는 아니에요. 하나는 자체 모드팩으로 돌아가는 건축 서버, 다른 하나는 돌멩이를 부딪히는 것부터 시작해서 GregTech 공장까지 세워야 하는 TerraFirmaGreg 서버예요. 둘 다 Java 에디션 전용이에요.
+                    건축용 자체 모드팩 서버가 있고, 돌멩이 두드리는 데서 시작해서 GregTech 공장까지 올라가야 하는 TerraFirmaGreg 서바이벌도 있어. 둘 다 Java 에디션 전용이야. <a class="text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong" href="/ko/">바닐라 SMP</a>가 그리워지면 언제든 돌아와.
                 </p>
                 <div class="mt-8 flex flex-wrap gap-3">
                     <a href="#yurumc-pack" class="btn-primary">
@@ -128,32 +128,29 @@
                 <div class="flex flex-wrap items-center gap-3">
                     <span class="chip-accent">
                         <svg class="size-3" aria-hidden="true"><use href="#i-package"/></svg>
-                        네오포지 21.1.228
+                        NeoForge 21.1.228
                     </span>
                     <span class="chip">
                         <svg class="size-3" aria-hidden="true"><use href="#i-check"/></svg>
-                        직접 정성껏 만든 팩
+                        직접 만든 팩
                     </span>
                 </div>
-                <h2 class="section-title mt-4">YuruMC 모드 서버, 살살 다뤄주세요</h2>
+                <h2 class="section-title mt-4">YuruMC 모드</h2>
                 <p class="mt-2 max-w-2xl">
-                    미러에서 바로 받을 수 있는 Modrinth 형식
+                    직접 만든 모드팩이야.
                     <code class="rounded bg-inset px-1.5 py-0.5 font-mono text-[13px] text-accent-strong">.mrpack</code>
-                    파일로 직접 구성한 자체 모드팩이에요. YuruMC Pack NeoForged 1.21
-                    (팩 버전 1.0.0)은 마인크래프트 1.21.1의
-                    네오포지 21.1.228 환경에서 구동되며, 229개 모드와
-                    2개 셰이더팩이 이 파일 하나에 다 들어있어요.
-                    곧 노트북 팬이 Create 기계 장치 돌아가는 소리를 내기 시작할 거예요.
+                    파일 하나 미러에서 받아서 넣으면 돼. 모드 229개에 셰이더팩 2개까지 전부 들어가 있어.
+                    노트북 팬이 Create 기계 소리 낼 수도 있어.
                 </p>
 
                 <div class="mt-8 grid gap-4 lg:grid-cols-5">
                     <div class="card p-6 lg:col-span-3">
-                        <h3 class="font-semibold text-ink">접속 방법</h3>
+                        <h3 class="font-semibold text-ink">접속 정보</h3>
                         <ul class="mt-4 divide-y divide-line border-y border-line">
                             <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-3">
                                 <span class="flex w-32 items-center gap-2 text-sm text-faint">
                                     <svg class="size-4" aria-hidden="true"><use href="#i-monitor"/></svg>
-                                    서버 주소
+                                    주소
                                 </span>
                                 <span class="address">
                                     <code class="font-mono text-sm font-semibold break-all text-ink">modded.mc.funami.tech</code>
@@ -162,7 +159,7 @@
                                         <svg class="size-3.5 text-accent-strong" data-copied-icon hidden aria-hidden="true"><use href="#i-check"/></svg>
                                     </button>
                                 </span>
-                                <span class="chip">여기도 포트 없음</span>
+                                <span class="chip">포트 칸 비워 둬</span>
                             </li>
                             <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-3">
                                 <span class="flex w-32 items-center gap-2 text-sm text-faint">
@@ -170,7 +167,7 @@
                                     에디션
                                 </span>
                                 <span class="text-sm font-medium text-ink">Java 에디션, 마인크래프트 1.21.1</span>
-                                <span class="chip">베드락 미지원</span>
+                                <span class="chip">베드락 안 돼</span>
                                 <span class="chip">건축 서버, 모험 모드</span>
                             </li>
                             <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-3">
@@ -178,7 +175,7 @@
                                     <svg class="size-4" aria-hidden="true"><use href="#i-users"/></svg>
                                     정원
                                 </span>
-                                <span class="text-sm font-medium text-ink">30명, 건축 권한은 Matrix 스페이스에서 요청해 주세요</span>
+                                <span class="text-sm font-medium text-ink">30명</span>
                             </li>
                         </ul>
 
@@ -193,12 +190,12 @@
                             </a>
                         </div>
                         <p class="mt-3 text-xs text-faint">
-                            이 서버는 건축용이에요. 모든 플레이어가 모험 모드로 시작하기 때문에 테러는 불가능해요. 건축 권한을 따로 받아야 하니까, 이게 사실상 가입 절차예요.
-                            <a class="font-medium text-accent-strong hover:underline" href="https://matrix.to/#/%23yurumc-space:funami.tech"><code class="font-mono">#yurumc-space:funami.tech</code></a>에
-                            들어와서 건축 권한을 요청해 주세요.
+                            그리핑 방지라 다들 모험 모드로 시작해. 건축하고 싶으면
+                            <a class="font-medium text-accent-strong hover:underline" href="https://matrix.to/#/%23yurumc-space:funami.tech"><code class="font-mono">#yurumc-space:funami.tech</code></a>
+                            Matrix 스페이스에서 물어봐.
                         </p>
                         <p class="mt-3 text-xs text-faint">
-                            라이브 맵에는 에더랑 행성 몇 개를 포함한 11개 차원이 있어요. 대부분은 유이도 아직 안 가 봤어요.
+                            라이브 맵에 차원이 11개 있어. Aether도 있고 행성도 몇 개 있는데 유이도 대부분 안 가봤어.
                         </p>
                     </div>
 
@@ -217,10 +214,10 @@
                         </div>
                         <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
                             <dt class="text-faint">모드 로더</dt>
-                            <dd class="font-medium text-ink">네오포지 21.1.228</dd>
+                            <dd class="font-medium text-ink">NeoForge 21.1.228</dd>
                         </div>
                         <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
-                            <dt class="text-faint">포함된 모드</dt>
+                            <dt class="text-faint">모드 수</dt>
                             <dd class="font-medium text-ink tabular-nums">229개 (+셰이더팩 2개)</dd>
                         </div>
                         <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
@@ -238,28 +235,25 @@
                 <div class="flex flex-wrap items-center gap-3">
                     <span class="chip-accent">
                         <svg class="size-3" aria-hidden="true"><use href="#i-pickaxe"/></svg>
-                        포지 47.4.13
+                        Forge 47.4.13
                     </span>
                     <span class="chip">
                         <svg class="size-3" aria-hidden="true"><use href="#i-calendar"/></svg>
                         팩 업데이트 2026-09-05
                     </span>
                 </div>
-                <h2 class="section-title mt-4">YuruMC 모드 서바이벌: 일단 돌부터, 원자로는 나중에</h2>
+                <h2 class="section-title mt-4">돌멩이부터 시작하는 서바이벌</h2>
                 <p class="mt-2 max-w-2xl">
-                    이 서버는 다른 분들의 노고가 담긴
-                    TerraFirmaGreg-Modern 0.13.10을
-                    CurseForge에서 가져와 운영하고 있어요. 모드팩 제작자의 말을 빌리면,
-                    "기술과 함께 더 많은 생존과 탐험을 원하세요? 1.20.1용 TerraFirmaCraft + GregTech 모드팩입니다."라고 하네요. 좀 더 솔직히 말하면
-                    첫날 저녁 내내 부싯돌이나 깎고 있을 때 채팅에서 누군가 증기 보일러를 자랑하고
-                    있을 거라는 뜻이에요. 262개 모드, 마인크래프트
-                    1.20.1, 포지
-                    47.4.13 기반이고, 친절한 가이드 같은 건 진짜 없어요.
+                    CurseForge에서 가져온
+                    TerraFirmaGreg-Modern 0.13.10으로 돌아가.
+                    첫날 저녁 내내 부싯돌 깎고 있는데 채팅에서 누가 증기 보일러 자랑하고 있을 거야.
+                    모드 262개 들어있고
+                    친절한 튜토리얼 같은 건 없어.
                 </p>
 
                 <div class="mt-8 grid gap-4 lg:grid-cols-5">
                     <div class="card p-6 lg:col-span-3">
-                        <h3 class="font-semibold text-ink">접속 방법, 빡센 버전</h3>
+                        <h3 class="font-semibold text-ink">접속 정보</h3>
                         <ul class="mt-4 divide-y divide-line border-y border-line">
                             <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-3">
                                 <span class="flex w-32 items-center gap-2 text-sm text-faint">
@@ -273,7 +267,7 @@
                                         <svg class="size-3.5 text-accent-strong" data-copied-icon hidden aria-hidden="true"><use href="#i-check"/></svg>
                                     </button>
                                 </span>
-                                <span class="chip">마찬가지로 포트 없음</span>
+                                <span class="chip">포트 칸 비워 둬</span>
                             </li>
                             <li class="flex flex-wrap items-center gap-x-4 gap-y-2 py-3">
                                 <span class="flex w-32 items-center gap-2 text-sm text-faint">
@@ -288,7 +282,7 @@
                                     <svg class="size-4" aria-hidden="true"><use href="#i-users"/></svg>
                                     정원
                                 </span>
-                                <span class="text-sm font-medium text-ink">30명, 화이트리스트 없음, 탓할 친구 하나쯤 데려오세요</span>
+                                <span class="text-sm font-medium text-ink">30명, 화이트리스트 없음. 같이 고통받을 친구 데려와!</span>
                             </li>
                         </ul>
 
@@ -303,8 +297,7 @@
                             </a>
                         </div>
                         <p class="mt-3 text-xs text-faint">
-                            서버와 동일한 파일인 <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">TerraFirmaGreg-Modern-0.13.10-curseforge.zip</code>을
-                            설치하세요. 이 서버에는 아직 라이브 맵이 없어요. 직접 눈으로 탐험해야 해요, 원시인처럼.
+                            <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">TerraFirmaGreg-Modern-0.13.10-curseforge.zip</code> 설치하면 돼. 서버랑 똑같은 파일이야. 라이브 맵은 아직 없어서 발로 뛰면서 외워야 해.
                         </p>
                     </div>
 
@@ -323,10 +316,10 @@
                         </div>
                         <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
                             <dt class="text-faint">모드 로더</dt>
-                            <dd class="font-medium text-ink">포지 47.4.13</dd>
+                            <dd class="font-medium text-ink">Forge 47.4.13</dd>
                         </div>
                         <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 rounded-xl border border-line bg-canvas px-4 py-3">
-                            <dt class="text-faint">포함된 모드</dt>
+                            <dt class="text-faint">모드 수</dt>
                             <dd class="font-medium text-ink tabular-nums">262개 (+리소스팩 9개, 셰이더팩 2개)</dd>
                         </div>
                     </dl>
@@ -337,16 +330,16 @@
         <!-- Which one -->
         <section class="border-b border-line bg-surface/50">
             <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
-                <h2 class="section-title">어떤 걸 고를까?</h2>
-                <p class="mt-2 max-w-2xl">버전도, 로더도, 분위기도 전부 달라요.</p>
+                <h2 class="section-title">뭘 골라야 하지?</h2>
+                <p class="mt-2 max-w-2xl">둘 다 수면 시간 박살 나는 건 똑같아.</p>
                 <div class="mt-8 grid gap-4 md:grid-cols-2">
                     <div class="card p-6">
                         <span class="flex size-10 items-center justify-center rounded-xl bg-accent-soft text-accent-strong">
                             <svg class="size-5" aria-hidden="true"><use href="#i-package"/></svg>
                         </span>
-                        <h3 class="mt-4 font-semibold text-ink">YuruMC 모드 서버를 고른다면</h3>
+                        <h3 class="mt-4 font-semibold text-ink">YuruMC 모드</h3>
                         <p class="mt-2 text-sm/relaxed">
-                            모든 게 다 들어있는 걸 원할 때. 마인크래프트 1.21.1 기반, 229개 모드, 미러에서 한 번만 받으면 바로 시작이에요. 모험 모드라서, 서버에 들어오면 가장 먼저 관리자에게 나무 캘 권한을 요청해야 해요.
+                            유이가 직접 만든 모드 229개짜리 팩이야. Create랑 Aether가 같은 월드에 있어. 거실에 기차가 지나갈 각오는 해 둬.
                         </p>
                         <p class="mt-3 text-xs text-faint">라이브 맵 있음.</p>
                     </div>
@@ -354,12 +347,9 @@
                         <span class="flex size-10 items-center justify-center rounded-xl bg-accent-soft text-accent-strong">
                             <svg class="size-5" aria-hidden="true"><use href="#i-pickaxe"/></svg>
                         </span>
-                        <h3 class="mt-4 font-semibold text-ink">모드 서바이벌을 고른다면</h3>
+                        <h3 class="mt-4 font-semibold text-ink">모드 서바이벌</h3>
                         <p class="mt-2 text-sm/relaxed">
-                            바닐라 서바이벌이 너무 쉽다고 느낄 때.
-                            마인크래프트 1.20.1 기반의
-                            TerraFirmaGreg-Modern, 포지.
-                            여기엔 나무 곡괭이 같은 건 없어요.
+                            바닐라 서바이벌이 시시해졌으면 여기로 와. TerraFirmaGreg가 다 갈아엎어 놔서 알던 마크랑은 완전 달라. 나무 곡괭이 같은 건 없어.
                         </p>
                         <p class="mt-3 text-xs text-faint">라이브 맵 없음. 야생은 야생 그대로.</p>
                     </div>
@@ -370,38 +360,38 @@
         <!-- Installing -->
         <section id="install" class="scroll-mt-20 border-b border-line">
             <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
-                <h2 class="section-title">모드팩 설치하기</h2>
+                <h2 class="section-title">모드팩 설치</h2>
                 <p class="mt-2 max-w-2xl">
-                    두 팩 모두 일반적인 모드팩 파일이라 가져오기 기능이 있는 런처면 뭐든 괜찮아요.
-                    바닐라 런처는 안 돼요. YuruMC에서 주소 말고 뭔가 더 필요한 건 이 부분뿐이에요.
+                    둘 다 일반 모드팩 파일이야. 바닐라 런처 빼고 팩 불러오는 런처면 뭐든 돼.
+                    바닐라 서버는 주소만 치면 되는데 모드 서버는 팩도 깔아야 해.
                 </p>
                 <ol class="mt-8 grid gap-4 md:grid-cols-3">
                     <li class="card flex min-w-0 gap-4 p-5">
                         <span class="flex size-8 flex-none items-center justify-center rounded-lg bg-inset font-mono text-sm font-bold text-accent-strong">1</span>
                         <div class="min-w-0">
                             <h3 class="font-semibold text-ink">런처 준비</h3>
-                            <p class="mt-1 text-sm/relaxed">팩 파일을 가져올 수 있는 런처면 돼요. <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">.mrpack</code>은 Modrinth 앱이나 Prism Launcher, CurseForge zip은 CurseForge 앱이나 Prism을 사용하세요.</p>
+                            <p class="mt-1 text-sm/relaxed"><code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">.mrpack</code>은 Modrinth 앱이나 Prism Launcher에서, CurseForge zip은 CurseForge 앱이나 Prism에서 열면 돼.</p>
                         </div>
                     </li>
                     <li class="card flex min-w-0 gap-4 p-5">
                         <span class="flex size-8 flex-none items-center justify-center rounded-lg bg-inset font-mono text-sm font-bold text-accent-strong">2</span>
                         <div class="min-w-0">
                             <h3 class="font-semibold text-ink">팩 가져오기</h3>
-                            <p class="mt-1 text-sm/relaxed">자체 팩은 미러의 <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">.mrpack</code> 파일을, 모드 서바이벌은 CurseForge에서 TerraFirmaGreg-Modern 0.13.10을 받으세요. 로더가 팩 안에 포함되어 있어서 (네오)포지를 따로 설치할 필요 없어요.</p>
+                            <p class="mt-1 text-sm/relaxed">자체 팩은 미러에서 <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">.mrpack</code> 받고, 모드 서바이벌은 CurseForge에서 TerraFirmaGreg-Modern 0.13.10 받으면 돼. 런처가 팩에서 (Neo)Forge를 알아서 깔아줘서 따로 설치할 거 없어.</p>
                         </div>
                     </li>
                     <li class="card flex min-w-0 gap-4 p-5">
                         <span class="flex size-8 flex-none items-center justify-center rounded-lg bg-inset font-mono text-sm font-bold text-accent-strong">3</span>
                         <div class="min-w-0">
-                            <h3 class="font-semibold text-ink">서버 추가 후 접속</h3>
-                            <p class="mt-1 text-sm/relaxed">팩을 실행하고 <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">modded.mc.funami.tech</code> 또는 <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">survival.modded.mc.funami.tech</code>를 추가하세요. 포트는 비워두면 돼요. 재밌게 즐기세요!</p>
+                            <h3 class="font-semibold text-ink">서버 추가하고 접속</h3>
+                            <p class="mt-1 text-sm/relaxed">팩 실행하고 <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">modded.mc.funami.tech</code> 아니면 <code class="rounded bg-inset px-1 py-0.5 font-mono text-[12px] text-accent-strong">survival.modded.mc.funami.tech</code> 추가해. 포트는 비워둬. 바로 들어가면 돼.</p>
                         </div>
                     </li>
                 </ol>
                 <p class="mt-6 text-sm text-faint">
-                    <a class="text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong" href="/ko/#rules">메인 페이지</a>의
-                    규칙 두 개가 여기서도 적용돼요. 렉 유발 금지, 테러 금지. 모드 서버에서는 렉을 유발할 수 있는
-                    훨씬 창의적인 방법들이 많아요. 부디 살살 다뤄주세요. 데이터센터가 아니라 누군가의 집에서 돌아가는 서버예요.
+                    <a class="text-accent-strong underline decoration-line-strong underline-offset-2 transition-colors hover:decoration-accent-strong" href="/ko/#rules">메인 규칙</a>
+                    두 개 여기서도 똑같아. 렉 걸지 마, 그리핑 하지 마. 모드 서버는 렉 걸 수 있는 방법이
+                    훨씬 많거든. 유이네 홈서버니까 좀 아껴줘.
                 </p>
             </div>
         </section>
@@ -413,10 +403,10 @@
                     <div class="max-w-xl">
                         <h2 class="section-title">다락방</h2>
                         <p class="mt-2 text-sm/relaxed">
-                            미러에는 과거와 현재의 YuruMC 모드팩 빌드와 1.17
-                            월드 아카이브가 보관되어 있어요. 지금은 YuruMC Pack NeoForged 1.21만
-                            운영 중이고, 나머지는 은퇴했거나 잠시 들른 것들이에요.
-                            다락방은 안 잠가두니까 필요한 건 마음껏 가져가세요.
+                            미러에 역대 YuruMC 모드팩 빌드랑 1.17
+                            월드 아카이브가 있어. 지금 돌아가는 건 YuruMC Pack NeoForged 1.21뿐이고
+                            나머지는 옛날 거 보관해 둔 거야.
+                            잠금 안 걸어뒀으니 필요한 거 가져가.
                         </p>
                     </div>
                     <a href="https://mirror.funami.tech/yurumc/" class="btn-primary self-start md:self-auto">
@@ -437,14 +427,12 @@
                     <span class="font-semibold tracking-tight text-ink">YuruMC</span>
                 </a>
                 <p class="mt-3 text-sm leading-relaxed text-faint">
-                    2021년부터 대한민국 경기도에서
-                    <svg class="inline size-3.5 text-accent" aria-hidden="true"><use href="#i-heart"/></svg><span class="sr-only">사랑</span>을
-                    담아 운영 중인 느긋한 세미 바닐라 SMP.
+                    2021년부터 경기도에서 굴러가는 느긋한 세미 바닐라 SMP.
                 </p>
                 <div class="mt-4 flex gap-1">
                     <a class="icon-btn" href="https://bsky.app/profile/funami.tech" aria-label="Bluesky"><svg class="size-4" aria-hidden="true"><use href="#i-bluesky"/></svg></a>
                     <a class="icon-btn" href="https://github.com/funamitech/YuruMC" aria-label="GitHub"><svg class="size-4" aria-hidden="true"><use href="#i-github"/></svg></a>
-                    <a class="icon-btn" href="mailto:yui+SPAM[at]funami[dot]tech" title="+SPAM을 빼고 @와 .을 넣어서 보내세요" aria-label="이메일"><svg class="size-4" aria-hidden="true"><use href="#i-mail"/></svg></a>
+                    <a class="icon-btn" href="mailto:yui+SPAM[at]funami[dot]tech" title="+SPAM 빼고 @랑 . 넣어서 보내" aria-label="이메일"><svg class="size-4" aria-hidden="true"><use href="#i-mail"/></svg></a>
                 </div>
             </div>
 
@@ -472,9 +460,9 @@
                 <div class="col-span-2 sm:col-span-1">
                     <h3 class="mb-3 text-xs font-semibold uppercase tracking-wider text-faint">YuruMC</h3>
                     <ul class="space-y-2 text-faint">
-                        <li class="flex items-start gap-2"><svg class="mt-1 size-3.5 flex-none" aria-hidden="true"><use href="#i-map-pin"/></svg>대한민국 경기도</li>
-                        <li class="flex items-start gap-2"><svg class="mt-1 size-3.5 flex-none" aria-hidden="true"><use href="#i-server"/></svg>2021년부터 운영 중</li>
-                        <li class="flex items-start gap-2"><svg class="mt-1 size-3.5 flex-none" aria-hidden="true"><use href="#i-gamepad"/></svg>Java + 베드락 에디션</li>
+                        <li class="flex items-start gap-2"><svg class="mt-1 size-3.5 flex-none" aria-hidden="true"><use href="#i-map-pin"/></svg>경기도</li>
+                        <li class="flex items-start gap-2"><svg class="mt-1 size-3.5 flex-none" aria-hidden="true"><use href="#i-server"/></svg>2021년부터</li>
+                        <li class="flex items-start gap-2"><svg class="mt-1 size-3.5 flex-none" aria-hidden="true"><use href="#i-gamepad"/></svg>Java + 베드락</li>
                     </ul>
                 </div>
             </div>
@@ -484,6 +472,7 @@
             <p>&copy; 2021&ndash;2026 <a class="footer-link" href="https://funami.tech">funami.tech YuruVerse</a>. Some Rights Reserved.</p>
             <p>자매 사이트: <a class="footer-link" href="https://funami.tech">YuruVerse</a> &middot; <a class="footer-link" href="https://noa.codes">noa.codes</a></p>
         </div>
+        <p class="mt-4 text-xs text-faint" data-mtl-note>AI 번역이야. 유이한테 한국어 시키면 서버 터져.</p>
     </div>
 </footer>
 <!-- Inline SVG icon sprite (Lucide, ISC license + Simple Icons, CC0). Reference with: <svg><use href="#i-name"/></svg> -->

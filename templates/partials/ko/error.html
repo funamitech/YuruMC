@@ -2,7 +2,7 @@
 <html lang="ko">
 
 <head>
-    <!-- @include partials/head.html font="PretendardVariable" title="{{code}} {{title}} | YuruMC" description="2021년부터 대한민국 경기도에서 운영 중인 세미 바닐라 SMP 마인크래프트 서버. 에러 페이지를 찾으셨군요. 유이한테 들켰어요." image="{{ogimage}}" path="{{path}}" -->
+    <!-- @include partials/head.html font="PretendardVariable" title="{{code}} {{title}} | YuruMC" description="{{description}}" image="{{ogimage}}" path="{{path}}" -->
     <meta name="robots" content="noindex">
 </head>
 
@@ -20,8 +20,8 @@
             <p class="mt-6 text-sm/relaxed">{{message}}</p>
             <p class="mt-3 text-xs text-faint">{{kicker}}</p>
             <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-                <a href="/ko/" class="{{homeclass}}">
-                    <svg class="size-4" aria-hidden="true"><use href="#i-house"/></svg>
+                <a href="{{homehref}}" class="{{homeclass}}">
+                    <svg class="size-4" aria-hidden="true"><use href="#i-{{homeicon}}"/></svg>
                     {{homelabel}}
                 </a>
                 <a href="{{alturl}}" class="{{altclass}}">
