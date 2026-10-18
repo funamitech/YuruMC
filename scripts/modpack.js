@@ -120,7 +120,10 @@ async function openRemoteZip(url) {
   return { url: head.url, size: buf.length, read: async (start, len) => buf.subarray(start, start + len) };
 }
 
-/** Return one named entry from a remote zip, plus the URL it really came from. */
+/**
+ * Return one named entry from a remote zip, plus the URL it really came from and the
+ * names of every entry in the archive (the central directory lists them all anyway).
+ */
 async function readZipEntry(url, wanted) {
   const zip = await openRemoteZip(url);
   const tailLen = Math.min(66000, zip.size);
@@ -137,6 +140,8 @@ async function readZipEntry(url, wanted) {
   if (cdOffset === 0xffffffff) die(`${zip.url} is a zip64 archive, which this script does not read.`);
   const cd = await zip.read(cdOffset, cdSize);
 
+  const names = [];
+  let found = null;
   for (let p = 0; p + 46 <= cd.length && cd.readUInt32LE(p) === 0x02014b50;) {
     const method = cd.readUInt16LE(p + 10);
     const compSize = cd.readUInt32LE(p + 20);
@@ -146,18 +151,19 @@ async function readZipEntry(url, wanted) {
     const localOffset = cd.readUInt32LE(p + 42);
     const name = cd.subarray(p + 46, p + 46 + nameLen).toString('utf8');
 
-    if (name === wanted) {
+    names.push(name);
+    if (name === wanted && !found) {
       const header = await zip.read(localOffset, 30);
       const skip = 30 + header.readUInt16LE(26) + header.readUInt16LE(28);
       const raw = await zip.read(localOffset + skip, compSize);
       if (method !== 0 && method !== 8) {
         die(`${wanted} inside ${zip.url} uses unsupported compression method ${method}.`);
       }
-      return { data: method === 0 ? raw : inflateRawSync(raw), url: zip.url };
+      found = method === 0 ? raw : inflateRawSync(raw);
     }
     p += 46 + nameLen + extraLen + commentLen;
   }
-  return { data: null, url: zip.url };
+  return { data: found, url: zip.url, names };
 }
 
 const LOADER_NAMES = {
@@ -168,13 +174,25 @@ const prettyLoader = (id) => LOADER_NAMES[id.toLowerCase()] || id;
 
 /** Pull loader + mod count out of a Modrinth-format pack's index. */
 async function readMrpack(url) {
-  const { data } = await readZipEntry(url, 'modrinth.index.json');
+  const { data, names } = await readZipEntry(url, 'modrinth.index.json');
   if (!data) die(`${url} has no modrinth.index.json — that is not a Modrinth-format modpack.`);
   const index = JSON.parse(data.toString('utf8'));
   const deps = index.dependencies || {};
   const loaderId = Object.keys(deps).find((k) => k !== 'minecraft');
   const files = index.files || [];
-  const under = (dir) => files.filter((f) => (f.path || '').startsWith(`${dir}/`)).length;
+  // A pack can also bundle files under overrides/, client-overrides/ and server-overrides/
+  // (jars that aren't on Modrinth, resource packs nobody uploaded). Count those too, once
+  // per name: a mod is a .jar directly in mods/, a resource pack or shaderpack is one
+  // top-level entry (zip or folder) in its directory.
+  const bundled = names
+    .filter((n) => /^(client-|server-)?overrides\//.test(n) && !n.endsWith('/'))
+    .map((n) => n.slice(n.indexOf('/') + 1));
+  const paths = [...files.map((f) => f.path || ''), ...bundled];
+  const under = (dir) => new Set(paths
+    .filter((p) => p.startsWith(`${dir}/`))
+    .map((p) => p.split('/'))
+    .filter((parts) => dir !== 'mods' || (parts.length === 2 && parts[1].endsWith('.jar')))
+    .map((parts) => parts[1])).size;
   return {
     name: index.name || null,
     version: index.versionId || null,
