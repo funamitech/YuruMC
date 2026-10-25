@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-18",
+  "generated": "2026-10-26",
   "packs": {
     "modded": {
       "id": "modded",
@@ -7,14 +7,14 @@
       "source": "mrpack",
       "name": "New YuruMC Modded",
       "summary": "YuruMC Modded creative building server pack",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "minecraft": "1.21.1",
       "loader": "NeoForge",
       "loaderVersion": "21.1.262",
-      "modCount": 159,
+      "modCount": 182,
       "resourcePackCount": 11,
       "shaderCount": 0,
-      "fileCount": 157,
+      "fileCount": 176,
       "pageUrl": "https://mirror.funami.tech/yurumc/",
       "downloadUrl": "https://mirror.funami.tech/yurumc/New%20YuruMC%20Modded.mrpack",
       "fileName": "New YuruMC Modded.mrpack",
